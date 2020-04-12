@@ -2760,9 +2760,144 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 
 
+![image-20200412214905879](HTML元素的补充笔记.assets/image-20200412214905879.png)
+
+
+
+
+
+![image-20200412215035902](HTML元素的补充笔记.assets/image-20200412215035902.png)
+
+
+
+
+
+![image-20200412215216233](HTML元素的补充笔记.assets/image-20200412215216233.png)
+
+
+
+![image-20200412215337304](HTML元素的补充笔记.assets/image-20200412215337304.png)
+
+
+
+![image-20200412215410889](HTML元素的补充笔记.assets/image-20200412215410889.png)
+
+
+
+
+
+![image-20200412215502785](HTML元素的补充笔记.assets/image-20200412215502785.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 990px;
+            height: 500px;
+            background-color: bisque;
+            margin:0 auto;
+        }
+        .wrap{
+            margin-right: -10px;
+        }
+        .item {
+            float:left;
+            width: 240px;
+            background-color: brown;
+            margin-right: 10px;
+        }
+        .itema{
+            height: 306px;
+        }
+        .itemb{
+            height: 148px;
+        }
+        .item-last{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="wrap">
+        <div class="item itema"></div>
+        <div class="item itema"></div>
+        <div class="item itemb"></div>
+        <div class="item itemb"></div>
+        <div class="item itemb item-last"></div>
+        <div class="item itemb item-last"></div>
+      </div>
+    </div>
+</body>
+</html>
+~~~
+
+![image-20200412221944361](HTML元素的补充笔记.assets/image-20200412221944361.png)
+
+
+
+
+
+
+
 ### 浮动练习（二）
 
 ![image-20200412203717964](HTML元素的补充笔记.assets/image-20200412203717964.png)
+
+
+
+![image-20200412222305409](HTML元素的补充笔记.assets/image-20200412222305409.png)
+
+
+
+
+
+![image-20200412222850769](HTML元素的补充笔记.assets/image-20200412222850769.png)
+
+
+
+
+
+![image-20200412223028712](HTML元素的补充笔记.assets/image-20200412223028712.png)
+
+
+
+
+
+![image-20200412223602987](HTML元素的补充笔记.assets/image-20200412223602987.png)
+
+
+
+
+
+![image-20200412224109124](HTML元素的补充笔记.assets/image-20200412224109124.png)
+
+
+
+![image-20200412224146656](HTML元素的补充笔记.assets/image-20200412224146656.png)
+
+
+
+
+
+![image-20200412224321546](HTML元素的补充笔记.assets/image-20200412224321546.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
