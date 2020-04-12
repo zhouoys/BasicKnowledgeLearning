@@ -2121,13 +2121,13 @@ table默认为display:table，所以一个table会默认独占一行。可以修
 
 ![1586419083845](HTML元素的补充笔记.assets/1586419083845.png)
 
-static属性为position的默认属性值 ，没有left,right,top,bottom等其他值
+static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 #### relative-相对定位
 
 ![1586419111672](HTML元素的补充笔记.assets/1586419111672.png)
 
-**注意到此刻position:relative相对的是元素自己的中心轴中心为原点，而不是元素自己的左上角的区域为原点，这一点需要注意。position:absolute的定位原点为包含块的左上角的位置为坐标原点，这要做一些区分**
+**注意到此刻position:relative相对的是元素自己的中心轴中心为原点，而不是元素自己的左上角的区域为原点，这一点需要注意。position:absolute的定位原点为包含块的左上角的位置为坐标原点，这要做**
 
 
 
@@ -2135,7 +2135,7 @@ static属性为position的默认属性值 ，没有left,right,top,bottom等其�
 
 ![1586424426473](HTML元素的补充笔记.assets/1586424426473.png)
 
-**使用position:relative注意元素不会脱离文档流，依然会占据文档流中的位置,而相对定位一般用作对元素的微调，以及作为父元素包含块使用**
+
 
 
 
@@ -2245,5 +2245,597 @@ static属性为position的默认属性值 ，没有left,right,top,bottom等其�
 
 ![1586419426884](HTML元素的补充笔记.assets/1586419426884.png)
 
-**此处的不再给父元素汇报宽高数据，也就是意味着脱标元素不会撑开父元素，也就是说父元素可能会高度坍塌。**
+![1586437990125](HTML元素的补充笔记.assets/1586437990125.png)
 
+![1586438016895](HTML元素的补充笔记.assets/1586438016895.png)
+
+![1586438161251](HTML元素的补充笔记.assets/1586438161251.png)
+
+![1586439052067](HTML元素的补充笔记.assets/1586439052067.png)
+
+
+
+
+
+### 练习三
+
+![1586419545191](HTML元素的补充笔记.assets/1586419545191.png)
+
+![1586439482744](HTML元素的补充笔记.assets/1586439482744.png)
+
+![1586439638069](HTML元素的补充笔记.assets/1586439638069.png)
+
+![1586439826080](HTML元素的补充笔记.assets/1586439826080.png)
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浏览器自带样式 */
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+        a{
+            text-decoration:none;
+            color:#000;
+        }
+        /* 自定义样式 */
+        .box{
+            position:fixed;
+            top:100px;
+            right:30px;
+            border:1px solid #eaeaea;
+        }
+        .box a{
+            display:block;
+            width: 62px;
+            height: 48px;
+            padding-top:12px;
+            font-size: 12px;
+            text-align: center;
+            border-bottom:1px solid #eaeaea;
+        }
+        a.top{
+            border-bottom:none;
+        }
+        .icon {
+            display:block;
+            width:20px;
+            height: 20px;
+            margin:0 auto 3px;
+        }
+        .sign{
+            background:url("./img/icon-aside-right-signin.png")
+        }
+        .cart{
+            background:url("./img/icon-aside-right-cart.png");
+        }
+        .phone{
+            background:url("./img/icon-aside-right-phone.png")
+        }
+        .backTop{
+            background:url("./img/icon-aside-right-top.png")
+        }
+        /* 悬浮样式变更 */
+        .box a:hover{
+            background-color: #f5f5f5;
+            color:#e41625;
+        
+        }
+        .box a:hover .sign{
+            background:url("./img/icon-aside-right-signin-active.png")
+        }
+        .box a:hover .cart{
+            background:url("./img/icon-aside-right-cart-active.png");
+        }
+        .box a:hover .phone{
+            background:url("./img/icon-aside-right-phone-active.png")
+        }
+        .box a:hover .backTop{
+            background:url("./img/icon-aside-right-top-active.png")
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">
+            <i class="icon sign"></i>
+            <span>签到</span>
+        </a>
+        <a href="#">
+            <i class="icon cart"></i>
+            <span>购物车</span>
+        </a>
+        <a href="#">
+            <i class="icon phone"></i>
+            <span>APP</span>
+        </a>
+        <a href="#" class="top">
+            <i class="icon backTop"></i>
+            <span>TOP</span>
+        </a>
+    </div>
+    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+</body>
+</html>
+~~~
+
+
+
+
+
+### 绝对定位-absolute
+
+![1586419584389](HTML元素的补充笔记.assets/1586419584389.png)
+
+
+
+![1586423542241](HTML元素的补充笔记.assets/1586423542241.png)
+
+####  子绝父相
+
+![1586419642850](HTML元素的补充笔记.assets/1586419642850.png)
+
+#### 练习四
+
+
+
+![1586419871778](HTML元素的补充笔记.assets/1586419871778.png)
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 重置默认配置 */
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        ul{
+            list-style: none;
+            margin:0px;
+            padding:0px;
+        }
+        a {
+            text-decoration:none;
+            color:#333;
+        }
+        /* 设置样式 */
+        .product-show {
+            position:relative;
+            display:inline-block;
+        }
+        .product-show ul {
+            position:absolute;
+            bottom:20px;
+            width: 285px;
+            text-align: justify;
+            text-align-last: justify;
+            left:0;
+            right:0;
+            margin: 0 auto;
+        }
+        .product-show ul li {
+            display:inline-block;
+            margin-top:10px;
+        }
+        .product-show ul li a{
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            font-size: 12px;
+            text-align-last: center;
+            text-align:center;
+            line-height: 40px;
+            border:1px solid #eaeaea;
+            border-radius:40px;
+            box-shadow: 0 0 0 1 rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        /* 悬浮效果 */
+        .product-show ul li a:hover {
+            color:#f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-show">
+        <a ref="#">
+            <img src="./img/beauty-left-img.jpg" alt>
+        </a>
+        <ul>
+            <li><a href="#">精致护肤</a></li>
+            <li><a href="#">人气面膜</a></li>
+            <li><a href="#">大牌彩妆</a></li>
+            <li><a href="#">防晒修护</a></li>
+            <li><a href="#">迷人香氛</a></li>
+            <li><a href="#">面部精华</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+~~~
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 样式重置 */
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        a {
+            text-decoration: none;
+            color:#333;
+        }
+        img {
+            vertical-align: middle;
+        }
+        .phone {
+            position:relative;
+            margin-left:200px;
+        }
+        .phone>span{
+            font-size:12px;
+        }
+        .phone .code{
+            display:none;
+            position:absolute;
+            left:0;
+            top:32px;
+            transform:translate(-50%);
+            margin-left:50%;
+            border:1px solid #eaeaea;
+            padding:5px 5px 0px;
+        }
+        .phone .code span{
+            display: block;
+            text-align: center;
+        }
+        .arrow{
+            position:absolute;
+            left:0;
+            right:0;
+            margin:0 auto;
+            top:-6px;
+            width: 8px;
+            height:8px;
+            border-top:1px solid #eaeaea;
+            border-left:1px solid #eaeaea;
+            transform:rotate(45deg);
+            background:#fff;
+        }
+        .phone>span:hover+.code{
+            display:inline;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="phone">
+        <span>手机考拉</span>
+        <span class="code">
+            <span class="arrow"></span>
+            <img src="./img/qrcode.png" alt>
+            <span>APP下载</span>
+            <span>领1000元新人礼包</span>
+        </span>
+    </a>
+</body>
+</html>
+~~~
+
+
+
+
+
+
+
+
+
+#### 绝对定位技巧
+
+![1586419894735](HTML元素的补充笔记.assets/1586419894735.png)
+
+### position总结
+
+
+
+![1586419982728](HTML元素的补充笔记.assets/1586419982728.png)
+
+
+
+### 元素的层叠
+
+![1586422286162](HTML元素的补充笔记.assets/1586422286162.png)
+
+
+
+### css属性-z-index
+
+![1586422316985](HTML元素的补充笔记.assets/1586422316985.png)
+
+
+
+## css属性-浮动
+
+### 定位方案
+
+![image-20200412203235496](HTML元素的补充笔记.assets/image-20200412203235496.png)
+
+
+
+### float
+
+![image-20200412203311983](HTML元素的补充笔记.assets/image-20200412203311983.png)
+
+
+
+
+
+#### 浮动的规则一
+
+![image-20200412203333053](HTML元素的补充笔记.assets/image-20200412203333053.png)
+
+
+
+
+
+#### 浮动的规则二
+
+![image-20200412203359642](HTML元素的补充笔记.assets/image-20200412203359642.png)
+
+
+
+
+
+#### 浮动的规则三
+
+![image-20200412203438020](HTML元素的补充笔记.assets/image-20200412203438020.png)
+
+
+
+
+
+#### 浮动的规则四
+
+![image-20200412203508456](HTML元素的补充笔记.assets/image-20200412203508456.png)
+
+
+
+
+
+#### 浮动的规则五
+
+![image-20200412203542487](HTML元素的补充笔记.assets/image-20200412203542487.png)
+
+
+
+#### 浮动的规则六
+
+![image-20200412203617232](HTML元素的补充笔记.assets/image-20200412203617232.png)
+
+
+
+
+
+### 应用
+
+![image-20200412203641095](HTML元素的补充笔记.assets/image-20200412203641095.png)
+
+
+
+### 浮动练习（一）
+
+![image-20200412203657484](HTML元素的补充笔记.assets/image-20200412203657484.png)
+
+
+
+
+
+### 浮动练习（二）
+
+![image-20200412203717964](HTML元素的补充笔记.assets/image-20200412203717964.png)
+
+
+
+
+
+### 浮动练习（三）
+
+![image-20200412203801367](HTML元素的补充笔记.assets/image-20200412203801367.png)
+
+
+
+
+
+### 浮动练习（四）
+
+![image-20200412203835612](HTML元素的补充笔记.assets/image-20200412203835612.png)
+
+
+
+
+
+### 浮动存在的问题
+
+![image-20200412203915511](HTML元素的补充笔记.assets/image-20200412203915511.png)
+
+
+
+
+
+
+
+#### 清除浮动
+
+![image-20200412203938918](HTML元素的补充笔记.assets/image-20200412203938918.png)
+
+
+
+
+
+
+
+#### 清除浮动的常用方法
+
+![image-20200412204022473](HTML元素的补充笔记.assets/image-20200412204022473.png)
+
+
+
+
+
+
+
+### clear
+
+![image-20200412204048050](HTML元素的补充笔记.assets/image-20200412204048050.png)
+
+
+
+
+
+
+
+### 定位方案对比
+
+![image-20200412204131726](HTML元素的补充笔记.assets/image-20200412204131726.png)
+
+
+
+
+
+
+
+## transform
+
+![image-20200412204329301](HTML元素的补充笔记.assets/image-20200412204329301.png)
+
+
+
+
+
+### 位移 - translate
+
+![image-20200412204404269](HTML元素的补充笔记.assets/image-20200412204404269.png)
+
+
+
+
+
+
+
+### 缩放 - scale
+
+![image-20200412204500634](HTML元素的补充笔记.assets/image-20200412204500634.png)
+
+
+
+
+
+### transform - origin
+
+![image-20200412204549915](HTML元素的补充笔记.assets/image-20200412204549915.png)
+
+
+
+
+
+### 旋转 - rotate
+
+![image-20200412204703704](HTML元素的补充笔记.assets/image-20200412204703704.png)
+
+
+
+
+
+### 倾斜-skew
+
+![image-20200412204733815](HTML元素的补充笔记.assets/image-20200412204733815.png)
+
+
+
+
+
+
+
+## 过渡动画
+
+![image-20200412204830582](HTML元素的补充笔记.assets/image-20200412204830582.png)
+
+
+
+
+
+## vertical -align
+
+
+
+![image-20200412204915491](HTML元素的补充笔记.assets/image-20200412204915491.png)
+
+
+
+
+
+
+
+### vertical-align-line boxes
+
+![image-20200412205013732](HTML元素的补充笔记.assets/image-20200412205013732.png)
+
+
+
+
+
+
+
+### 不同情况分析一
+
+![image-20200412205057399](HTML元素的补充笔记.assets/image-20200412205057399.png)
+
+
+
+
+
+
+
+
+
+### 不同情况分析二
+
+![image-20200412205137848](HTML元素的补充笔记.assets/image-20200412205137848.png)
+
+
+
+
+
+
+
+### 出场
+
+![image-20200412205207066](HTML元素的补充笔记.assets/image-20200412205207066.png)
+
+
+
+
+
+### 不同的取值
+
+![image-20200412205245778](HTML元素的补充笔记.assets/image-20200412205245778.png)
