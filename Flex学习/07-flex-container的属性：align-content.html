@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container{
+        height: 400px;
+        width: 650px;
+        background-color: orangered;
+        display: flex;
+        justify-content: space-around;
+        /*允许换行*/
+        flex-wrap:wrap;
+        align-content: space-around;
+    }
+    .item{
+        height: 80px;
+        width: 100px;
+        text-align: center;
+        line-height: 80px;
+        color:#fff;
+    }
+    .item1{
+        background-color: aquamarine;
+    }
+    .item2{
+        background-color: blueviolet;
+    }
+    .item3{
+        background-color: chartreuse;
+    }
+    .item4{
+        background-color: red;
+    }
+</style>
+<body>
+<!--
+align-content:为flex-container的属性，决定了多行的flex-items在cross-axis上的对齐方式，类似于justify-content,但是注意针对的是多行
+ 的情况，单行没有效果。
+ :stretch(默认值伸缩，也就是自动根据flex-item等比例缩小，类似于align-items)
+ :flex-start(flex-items布局为在交错轴cross-axis方向上从cross-start到cross-end，依次紧靠，没有均分两行的情况)
+ :flex-end(flex-items布局为在交错轴cross-axis方向上从cross-end到cross-start，依次紧靠,没有均分情况)
+ :center(flex-items布局为cross-axis方向上的居中布局，依次紧靠)
+ :space-between(flex-items在cross-axis上两端(cross-start,cross-end)对齐，也就是紧靠，然后，各个flex-item间距相等)
+ :space-evenly(flex-items各间距相同，同时他们的间距也与cross-start,cross-end相同)
+ :spa ce-around(flex-items各个间距相同，同时他们的间距为cross-start间距，cross-end间距的两倍)
+-->
+<div class="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+    <div class="item item1">item5</div>
+    <div class="item item2">item6</div>
+    <div class="item item3">item7</div>
+    <div class="item item4">item8</div>
+    <div class="item item1">item9</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container{
+        height: 400px;
+        width: 600px;
+        background-color: orangered;
+        display: flex;
+        /*在flex-container上面设置cross-axis为居中对齐*/
+        align-items: center;
+    }
+    .item{
+        width: 100px;
+        color:#fff;
+    }
+    .item1{
+        background-color: aquamarine;
+        height: 100px;
+    }
+    .item2{
+        background-color: blueviolet;
+        height: 80px;
+        /* 单独给item2设置为cross-axis为flex-end*/
+        align-self: flex-end;
+    }
+    .item3{
+        background-color: chartreuse;
+        height: 60px;
+    }
+    .item4{
+        background-color: #999;
+        height: 80px;
+    }
+</style>
+<body>
+<!--
+align-self：为flex-items上面的属性，用来覆盖flex-container上面设置的align-items属性值，也就是通过该属性可以给flex-items
+单独设置一个cross-axis布局。共有六值，其值均会覆盖flex-container上面设置的值
+:normal(默认值，在弹性布局中和stretch效果一样)
+:stretch(当flex-items在交错轴上的size为auto时,会自动拉伸填充至flex-container)
+:flex-start(会与交错轴起始位置对齐，也就是cross-start对齐)
+:flex-end(会与交错轴终点位置对齐，也就是cross-end对齐)
+:center(居中对齐)
+:baseline(与基准线对齐)
+-->
+<div class="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+</div>
+</body>
+</html>

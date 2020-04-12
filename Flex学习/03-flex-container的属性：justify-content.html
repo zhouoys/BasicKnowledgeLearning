@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container{
+        height: 400px;
+        width: 600px;
+        background-color: orangered;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .item{
+        height: 80px;
+        width: 100px;
+        text-align: center;
+        line-height: 80px;
+        color:#fff;
+    }
+    .item1{
+        background-color: aquamarine;
+    }
+    .item2{
+        background-color: blueviolet;
+    }
+    .item3{
+        background-color: chartreuse;
+    }
+    .item4{
+        background-color: red;
+    }
+</style>
+<body>
+<!--
+flex-direction:为flex-container的属性,决定了flex-items在主轴的布局方向，共有六个值。
+ :flex-start(默认值，flex-items布局为在主轴方向从左到右,依次紧靠)
+ :flex-start(flex-items布局为在主轴方向从右向左，依次紧靠)
+ :center(flex-items布局为主轴的居中布局，依次紧靠)
+ :space-between(flex-items在主轴上两端(main-start,main-end)对齐，也就是紧靠，然后，各个flex-item间距相等)
+ :space-evenly(flex-items各间距相同，同时他们的间距也与main-start,main-end相同)
+ ：spance-around(flex-items各个间距相同，同时他们的间距为main-start间距，main-end间距的两倍)
+-->
+<div class="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+</div>
+</body>
+</html>

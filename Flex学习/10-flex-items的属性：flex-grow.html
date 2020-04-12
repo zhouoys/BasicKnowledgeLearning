@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container{
+        height: 400px;
+        width: 600px;
+        background-color: orangered;
+        display: flex;
+    }
+    .item{
+        width: 100px;
+        color:#fff;
+    }
+    .item1{
+        background-color: aquamarine;
+        height: 100px;
+        flex-grow: 2;
+    }
+    .item2{
+        background-color: blueviolet;
+        height: 80px;
+        flex-grow: 1;
+    }
+    .item3{
+        background-color: chartreuse;
+        height: 60px;
+        flex-grow: 3;
+    }
+    .item4{
+        background-color: #999;
+        height: 80px;
+        flex-grow: 2;
+    }
+</style>
+<body>
+<!--
+flex-grow:为flex-items上面的属性，一般用作为flex-items在主轴方向上的size的扩展，其值
+可以为任意正数或者0，也就是正整数，正小数，0，
+注意：1，如果所有的fLex-item上面的flex-grow的值小于1，则各个对应的flex-item拓展的size按照
+flex-container在主轴上的剩余size*flex-item上面的flex-grow的值来计算,此时不一定能填满主轴的size
+     2.如果所有的flex-item上面的flex-grow的值大于1，则各个对应的flex-item扩展的size按照
+flex-container在主轴上的剩余size*flex-item上面的flex-grow的值/(各个flex-item上面的flex-grow的值的和)来计算，此时各个
+flex-item一定能填满整个主轴的size
+flex-item的扩容一定不能超过max-width/max-height
+-->
+<div class="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+</div>
+</body>
+</html>
