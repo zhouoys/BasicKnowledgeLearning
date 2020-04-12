@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浏览器自带样式 */
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+        a{
+            text-decoration:none;
+            color:#000;
+        }
+        /* 自定义样式 */
+        .box{
+            position:fixed;
+            top:100px;
+            right:30px;
+            border:1px solid #eaeaea;
+        }
+        .box a{
+            display:block;
+            width: 62px;
+            height: 48px;
+            padding-top:12px;
+            font-size: 12px;
+            text-align: center;
+            border-bottom:1px solid #eaeaea;
+        }
+        a.top{
+            border-bottom:none;
+        }
+        .icon {
+            display:block;
+            width:20px;
+            height: 20px;
+            margin:0 auto 3px;
+        }
+        .sign{
+            background:url("./img/icon-aside-right-signin.png")
+        }
+        .cart{
+            background:url("./img/icon-aside-right-cart.png");
+        }
+        .phone{
+            background:url("./img/icon-aside-right-phone.png")
+        }
+        .backTop{
+            background:url("./img/icon-aside-right-top.png")
+        }
+        /* 悬浮样式变更 */
+        .box a:hover{
+            background-color: #f5f5f5;
+            color:#e41625;
+        
+        }
+        .box a:hover .sign{
+            background:url("./img/icon-aside-right-signin-active.png")
+        }
+        .box a:hover .cart{
+            background:url("./img/icon-aside-right-cart-active.png");
+        }
+        .box a:hover .phone{
+            background:url("./img/icon-aside-right-phone-active.png")
+        }
+        .box a:hover .backTop{
+            background:url("./img/icon-aside-right-top-active.png")
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">
+            <i class="icon sign"></i>
+            <span>签到</span>
+        </a>
+        <a href="#">
+            <i class="icon cart"></i>
+            <span>购物车</span>
+        </a>
+        <a href="#">
+            <i class="icon phone"></i>
+            <span>APP</span>
+        </a>
+        <a href="#" class="top">
+            <i class="icon backTop"></i>
+            <span>TOP</span>
+        </a>
+    </div>
+    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+</body>
+</html>

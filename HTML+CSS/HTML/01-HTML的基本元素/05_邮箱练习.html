@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 清除浏览器格式 */
+    ul {
+      list-style: none;
+      padding:0px;
+      margin:0px;
+    }
+    a{
+      text-decoration:none;
+    }
+    .email{
+      width: 120px;
+      border:2px solid #999;
+      text-align: center;
+    }
+    .header{
+      background-color: #999;
+      color:#fff;
+    }
+    .email ul{
+      display:none;
+    }
+    .email:hover ul{
+      display: block;
+    }
+    ul li a {
+      display:block;
+      color:#000;
+    }
+    ul li a:hover{
+      background-color: skyblue;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="email">
+    <div class="header">邮箱</div>
+    <ul>
+      <li><a href="#">QQ邮箱</a></li>
+      <li><a href="#">360邮箱</a></li>
+      <li><a href="#">网易126邮箱</a></li>
+    </ul>
+  </div>
+</body>
+</html>

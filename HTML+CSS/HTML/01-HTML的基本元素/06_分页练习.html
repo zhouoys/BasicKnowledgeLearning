@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 重置浏览器默认配置 */
+    ul {
+      list-style:none;
+      padding: 0;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    ul li {
+      display:inline-block;
+      text-align: center;
+      margin-left: 5px;
+    }
+    ul li a{
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      border:1px solid #e1e2e3
+    }
+    .prve,.next{
+      width: 88px;
+    }
+    /* 悬浮效果 */
+    .page ul li a:hover{
+      background-color: #38f;
+      color:#f2f8ff;
+    }
+    /* 点击之后的效果 */
+    .page .active{
+      border: none;
+      font-weight: 700;
+      color:#000;
+    }
+    .page .active:hover{
+      border:none;
+      background-color: #fff;
+      color:#000;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <ul>
+      <li><a href="#" class="prve">&lt;上一页</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a class="active">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+      <li><a href="#" class="next">下一页&gt;</a></li>
+    </ul>
+
+  </div>
+</body>
+</html>
