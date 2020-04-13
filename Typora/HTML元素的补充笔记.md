@@ -3140,7 +3140,55 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 
 
+![image-20200413171243140](HTML元素的补充笔记.assets/image-20200413171243140.png)
 
+
+
+
+
+![image-20200413171313151](HTML元素的补充笔记.assets/image-20200413171313151.png)
+
+
+
+
+
+
+
+![image-20200413171448111](HTML元素的补充笔记.assets/image-20200413171448111.png)
+
+
+
+
+
+
+
+![image-20200413171602872](HTML元素的补充笔记.assets/image-20200413171602872.png)
+
+
+
+
+
+![image-20200413171732680](HTML元素的补充笔记.assets/image-20200413171732680.png)
+
+
+
+![image-20200413172302356](HTML元素的补充笔记.assets/image-20200413172302356.png)
+
+
+
+
+
+![image-20200413172418624](HTML元素的补充笔记.assets/image-20200413172418624.png)
+
+
+
+
+
+![image-20200413172510193](HTML元素的补充笔记.assets/image-20200413172510193.png)
+
+
+
+![image-20200413172641447](HTML元素的补充笔记.assets/image-20200413172641447.png)
 
 
 
