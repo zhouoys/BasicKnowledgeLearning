@@ -2889,6 +2889,87 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 ![image-20200412224321546](HTML元素的补充笔记.assets/image-20200412224321546.png)
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浏览器自带样式 */
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+        a{
+            text-decoration:none;
+            color:#333;
+        }
+        /* 自定义样式 */
+        .container{
+            width: 1000px;
+            height: 200px;
+            background-color: bisque;
+            padding-top:20px;
+            margin:0 auto;
+        }
+        /* 左浮动样式 */
+        .f_left{
+            float:left;
+        }
+        .desc_left h2 {
+            float:left;
+            margin-top:0px;
+            margin-bottom: 0px;
+            font-size:22px; 
+        }
+        .desc_left span , .desc_left a{
+            float:left;
+            font-size:14px;
+            color:#8DB6CD;
+            margin-top:9px;
+            margin-left:20px;
+        }
+        /* 右浮动样式 */
+        .f_right{
+            float:right;
+        }
+        .desc_right a{
+            margin-top:9px;
+            font-size:14px;
+            color:#8DB6CD;
+        }
+        /*特殊字体颜色 */
+       .desc_left .hot{
+           color:#ff080f;
+       }
+       /* 悬浮效果 */
+       .desc_left a:hover,.desc_right a:hover{
+           text-decoration: underline;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="desc_left f_left">
+            <h2>美妆专区</h2>
+            <span>热搜词</span>
+            <a href="#" class="hot">面膜</a>
+            <a href="#" class="hot">口红</a>
+            <a href="#">眼霜</a>
+            <a href="#">精华</a>
+            <a href="#">卸妆</a>
+        </div>
+        <div class="desc_right f_right">
+            <a href="#">更多好货></a>
+        </div>
+    </div>
+</body>
+</html>
+~~~
+
+![image-20200413111149441](HTML元素的补充笔记.assets/image-20200413111149441.png)
 
 
 
@@ -2898,6 +2979,23 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 
 
+![image-20200413111837225](HTML元素的补充笔记.assets/image-20200413111837225.png)
+
+
+
+
+
+![image-20200413111659291](HTML元素的补充笔记.assets/image-20200413111659291.png)
+
+
+
+![image-20200413112120114](HTML元素的补充笔记.assets/image-20200413112120114.png)
+
+
+
+![image-20200413112655749](HTML元素的补充笔记.assets/image-20200413112655749.png)
+
+![image-20200413112812028](HTML元素的补充笔记.assets/image-20200413112812028.png)
 
 
 
@@ -2906,6 +3004,113 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 ### 浮动练习（三）
 
 ![image-20200412203801367](HTML元素的补充笔记.assets/image-20200412203801367.png)
+
+
+
+
+
+![image-20200413113543464](HTML元素的补充笔记.assets/image-20200413113543464.png)
+
+
+
+![image-20200413113744155](HTML元素的补充笔记.assets/image-20200413113744155.png)
+
+
+
+
+
+![image-20200413113831313](HTML元素的补充笔记.assets/image-20200413113831313.png)
+
+
+
+
+
+![image-20200413114011402](HTML元素的补充笔记.assets/image-20200413114011402.png)
+
+
+
+
+
+
+
+![image-20200413114144627](HTML元素的补充笔记.assets/image-20200413114144627.png)
+
+
+
+
+
+![image-20200413114402911](HTML元素的补充笔记.assets/image-20200413114402911.png)
+
+
+
+
+
+![image-20200413114722590](HTML元素的补充笔记.assets/image-20200413114722590.png)
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css reset */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration:none;
+            color:#000;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* 样式 */
+        .container{
+            width: 1100px;
+            margin:0 auto;
+            height: 380px;
+        }
+        .wraper{
+            margin-right: -3px;
+        }
+        .container .wraper li {
+            float:left;
+            width: 420px;
+            height: 190px;
+            line-height: 190px;
+            text-align: center;
+            border:1px solid #eaeaea;
+            margin-right:-1px;
+            margin-bottom: -1px;
+        }
+        .container .wraper li.last{
+            float:right;
+            height: 381px;
+            line-height: 381px;
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     <ul class="wraper">
+         <li class="last"><a href="#">区域五</a></li>
+         <li><a href="#">区域一</a></li>
+         <li><a href="#">区域二</a></li>
+         <li><a href="#">区域三</a></li>
+         <li><a href="#">区域四</a></li>
+     </ul>
+    </div>
+</body>
+</html>
+~~~
+
+![image-20200413164334119](HTML元素的补充笔记.assets/image-20200413164334119.png)
 
 
 

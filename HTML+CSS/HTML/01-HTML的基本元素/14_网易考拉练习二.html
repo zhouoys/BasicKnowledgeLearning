@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css reset */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration:none;
+            color:#000;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* 样式 */
+        .container{
+            width: 1100px;
+            margin:0 auto;
+            height: 380px;
+        }
+        .wraper{
+            margin-right: -3px;
+        }
+        .container .wraper li {
+            float:left;
+            width: 420px;
+            height: 190px;
+            line-height: 190px;
+            text-align: center;
+            border:1px solid #eaeaea;
+            margin-right:-1px;
+            margin-bottom: -1px;
+        }
+        .container .wraper li.last{
+            float:right;
+            height: 381px;
+            line-height: 381px;
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     <ul class="wraper">
+         <li class="last"><a href="#">区域五</a></li>
+         <li><a href="#">区域一</a></li>
+         <li><a href="#">区域二</a></li>
+         <li><a href="#">区域三</a></li>
+         <li><a href="#">区域四</a></li>
+     </ul>
+    </div>
+</body>
+</html>

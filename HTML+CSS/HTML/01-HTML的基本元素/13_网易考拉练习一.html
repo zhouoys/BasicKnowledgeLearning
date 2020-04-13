@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浏览器自带样式 */
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+        a{
+            text-decoration:none;
+            color:#333;
+        }
+        /* 自定义样式 */
+        .container{
+            width: 1000px;
+            height: 200px;
+            background-color: bisque;
+            padding-top:20px;
+            margin:0 auto;
+        }
+        /* 左浮动样式 */
+        .f_left{
+            float:left;
+        }
+        .desc_left h2 {
+            float:left;
+            margin-top:0px;
+            margin-bottom: 0px;
+            font-size:22px; 
+        }
+        .desc_left span , .desc_left a{
+            float:left;
+            font-size:14px;
+            color:#8DB6CD;
+            margin-top:9px;
+            margin-left:20px;
+        }
+        /* 右浮动样式 */
+        .f_right{
+            float:right;
+        }
+        .desc_right a{
+            margin-top:9px;
+            font-size:14px;
+            color:#8DB6CD;
+        }
+        /*特殊字体颜色 */
+       .desc_left .hot{
+           color:#ff080f;
+       }
+       /* 悬浮效果 */
+       .desc_left a:hover,.desc_right a:hover{
+           text-decoration: underline;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="desc_left f_left">
+            <h2>美妆专区</h2>
+            <span>热搜词</span>
+            <a href="#" class="hot">面膜</a>
+            <a href="#" class="hot">口红</a>
+            <a href="#">眼霜</a>
+            <a href="#">精华</a>
+            <a href="#">卸妆</a>
+        </div>
+        <div class="desc_right f_right">
+            <a href="#">更多好货></a>
+        </div>
+    </div>
+</body>
+</html>
