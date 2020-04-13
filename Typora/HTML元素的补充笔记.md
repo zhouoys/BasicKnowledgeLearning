@@ -3236,13 +3236,59 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 
 
+![image-20200413202836513](HTML元素的补充笔记.assets/image-20200413202836513.png)
 
+
+
+![image-20200413202902957](HTML元素的补充笔记.assets/image-20200413202902957.png)
+
+
+
+
+
+
+
+![image-20200413203104506](HTML元素的补充笔记.assets/image-20200413203104506.png)
+
+
+
+
+
+![image-20200413203202596](HTML元素的补充笔记.assets/image-20200413203202596.png)
 
 
 
 ### 缩放 - scale
 
 ![image-20200412204500634](HTML元素的补充笔记.assets/image-20200412204500634.png)
+
+
+
+![image-20200413203650631](HTML元素的补充笔记.assets/image-20200413203650631.png)
+
+
+
+![image-20200413203458891](HTML元素的补充笔记.assets/image-20200413203458891.png)
+
+
+
+
+
+![image-20200413203736976](HTML元素的补充笔记.assets/image-20200413203736976.png)
+
+
+
+
+
+![image-20200413203830803](HTML元素的补充笔记.assets/image-20200413203830803.png)
+
+
+
+
+
+![image-20200413203938282](HTML元素的补充笔记.assets/image-20200413203938282.png)
+
+
 
 
 
@@ -3256,9 +3302,45 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 
 
+![image-20200413204146134](HTML元素的补充笔记.assets/image-20200413204146134.png)
+
+
+
+![image-20200413204304574](HTML元素的补充笔记.assets/image-20200413204304574.png)
+
+
+
+
+
+![image-20200413204341420](HTML元素的补充笔记.assets/image-20200413204341420.png)
+
+
+
+
+
+![image-20200413204423394](HTML元素的补充笔记.assets/image-20200413204423394.png)
+
+
+
+
+
+
+
 ### 旋转 - rotate
 
 ![image-20200412204703704](HTML元素的补充笔记.assets/image-20200412204703704.png)
+
+
+
+![image-20200413204833828](HTML元素的补充笔记.assets/image-20200413204833828.png)
+
+
+
+![image-20200413204906261](HTML元素的补充笔记.assets/image-20200413204906261.png)
+
+
+
+
 
 
 
@@ -3270,6 +3352,14 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 
 
+![image-20200413205659215](HTML元素的补充笔记.assets/image-20200413205659215.png)
+
+
+
+![image-20200413205721830](HTML元素的补充笔记.assets/image-20200413205721830.png)
+
+
+
 
 
 
@@ -3277,6 +3367,54 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 ## 过渡动画
 
 ![image-20200412204830582](HTML元素的补充笔记.assets/image-20200412204830582.png)
+
+
+
+![image-20200413211016030](HTML元素的补充笔记.assets/image-20200413211016030.png)
+
+
+
+
+
+![image-20200413211348192](HTML元素的补充笔记.assets/image-20200413211348192.png)
+
+
+
+
+
+![image-20200413211451524](HTML元素的补充笔记.assets/image-20200413211451524.png)
+
+
+
+
+
+
+
+![image-20200413211532596](HTML元素的补充笔记.assets/image-20200413211532596.png)
+
+
+
+
+
+![image-20200413211554792](HTML元素的补充笔记.assets/image-20200413211554792.png)
+
+
+
+
+
+![image-20200413211715852](HTML元素的补充笔记.assets/image-20200413211715852.png)
+
+
+
+
+
+![image-20200413211744333](HTML元素的补充笔记.assets/image-20200413211744333.png)
+
+
+
+![image-20200413211800853](HTML元素的补充笔记.assets/image-20200413211800853.png)
+
+
 
 
 
@@ -3296,7 +3434,195 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 ### vertical-align-line boxes
 
-![image-20200412205013732](HTML元素的补充笔记.assets/image-20200412205013732.png)
+![image-20200413212537998](HTML元素的补充笔记.assets/image-20200413212537998.png)
+
+
+
+![image-20200413213109398](HTML元素的补充笔记.assets/image-20200413213109398.png)
+
+
+
+
+
+![image-20200413213127223](HTML元素的补充笔记.assets/image-20200413213127223.png)
+
+
+
+![image-20200413213224725](HTML元素的补充笔记.assets/image-20200413213224725.png)
+
+
+
+
+
+![image-20200413213240751](HTML元素的补充笔记.assets/image-20200413213240751.png)
+
+
+
+![image-20200413213441462](HTML元素的补充笔记.assets/image-20200413213441462.png)
+
+
+
+
+
+![image-20200413213400158](HTML元素的补充笔记.assets/image-20200413213400158.png)
+
+
+
+![image-20200413213609544](HTML元素的补充笔记.assets/image-20200413213609544.png)
+
+
+
+
+
+
+
+![image-20200413213907516](HTML元素的补充笔记.assets/image-20200413213907516.png)
+
+
+
+
+
+![image-20200413214019764](HTML元素的补充笔记.assets/image-20200413214019764.png)
+
+
+
+![image-20200413214047156](HTML元素的补充笔记.assets/image-20200413214047156.png)
+
+
+
+
+
+![image-20200413214200335](HTML元素的补充笔记.assets/image-20200413214200335.png)
+
+
+
+![image-20200413214323387](HTML元素的补充笔记.assets/image-20200413214323387.png)
+
+
+
+![image-20200413214359296](HTML元素的补充笔记.assets/image-20200413214359296.png)
+
+
+
+
+
+
+
+![image-20200413214909427](HTML元素的补充笔记.assets/image-20200413214909427.png)
+
+
+
+![image-20200413214928611](HTML元素的补充笔记.assets/image-20200413214928611.png)
+
+
+
+
+
+![image-20200413215036908](HTML元素的补充笔记.assets/image-20200413215036908.png)
+
+
+
+![image-20200413215407126](HTML元素的补充笔记.assets/image-20200413215407126.png)
+
+
+
+
+
+
+
+![image-20200413215607585](HTML元素的补充笔记.assets/image-20200413215607585.png)
+
+
+
+
+
+![image-20200413215722098](HTML元素的补充笔记.assets/image-20200413215722098.png)
+
+
+
+![image-20200413215759496](HTML元素的补充笔记.assets/image-20200413215759496.png)
+
+
+
+
+
+![image-20200413215905500](HTML元素的补充笔记.assets/image-20200413215905500.png)
+
+
+
+![image-20200413220032182](HTML元素的补充笔记.assets/image-20200413220032182.png)
+
+
+
+![image-20200413220114651](HTML元素的补充笔记.assets/image-20200413220114651.png)
+
+
+
+![image-20200413220334503](HTML元素的补充笔记.assets/image-20200413220334503.png)
+
+
+
+![image-20200413220445907](HTML元素的补充笔记.assets/image-20200413220445907.png)
+
+
+
+![image-20200413220545781](HTML元素的补充笔记.assets/image-20200413220545781.png)
+
+
+
+![image-20200413220720334](HTML元素的补充笔记.assets/image-20200413220720334.png)
+
+
+
+![image-20200413221116657](HTML元素的补充笔记.assets/image-20200413221116657.png)
+
+
+
+
+
+![image-20200413221313091](HTML元素的补充笔记.assets/image-20200413221313091.png)
+
+
+
+![image-20200413221345018](HTML元素的补充笔记.assets/image-20200413221345018.png)
+
+
+
+![image-20200413221412755](HTML元素的补充笔记.assets/image-20200413221412755.png)
+
+
+
+![image-20200413221551446](HTML元素的补充笔记.assets/image-20200413221551446.png)
+
+
+
+![image-20200413221605823](HTML元素的补充笔记.assets/image-20200413221605823.png)
+
+
+
+
+
+![image-20200413222751623](HTML元素的补充笔记.assets/image-20200413222751623.png)
+
+
+
+![image-20200413222809363](HTML元素的补充笔记.assets/image-20200413222809363.png)
+
+
+
+
+
+![image-20200413223116400](HTML元素的补充笔记.assets/image-20200413223116400.png)
+
+
+
+
+
+![image-20200413223217582](HTML元素的补充笔记.assets/image-20200413223217582.png)
+
+
+
+![image-20200413223235290](HTML元素的补充笔记.assets/image-20200413223235290.png)
 
 
 
