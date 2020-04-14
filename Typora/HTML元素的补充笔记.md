@@ -2594,7 +2594,7 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 ![image-20200412203333053](HTML元素的补充笔记.assets/image-20200412203333053.png)
 
-
+一旦浮动之后，浮动元素就朝着向左或者向右浮动，除非遇到包含块的边界或者其他的浮动元素才会停止浮动。
 
 
 
@@ -2602,7 +2602,7 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 ![image-20200412203359642](HTML元素的补充笔记.assets/image-20200412203359642.png)
 
-
+div里面的文字也是可以被视作是一个行内级元素，所以可以知道，在实际中经常遇到浮动块占据了div的大片位置，从而将div里面的文字挤到一边去了，这也是这个规则的实际应用，就像上图中的图片文字环绕效果一样。
 
 
 
@@ -2671,6 +2671,8 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 ![image-20200412211039489](HTML元素的补充笔记.assets/image-20200412211039489.png)
 
 
+
+### caniuse
 
 ![image-20200412211254849](HTML元素的补充笔记.assets/image-20200412211254849.png)
 
@@ -3378,7 +3380,7 @@ static属性为position的默认属性，没有left,right,top,bottom等其他值
 
 ![image-20200413211348192](HTML元素的补充笔记.assets/image-20200413211348192.png)
 
-
+可以注意到过渡动画属性是添加在.box上面的，代码它的某个属性的变化的过渡动画的效果。
 
 
 
