@@ -82,7 +82,6 @@
 #header .logo-search{
     position: relative;
     height: 100px;
-    border:1px solid red;
 }
 #header .logo-search img{
     position: absolute;
@@ -90,4 +89,79 @@
     bottom:0;
     left:0;
     margin:auto 0;
+}
+
+#header .search-cart{
+    position:absolute;
+    right: 0px;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    height: 40px;
+}
+#header .search-cart .search{
+    position: relative;
+    float: right;;
+    width: 400px;
+    height: 24px;
+    padding:6px 39px 6px 30px;
+    border:2px solid #ff1e32;
+    border-radius: 40px;
+    background-color: #fff;
+}
+#header .search .search-icon{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:10px;
+    margin:auto 0px;
+    width: 14px;
+    height: 14px;
+    background-image: url('../assets/image/kl-sprite-01.png');
+    background-position: -466px -667px;
+}
+#header .search input{
+    height: 24px;
+    width: 400px;
+}
+#header .search .search-bar{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    top:0;
+    bottom:0;
+    right: -1px;
+    margin:auto 0;
+    border-radius: 40px;
+    background-color: #ff1e32;
+    background-image: url("../assets/image/icon-search.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+#header .search-cart .shop-cart{
+    position: relative;
+    float: right;
+    box-sizing: border-box;
+    width: 114px;
+    height: 40px;
+    border:2px solid #ff1e32;
+    border-radius: 40px;
+    margin:0px 40px;
+    padding:6px 20px;
+}
+#header .icon-cart{
+    display:inline-block;
+    background-image: url("../assets/image/shopcart-icon.png");
+    width: 20px;
+    height: 20px;
+}
+#header .search-cart .shop-cart .shop-desc{
+    position: relative;
+    bottom:4px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#header .search-cart .search input::placeholder{
+    font-style: italic;
 }
