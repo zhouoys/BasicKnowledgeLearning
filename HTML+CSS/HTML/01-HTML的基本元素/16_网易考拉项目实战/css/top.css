@@ -1,0 +1,113 @@
+@charset 'utf-8';
+
+/* 菜单栏样式 */
+
+/* #top .top-nav{
+    border: 1px solid red;
+} */
+#top .top-nav .category,
+#top .top-nav .top-nav-list,
+#top .top-nav .top-nav-list li{
+    float:left;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+/* 种类样式 */
+#top .category{
+    position: relative;
+    width: 164px;
+    background:linear-gradient(90deg,red,#ff3264);
+    font-size: 14px;
+    color:#fff;
+}
+/* 分类样式 */
+#top .category .category-list{
+    position: absolute;
+    top:42px;
+    left:0;
+    background:linear-gradient(90deg,red,#ff3264);
+    z-index: 9;
+}
+#top .category .category-list li{
+    height: 41px;
+    width: 160px;
+    line-height: 41px;
+    padding:0px 2px;
+}
+#top .category .category-list li a{
+    display: block;
+    font-size: 14px;
+    color:#fff;
+}
+#top .category .category-list li a img{
+    position: relative;
+    top:0;
+    bottom: 0px;
+    margin:auto 0px;
+    margin-right:8px;
+}
+#top .category .category-list li a img.active{
+    display: none;
+}
+#top .category .category-list li a:hover{
+    background-color: #fff;
+    color:#ff3264;
+}
+#top .category .category-list li a:hover img{
+    display: none;
+}
+#top .category .category-list li a:hover img.active{
+    display: inline-block;
+}
+
+/* tab样式 */
+#top .top-nav-list{
+    padding:0 20px;
+}
+#top .top-nav-list li{
+    margin-right: 5px;
+}
+#top .top-nav-list li a:hover{
+    color:#ff3264;
+}
+#top .top-nav-list li a{
+    display: block;
+    padding:0px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#333;
+}
+#top .category .lineicon{
+    margin:0 8px;
+}
+#top .category .lineicon-first{
+    margin-top:0px;
+}
+/* 轮播图样式 */
+#top .banner{
+    overflow: hidden;
+}
+#top .banner .swiper img {
+    position: relative;
+    transform: translate(-50%);
+    margin-left:50%;
+}
+/* 高斯模糊 */
+#top .serve{
+    position:absolute;
+    height:45px;
+    width: 100%;
+    top:-45px;
+}
+#top .serve .blur{
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    background-image: url("../assets/image/banner.jpg");
+    background-position: center bottom;
+    filter: blur(8px);
+    z-index: 9;
+}

@@ -4,3 +4,21 @@
     width: 1100px;
     margin:0 auto;
 }
+/* lineicon样式 */
+.lineicon{
+    display:inline-block
+}
+.lineicon i{
+    display:block;
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    margin-top:3px
+}
+
+/* 左箭头字体样式 */
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
