@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/* brand描述样式 */
+#main .brand{
+    padding:25px 0px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    margin-top: 25px;
+}
+#main .brand .desc{
+    width: 230px;
+    height: 33px;
+}
+#main .brand .desc h2,#main .brand .desc span{
+    float:left;
+}
+#main .brand .desc h2{
+    font-size: 22px;
+    color:#333;
+    margin-right: 25px;
+}
+#main .brand .desc span{
+    color:#999999;
+    font-size: 14px;
+    padding-top:9px
+}
+/* brand的内容 */
+/* brand-left的css */
+#main .brand-content .brand-left{
+    width: 219px;
+    height: 355px;
+    float:left;
+    background-color: #151515;
+    border-right: 1px solid #eaeaea;
+}
+#main .brand-content .brand-left img{
+    height: 219px;
+    width: 219px;
+}
+#main .brand-content .brand-left .programess{
+    height: 1px;
+    background-color: #ff1e32;
+}
+#main .brand-content .brand-left .info{
+    display: block;
+    height: 135px;
+    width: 100%;
+    color:#fff;
+    text-align: center;
+    padding-top:40px;
+}
+#main .brand-content .brand-left .info span{
+    display: block;
+}
+#main .brand-content .brand-left .info .brand-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+#main .brand-content .brand-left .info .brand-desc{
+    font-size: 14px;
+}
+
+/* .brand-right的css */
+#main .brand-content .brand-right{
+    float:left;
+    width: 880px;
+    height:354px;
+    border-bottom: 1px solid #999999;
+}
+#main .brand-content .brand-right li{
+    position: relative;
+    float: left;
+    width: 219px;
+    height: 176px;
+    border-top:1px solid #999999;
+    border-right: 1px solid #999999;
+    text-align: center;
+    background-color: #fff;
+}
+
+#main .brand .brand-right a,
+#main .brand .brand-right a span{
+    display: block;
+}
+#main .brand .brand-right a img{
+    margin-top: 12px;
+    transition: transform 0.5s ease;
+    transform-origin: center 0;
+}
+#main .brand-right li:hover img{
+    /* 图片缩放0.5倍 */
+    transform: scale(0.7); 
+}
+#main .brand-right a span{
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+#main .brand-right .brand-entrance{
+    /* 默认为隐藏 */
+    opacity: 0; 
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    transition: opacity 0.5s ease;
+}
+/* 悬浮显示 */
+#main .brand-right li:hover .brand-entrance{
+    opacity: 1;
+}
+/* 悬浮影藏 */
+#main .brand-right li:hover .brand-right-desc{
+    opacity: 0;
+}
+
+#main .brand-right .brand-entrance 
+.brand-focus{
+    position: absolute;
+    top:10px;
+    left:10px;
+    width: 52px;
+    height: 20px;
+    line-height: 20px;
+    border:1px solid #999;
+    border-radius: 21px;
+    color:#999;
+}
+#main .brand-right .brand-entrance div{
+    position: absolute;
+    bottom:10px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+}
+#main .brand-right .brand-entrance a{
+    display: inline-block;
+    width: 80px;
+    height: 36px;
+    border:2px solid #ff1e32;
+    border-radius: 20px;
+    line-height: 36px;
+    font-size: 14px;
+    color:#ff1e32;
+    text-align: center;
+    margin-top:7px;
+}
+/* 悬浮时候变动样式 */
+
