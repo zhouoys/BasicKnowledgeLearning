@@ -3676,11 +3676,26 @@ div里面的文字也是可以被视作是一个行内级元素，所以可以�
 
 ![image-20200416153355489](HTML元素的补充笔记.assets/image-20200416153355489.png)
 
+### opacity
 
+**此处新添加的opacity:0是因为display属性不能支持transition，所以采用opactiy:0**
+
+设置 div 元素的不透明级别：
+
+```
+div
+{
+opacity:0.5;
+}
+```
+
+opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全不透明
+
+规定不透明度。从 0.0 （完全透明）到 1.0（完全不透明）。
 
 ![image-20200416154112438](HTML元素的补充笔记.assets/image-20200416154112438.png)
 
-
+**此处对于transition这个属性，可以同时设置多个属性的动画效果，例如上面的transition：首先设置了transform这个属性的动画，然后，在创建了基于margin-top的动画效果**
 
 
 
@@ -3714,9 +3729,9 @@ div里面的文字也是可以被视作是一个行内级元素，所以可以�
 
 ![image-20200416160359474](HTML元素的补充笔记.assets/image-20200416160359474.png)
 
-语义化元素，其实质可以理解为就是一个“div”，例如<header></header> 其在chrome中的显示机制就是
+语义化元素，其实质可以理解为就是一个“div”，例如<header></header> 其在chrome中的显示机制就是一个普通的元素
 
-<header></header>然后在浏览器的代理样式中添加了display:block这样样式，是不是跟<span></span>套一个display:inline是一样的
+如<header></header>然后在浏览器的代理样式中添加了display:block这样样式，是不是跟<span></span>套一个display:inline是一样的
 
 
 
@@ -3825,7 +3840,7 @@ div里面的文字也是可以被视作是一个行内级元素，所以可以�
     <input type="text" autofocus>
     <!-- type="data" -->
     <input type="date">
-    <!-- type="datetime"-->
+    <!-- type="time"-->
     <input type="time">
     <!-- type="number" -->
     <input type="number">
@@ -3849,7 +3864,44 @@ div里面的文字也是可以被视作是一个行内级元素，所以可以�
 
 ![image-20200416160742913](HTML元素的补充笔记.assets/image-20200416160742913.png)
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 从资源中引入设计好的字体资源 */
+        @font-face {
+            /* 给引入的字体资源取一个名字 */
+            font-family: zw01;
+            /* 利用统一资源定位符获取字体文件资源 */
+            src: url("../source/Zhi_Mang_Xing/ZhiMangXing-Regular.ttf");
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            color:red;
+            font-size: 30px;
+            border:1px solid #000;
+        }
+        .box{
+            /* 在元素的选择器中使用font-family属性，其值为之前所取的名字 */
+            font-family: zw01;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        我是一个野指针，我没得对象
+    </div>
+    
+</body>
+</html>
+~~~
 
+![image-20200418173125659](HTML元素的补充笔记.assets/image-20200418173125659.png)
 
 
 
@@ -3861,13 +3913,13 @@ div里面的文字也是可以被视作是一个行内级元素，所以可以�
 
 ![image-20200417145306815](HTML元素的补充笔记.assets/image-20200417145306815.png)
 
+**此处为了处理浏览器的兼容性问题，所以同时添加了多个字体文件，换言之，总有一个适合你的**
+
 
 
 ![image-20200417145512546](HTML元素的补充笔记.assets/image-20200417145512546.png)
 
-
-
-
+**以上，可以同时设置多个自定义的字体，设置的样式均以往上相同，只是取的名字不同**
 
 
 

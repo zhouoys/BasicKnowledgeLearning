@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 从资源中引入设计好的字体资源 */
+        @font-face {
+            /* 给引入的字体资源取一个名字 */
+            font-family: zw01;
+            /* 利用统一资源定位符获取字体文件资源 */
+            src: url("../source/Zhi_Mang_Xing/ZhiMangXing-Regular.ttf");
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            color:red;
+            font-size: 30px;
+            border:1px solid #000;
+        }
+        .box{
+            /* 在元素的选择器中使用font-family属性，其值为之前所取的名字 */
+            font-family: zw01;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        我是一个野指针，我没得对象
+    </div>
+    
+</body>
+</html>
