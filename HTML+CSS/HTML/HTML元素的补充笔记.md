@@ -3945,6 +3945,14 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 
 ![image-20200417150033901](HTML元素的补充笔记.assets/image-20200417150033901.png)
 
+
+
+此处有一个问题，如果有多个文字呢？是否就是有多个图标，也就是如何将图标插入到指定的内容中去，这是一个值得注意的点
+
+#### 阿里巴巴图标库使用流程
+
+##### 第一步添加入库
+
 ![image-20200417150857046](HTML元素的补充笔记.assets/image-20200417150857046.png)
 
 
@@ -3969,6 +3977,8 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 
 
 
+##### 第二步下载图标
+
 ![image-20200417152153646](HTML元素的补充笔记.assets/image-20200417152153646.png)
 
 
@@ -3981,7 +3991,7 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 
 ![image-20200417152523421](HTML元素的补充笔记.assets/image-20200417152523421.png)
 
-
+##### 第三步拷贝图标代码
 
 ![image-20200417152707042](HTML元素的补充笔记.assets/image-20200417152707042.png)
 
@@ -3995,29 +4005,89 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 
 
 
-
+##### 第四步对字体图标进行相应的颜色大小设置
 
 ![image-20200417153005598](HTML元素的补充笔记.assets/image-20200417153005598.png)
 
 
 
-第二种引入字体图标的方式
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标</title>
+    <style>
+        /* 引入阿里巴巴图标库设计的字体 */
+        @font-face {
+            /* 重新命名图标 */
+            font-family:zw-alibabaicon;
+            /* 同时添加多个字体资源，以便于兼容不同的浏览器 */
+            src: url("../source/download/font_alibaba/iconfont.eot"),
+                 url("../source/download/font_alibaba/iconfont.ttf"),
+                 url("../source/download/font_alibaba/iconfont.woff"),
+                 url("../source/download/font_alibaba/iconfont.woff2"),
+                 url("../source/download/font_alibaba/iconfont.svg")
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border:1px solid red;
+            margin:20px auto;
+        }
+        p{
+            /* 引用相应的字体资源 */
+            font-family: zw-alibabaicon;
+            /* 对字体图标添加字体相关的样式 */
+            font-weight: 700px;
+            font-size: 20px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 测试字体图标方式一 -->
+    <div class="box">
+        <!-- 在对应的p标签中写入相应的图标对应的编码 -->
+        <p>&#xe612;</p>
+        <p>&#xe667;</p>
+        <p>&#xe60f;</p>
+        <p>&#xe63b;</p>
+        <p>&#xe608;</p>
+    </div>
+    
+</body>
+</html>
+~~~
+
+![image-20200419160933458](HTML元素的补充笔记.assets/image-20200419160933458.png)
+
+
+
+##### 第二种引入字体图标的方式
 
 ![image-20200417153408905](HTML元素的补充笔记.assets/image-20200417153408905.png)
 
 
 
+###### 拷贝infont.css文件到相应的文件夹
+
 ![image-20200417153536517](HTML元素的补充笔记.assets/image-20200417153536517.png)
 
 
 
+###### 在对应的html文件中引入css文件
+
 ![image-20200417153645021](HTML元素的补充笔记.assets/image-20200417153645021.png)
 
-
+###### 在html中直接引用.infont的类
 
 ![image-20200417153813316](HTML元素的补充笔记.assets/image-20200417153813316.png)
 
 
+
+###### 添加对应的图标代码
 
 ![image-20200417153904151](HTML元素的补充笔记.assets/image-20200417153904151.png)
 
@@ -4033,9 +4103,11 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 
 
 
-
+###### 利用伪类来进行处理避免图标代码
 
 ![image-20200417154241697](HTML元素的补充笔记.assets/image-20200417154241697.png)
+
+
 
 
 
@@ -4044,6 +4116,44 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 
 
 ![image-20200417154436034](HTML元素的补充笔记.assets/image-20200417154436034.png)
+
+~~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../source/download/font_alibaba/iconfont.css">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin:20 auto;
+        }
+        /* 重新定义默认字体图标的颜色 */
+        .iconfont{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="iconfont icon-gongju"></p>
+        <p class="iconfont hongbao"></p>
+        <p class="iconfont icon-cocktail"></p>
+        <p class="iconfont icon-compass"></p>
+        <p class="iconfont icon-CombinedShape"></p>
+        <p class="iconfont icon-gongju"></p>
+    </div>
+    
+</body>
+</html> 
+~~~~
+
+
+
+![image-20200419183429490](HTML元素的补充笔记.assets/image-20200419183429490.png)
 
 
 
@@ -4063,13 +4173,55 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 
 ![image-20200416160952617](HTML元素的补充笔记.assets/image-20200416160952617.png)
 
+###### transition动画
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin:100px auto;
+            transition: transform 1s linear;
+        }
+        .box:hover {
+            transform : scale(1.5) translate(200px,0) rotate(45deg)
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>
+~~~
+
+
+
+
+
+![image-20200419202443979](HTML元素的补充笔记.assets/image-20200419202443979.png)
+
+
+
+
+
+###### animation动画
 
 ![image-20200417162117513](HTML元素的补充笔记.assets/image-20200417162117513.png)
 
 
 
-
+###### @keyframes
 
 ![image-20200417162322090](HTML元素的补充笔记.assets/image-20200417162322090.png)
 
@@ -4110,6 +4262,64 @@ opacity属性修改元素的不透明度，0表示完全透明 ，1表示完全�
 ![image-20200416161041244](HTML元素的补充笔记.assets/image-20200416161041244.png)
 
 ![image-20200417165411525](HTML元素的补充笔记.assets/image-20200417165411525.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin:200px auto;
+            background-color: red;;
+        }
+        .box:hover{
+            animation: zwanimation 1s ease infinite;
+        }
+        @keyframes zwanimation {
+            0%{
+                transform: translate(0,0) scale(1)
+            }
+
+            25%{
+                transform: translate(100,0) scale(1.5)
+            }
+
+            50%{
+                transform: translate(100px,100px) scale(2)
+            }
+
+            75%{
+                transform: translate(0,100px) scale(1.5)
+            }
+            100%{
+                transform: translate(0,0) scale(1)
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>
+~~~
+
+
+
+![image-20200419204157182](HTML元素的补充笔记.assets/image-20200419204157182.png)
+
+
 
 
 
@@ -4245,9 +4455,7 @@ https://www.crx4chrome.com/
 
 ![image-20200417165809868](HTML元素的补充笔记.assets/image-20200417165809868.png)
 
-
-
-
+**前缀不需要自己手动添加，一般在项目中通过webpack可以打包自动在相应的属性上面添加对应浏览器的后缀名。**
 
 
 
@@ -4276,6 +4484,104 @@ https://www.crx4chrome.com/
 
 
 ![image-20200417173130156](HTML元素的补充笔记.assets/image-20200417173130156.png)
+
+### 最多显示一行文字且有点数表示剩余文字
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* 禁止换行 */
+            white-space: nowrap;
+            /* 溢出的那行用...表示 */
+            text-overflow: ellipsis;
+            /* 超出父元素部分隐藏 */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+2000年1月，李彦宏以超链分析专利为技术基础，带着融到的第一笔风险投资120万美元，
+在北大资源宾馆租了两间房，与好友徐勇先生共同创建百度。9个月之后，风险投资商德丰杰联合IDG又向百度投入了1000万美元。 [1] 
+2001年，李彦宏在百度董事会上说服股东，将百度转型为面向终端用户的独立搜索引擎网站，并实施“闪电计划”对百度实行技术升级，
+使百度成为全球第二大独立搜索引擎，在中文搜索引擎中名列第一。 [1] 
+2005年8月，百度在美国纳斯达克成功上市，成为全球资本市场最受关注的上市公司之一。 [1] 
+2009年，李彦宏提出框计算技术理念，并陆续推出“数据开放平台”、“应用开放平台”，构建互联网全新产业生态。 [12] 
+2013年，李彦宏在百度建设中国首个深度学习研究院，成为中国乃至全球率先推动人工智能前沿科技研究的企业家。 [13] 
+2015年，李彦宏倡议在国家层面建立“中国大脑”计划，以人工智能为核心抢占新一轮科技革命制高点。 [14] 
+2017年，百度牵头筹建深
+    </div>
+</body>
+</html>
+~~~
+
+![image-20200419205724340](HTML元素的补充笔记.assets/image-20200419205724340.png)
+
+### 最多显示两行文字且有点数表示剩余文字
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            width: 200px;
+            height: 43px;
+            background-color: red;
+            color:#fff;
+            /* 多行超出显示省略号 */
+            overflow: hidden;
+            text-overflow: elipsis;
+            display:-webkit-box;
+            /* 2行 */
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+          
+        }
+/* 注意：-webkit-line-clamp是一个 不规范的属性
+（unsupported WebKit property），
+它没有出现在 CSS 规范草案中。只适用于WebKit内核的浏览器，
+因此firebox、ie等并不支持该属性。 */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        2000年1月，李彦宏以超链分析专利为技术基础，带着融到的第一笔风险投资120万美元，
+        在北大资源宾馆租了两间房，与好友徐勇先生共同创建百度。9个月之后，风险投资商德丰杰联合IDG又向百度投入了1000万美元。 [1] 
+        2001年，李彦宏在百度董事会上说服股东，将百度转型为面向终端用户的独立搜索引擎网站，并实施“闪电计划”对百度实行技术升级，
+        使百度成为全球第二大独立搜索引擎，在中文搜索引擎中名列第一。 [1] 
+        2005年8月，百度在美国纳斯达克成功上市，成为全球资本市场最受关注的上市公司之一。 [1] 
+        2009年，李彦宏提出框计算技术理念，并陆续推出“数据开放平台”、“应用开放平台”，构建互联网全新产业生态。 [12] 
+        2013年，李彦宏在百度建设中国首个深度学习研究院，成为中国乃至全球率先推动人工智能前沿科技研究的企业家。 [13] 
+        2015年，李彦宏倡议在国家层面建立“中国大脑”计划，以人工智能为核心抢占新一轮科技革命制高点。 [14] 
+        2017年，百度牵头筹建深
+    </div>
+</body>
+</html>
+~~~
+
+
+
+![image-20200419211244113](HTML元素的补充笔记.assets/image-20200419211244113.png)
+
+
+
+
 
 
 

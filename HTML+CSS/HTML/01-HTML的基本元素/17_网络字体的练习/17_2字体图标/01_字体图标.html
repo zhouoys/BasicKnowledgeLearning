@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>字体图标</title>
+    <style>
+        /* 引入阿里巴巴图标库设计的字体 */
+        @font-face {
+            /* 重新命名图标 */
+            font-family:zw-alibabaicon;
+            /* 同时添加多个字体资源，以便于兼容不同的浏览器 */
+            src: url("../source/download/font_alibaba/iconfont.eot"),
+                 url("../source/download/font_alibaba/iconfont.ttf"),
+                 url("../source/download/font_alibaba/iconfont.woff"),
+                 url("../source/download/font_alibaba/iconfont.woff2"),
+                 url("../source/download/font_alibaba/iconfont.svg")
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border:1px solid red;
+            margin:20px auto;
+        }
+        p{
+            /* 引用相应的字体资源 */
+            font-family: zw-alibabaicon;
+            /* 对字体图标添加字体相关的样式 */
+            font-weight: 700px;
+            font-size: 20px;
+            color:red;
+        }
+    </style>
 </head>
 <body>
+    <!-- 测试字体图标方式一 -->
+    <div class="box">
+        <!-- 在对应的p标签中写入相应的图标对应的编码 -->
+        <p>&#xe612;</p>
+        <p>&#xe667;</p>
+        <p>&#xe60f;</p>
+        <p>&#xe63b;</p>
+        <p>&#xe608;</p>
+    </div>
     
 </body>
 </html>

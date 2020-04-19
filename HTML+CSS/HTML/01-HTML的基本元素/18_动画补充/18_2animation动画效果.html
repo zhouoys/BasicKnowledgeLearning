@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin:200px auto;
+            background-color: red;;
+        }
+        .box:hover{
+            animation: zwanimation 1s ease infinite;
+        }
+        @keyframes zwanimation {
+            0%{
+                transform: translate(0,0) scale(1)
+            }
+
+            25%{
+                transform: translate(100,0) scale(1.5)
+            }
+
+            50%{
+                transform: translate(100px,100px) scale(2)
+            }
+
+            75%{
+                transform: translate(0,100px) scale(1.5)
+            }
+            100%{
+                transform: translate(0,0) scale(1)
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "id": "1765262",
+  "name": "zw-iconfont",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1240021",
+      "name": "icon_tool",
+      "font_class": "gongju",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "1276164",
+      "name": "icon_red_packet",
+      "font_class": "hongbao",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "2205916",
+      "name": "icon-cocktail",
+      "font_class": "cocktail",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "2206639",
+      "name": "icon-compass",
+      "font_class": "compass",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "4573826",
+      "name": "icon-side bar-01",
+      "font_class": "CombinedShape",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    }
+  ]
+}
