@@ -1,0 +1,20 @@
+/* 这个是专门用于保存到编译之后的css的文件中的注释*/
+.container {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  padding: 100px 100px;
+  margin: 100px auto;
+}
+/* 可以看到.container与.box成了兄弟关系 */
+.container.box {
+  height: 100px;
+  width: 100px;
+  background-color: #f00;
+  margin: 0 auto;
+}
+.imgUrl {
+  background: url("../../image/01.png") no-repeat;
+  width: 200px;
+  height: 200px;
+}

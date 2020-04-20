@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/less">
+        .container{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            padding:100px 100px;
+            margin:100px auto;
+            /* 此处的less语法在html页面中直接报错，浏览器也执行不了，但是添加了less.min.js之后就可以执行了，但页面仍然提示报错 */
+            .box{
+            height: 100px;
+            width: 100px;
+            background-color: purple;
+            margin:0 auto;
+            }
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    
+</body>
+<script src="../js/less.min.js"></script>
+</html>

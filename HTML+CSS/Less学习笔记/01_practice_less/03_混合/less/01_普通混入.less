@@ -1,0 +1,30 @@
+// 使用混入
+.center{
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom:0;
+    margin:auto;
+
+}
+.container{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin:200px auto;
+    background-color: seagreen;
+    .outer{
+        width: 250px;
+        height: 250px;
+        background-color: sienna;
+        .center;
+    }
+    .inner{
+        width: 100px;
+        height: 100px;
+        background-color:purple; 
+        .center;
+    }
+  
+}

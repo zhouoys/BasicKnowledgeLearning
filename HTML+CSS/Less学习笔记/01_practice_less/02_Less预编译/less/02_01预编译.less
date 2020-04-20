@@ -1,0 +1,23 @@
+// 这个是Less开发时的注释，将不会保存到编译之后的文件中
+/* 这个是专门用于保存到编译之后的css的文件中的注释*/
+@outbgc:purple;
+@inbgc:#f00;
+@imgUrl:"../../image";
+.container{
+    width: 100px;
+    height: 100px;
+    background-color:@outbgc;
+    padding:100px 100px;
+    margin:100px auto;
+    &.box{
+    height: 100px;
+    width: 100px;
+    background-color: @inbgc;
+    margin:0 auto;
+    }
+}
+.imgUrl{
+    background: url("@{imgUrl}/01.png") no-repeat;
+    width: 200px;
+    height: 200px;
+}
