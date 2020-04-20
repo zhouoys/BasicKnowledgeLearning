@@ -1,12 +1,5 @@
-.center {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
 .container {
+  /*直接计算*/
   width: 400px;
   height: 400px;
   position: relative;
@@ -14,24 +7,28 @@
   background-color: seagreen;
 }
 .container .outer {
-  width: 250px;
-  height: 250px;
-  background-color: sienna;
+  /*输入实参,并且计算 */
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+  /*携带参数的混合*/
+  width: 270px;
+  height: 230px;
+  background-color: sienna;
 }
 .container .inner {
-  width: 100px;
-  height: 100px;
-  background-color: purple;
+  /*指定形参名输入实参,并且计算 */
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+  /*携带参数的混合*/
+  width: 100px;
+  height: 150px;
+  background-color: red;
 }

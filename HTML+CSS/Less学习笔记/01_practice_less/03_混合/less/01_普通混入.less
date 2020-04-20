@@ -1,30 +1,31 @@
-// 使用混入
-.center{
+// 使用混合，同时混合携带参数,注意参数的顺序，less无法判断为第几个参数
+.center(@w:100px,@h:200px,@c:purple){
     position: absolute;
     left:0;
     right: 0;
     top:0;
     bottom:0;
     margin:auto;
+    // 携带参数的混合
+    /*携带参数的混合*/
+    width: @w;
+    height: @h;
+    background-color: @c;
 
 }
 .container{
-    width: 400px;
+    /*直接计算*/ 
+    width: 40*10px;
     height: 400px;
     position: relative;
     margin:200px auto;
     background-color: seagreen;
     .outer{
-        width: 250px;
-        height: 250px;
-        background-color: sienna;
-        .center;
+         /*输入实参,并且计算 */
+        .center(250px+20,250-20px,sienna);
     }
     .inner{
-        width: 100px;
-        height: 100px;
-        background-color:purple; 
-        .center;
+        /*指定形参名输入实参,并且计算 */
+        .center(@h:100*1.5px,@c:red);
     }
-  
 }
