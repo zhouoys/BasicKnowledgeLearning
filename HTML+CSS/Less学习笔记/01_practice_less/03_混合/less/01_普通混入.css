@@ -15,7 +15,7 @@
   bottom: 0;
   margin: auto;
   /*携带参数的混合*/
-  width: 270px;
+  width: 280px;
   height: 230px;
   background-color: sienna;
 }
@@ -32,3 +32,4 @@
   height: 150px;
   background-color: red;
 }
+/*# sourceMappingURL=./01_普通混入.css.map */

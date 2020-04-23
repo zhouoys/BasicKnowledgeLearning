@@ -1620,6 +1620,8 @@ less：
 
 
 
+**注意插件安装好了之后，less文件必须要重新编译，才会出现map文件，因此需要稍微修改less文件。返回浏览器之后，如果style sheet旁边没有出现less文件路径，不妨刷新一下浏览器，就可以了**
+
 
 
 ## Less学习的后续补充
@@ -1628,11 +1630,105 @@ less：
 
 
 
+### 原生css也可以使用变量
+
+~~~html
+html{
+--color:red;
+}
+.box1{
+background-color:var(--color)
+}
+~~~
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --color:green;
+        }
+       div{
+           width: 100px;
+           height: 100px;
+           border:1px solid red;
+       }
+       .container{
+      
+           /* 使用css自带的变量 */
+        background-color: var(--color);
+       }
+       .box1{
+        background-color: var(--color);
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+    <div class="box1"></div>
+    
+</body>
+</html>
+~~~
+
+![image-20200423215228882](Less学习笔记.assets/image-20200423215228882.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: var(--color);
+        }
+       div{
+           width: 100px;
+           height: 100px;
+           border:1px solid red;
+       }
+       .container{
+      
+           /* 使用css自带的变量 */
+           --color:green;
+           background-color: var(--color);
+       }
+       .box1{
+        background-color: var(--color);
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+    <div class="box1"></div>
+    
+</body>
+</html>
+~~~
+
+![image-20200423215437422](Less学习笔记.assets/image-20200423215437422.png)
+
+
+
+
+
+
+
 ![image-20200422104721824](Less学习笔记.assets/image-20200422104721824.png)
 
+**父元素的变量后代元素可以直接使用，可是后代元素的变量，父元素不能使用**
 
-
-
+### 原生css的计算函数：calc()
 
 ![image-20200422104943988](Less学习笔记.assets/image-20200422104943988.png)
 
@@ -1734,13 +1830,13 @@ less：
 
 
 
-
+### 颜色平均 color:average()
 
 ![image-20200422113452418](Less学习笔记.assets/image-20200422113452418.png)
 
 
 
-
+### 颜色加深:darken()
 
 ![image-20200422113648172](Less学习笔记.assets/image-20200422113648172.png)
 
