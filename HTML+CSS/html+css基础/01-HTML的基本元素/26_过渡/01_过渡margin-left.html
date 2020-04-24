@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 400px;
+            background-color: purple;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            margin-left:auto;
+            /* 过渡属性名称 */
+            transition-property: all;
+            /* 过渡持续时间 */
+            transition-duration: 1000ms;
+            /* 过渡贝塞尔曲线，也就是速度曲线 */
+            transition-timing-function:ease-in
+        }
+       .container:hover .box1{
+            margin-left: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+    </div>
+</body>
+</html>

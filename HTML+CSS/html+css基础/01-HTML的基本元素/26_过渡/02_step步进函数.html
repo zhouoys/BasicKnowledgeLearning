@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+
+            width: 700px;
+            height: 500px;
+            background-color: red;
+            margin:30px auto;
+        }
+        .box1{
+            width: 200px;
+            height: 150px;
+            background-color: purple;
+            margin-left: 0px;
+            transition-property:margin-left;
+            transition-duration:5s;
+            /* steps:后面的end|start作用就是
+            间隔一秒之后再步进，还是先步进再间隔一秒 */
+            transition-timing-function:steps(5,start)
+
+        }
+        .box2{
+            width: 200px;
+            height: 150px;
+            background-color:green;
+            margin-left: 0px;
+            transition-property:margin-left;
+            transition-duration:5s;
+            /* 注释步进函数 */
+            /* transition-timing-function:steps(5,start) */
+
+        }
+        .container:hover .box1,.container:hover .box2{
+            margin-left:500px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    
+</body>
+</html>

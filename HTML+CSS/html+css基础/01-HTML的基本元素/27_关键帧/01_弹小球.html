@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=di, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 900px;
+            height: 600px;
+            background-color: indianred;
+            margin:0 auto;
+        }
+        .container div{
+            float: left;
+            margin-right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* 动画设置 */
+            animation-name: Keyframes;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-iteration-count:infinite;
+            /* 设置从0% 到100% 时是否返回以及如何返回 */
+            animation-direction:alternate;
+            animation-fill-mode: forwards;
+
+        }
+        /* 鼠标放入暂停 */
+        .container:hover div{
+            animation-play-state:paused
+        }
+        .container .box1{
+            background-color: red;
+        }
+        .container .box2{
+            background-color: orange;
+            animation-delay: 0.2s;
+        } .container .box3{
+            background-color: yellow;
+            animation-delay: 0.4s;
+        } .container .box4{
+            background-color: green;
+            animation-delay: 0.6s;
+        } .container .box5{
+            background-color: cyan;
+            animation-delay: 0.8s;
+        } .container .box6{
+            background-color: blue;
+            animation-delay: 1.0s;
+        } .container .box7{
+            background-color:purple;
+            animation-delay: 1.2s;
+        } .container .box8{
+            background-color:brown;
+            animation-delay: 1.4s;
+        }
+        @keyframes Keyframes {
+            0%{
+                margin-top: 0;
+            }
+            20%,60%,100%{
+                margin-top: 500px;
+                transition-timing-function: ease-in;
+            }
+            40%{
+                margin-top:100px
+            }
+            80%{
+                margin-top: 200px;
+            }
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+    </div>
+</body>
+</html>
