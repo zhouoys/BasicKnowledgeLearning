@@ -204,6 +204,14 @@
 
 
 
+![image-20200425105702297](JavaScript基础.assets/image-20200425105702297.png)
+
+
+
+
+
+
+
 ## 数据类型
 
 ![image-20200422180559396](JavaScript基础.assets/image-20200422180559396.png)
@@ -219,6 +227,10 @@
 
 
 ![image-20200422180931609](JavaScript基础.assets/image-20200422180931609.png)
+
+
+
+![image-20200425110919668](JavaScript基础.assets/image-20200425110919668.png)
 
 
 
@@ -240,11 +252,23 @@
 
 
 
+![image-20200425111539840](JavaScript基础.assets/image-20200425111539840.png)
+
+
+
 ![image-20200422181305447](JavaScript基础.assets/image-20200422181305447.png)
 
 
 
+![image-20200425111626116](JavaScript基础.assets/image-20200425111626116.png)
+
+
+
 ![image-20200422181341069](JavaScript基础.assets/image-20200422181341069.png)
+
+
+
+![image-20200425111715563](JavaScript基础.assets/image-20200425111715563.png)
 
 
 
@@ -260,11 +284,29 @@
 
 
 
+![image-20200425112044367](JavaScript基础.assets/image-20200425112044367.png)
+
+
+
+
+
+
+
 ![image-20200422181657136](JavaScript基础.assets/image-20200422181657136.png)
 
 
 
+![image-20200425112210207](JavaScript基础.assets/image-20200425112210207.png)
+
+
+
 ![image-20200422181724986](JavaScript基础.assets/image-20200422181724986.png)
+
+
+
+![image-20200425112406654](JavaScript基础.assets/image-20200425112406654.png)
+
+
 
 
 
@@ -273,6 +315,10 @@
 
 
 ![image-20200422181812945](JavaScript基础.assets/image-20200422181812945.png)
+
+
+
+![image-20200425112759419](JavaScript基础.assets/image-20200425112759419.png)
 
 
 
@@ -306,6 +352,12 @@
 
 
 
+![image-20200425113537629](JavaScript基础.assets/image-20200425113537629.png)
+
+
+
+![image-20200425113643234](JavaScript基础.assets/image-20200425113643234.png)
+
 
 
 
@@ -313,6 +365,10 @@
 ### 获取变量数据类型
 
 ![image-20200422195830972](JavaScript基础.assets/image-20200422195830972.png)
+
+
+
+![image-20200425113844407](JavaScript基础.assets/image-20200425113844407.png)
 
 
 
@@ -337,6 +393,18 @@
 
 
 ![image-20200422200232172](JavaScript基础.assets/image-20200422200232172.png)
+
+
+
+![image-20200425114748645](JavaScript基础.assets/image-20200425114748645.png)
+
+
+
+![image-20200425115050233](JavaScript基础.assets/image-20200425115050233.png)
+
+
+
+![image-20200425115247225](JavaScript基础.assets/image-20200425115247225.png)
 
 
 
@@ -440,11 +508,27 @@
 
 
 
+![image-20200425145225488](JavaScript基础.assets/image-20200425145225488.png)
+
+
+
+![image-20200425145317447](JavaScript基础.assets/image-20200425145317447.png)
+
+
+
+
+
+
+
 ![image-20200422204820655](JavaScript基础.assets/image-20200422204820655.png)
 
 
 
 ![image-20200422204857115](JavaScript基础.assets/image-20200422204857115.png)
+
+
+
+![image-20200425145639890](JavaScript基础.assets/image-20200425145639890.png)
 
 
 
@@ -476,6 +560,14 @@
 
 
 
+![image-20200425150149136](JavaScript基础.assets/image-20200425150149136.png)
+
+
+
+![image-20200425150421408](JavaScript基础.assets/image-20200425150421408.png)
+
+
+
 
 
 ### 比较运算符
@@ -491,6 +583,10 @@
 
 
 ![image-20200422205738215](JavaScript基础.assets/image-20200422205738215.png)
+
+
+
+![image-20200425152052165](JavaScript基础.assets/image-20200425152052165.png)
 
 
 
@@ -524,6 +620,12 @@
 
 
 
+![image-20200425152829564](JavaScript基础.assets/image-20200425152829564.png)
+
+
+
+
+
 ![image-20200422210221328](JavaScript基础.assets/image-20200422210221328.png)
 
 
@@ -531,6 +633,8 @@
 ![image-20200422210309240](JavaScript基础.assets/image-20200422210309240.png)
 
 
+
+![image-20200425153042838](JavaScript基础.assets/image-20200425153042838.png)
 
 
 
@@ -712,7 +816,19 @@
 
 
 
+![image-20200425160310963](JavaScript基础.assets/image-20200425160310963.png)
+
+
+
+
+
 ![image-20200422213242530](JavaScript基础.assets/image-20200422213242530.png)
+
+
+
+![image-20200425160500091](JavaScript基础.assets/image-20200425160500091.png)
+
+
 
 
 
@@ -764,7 +880,19 @@
 
 
 
+![image-20200425161546806](JavaScript基础.assets/image-20200425161546806.png)
+
+
+
+
+
 ![image-20200422214350851](JavaScript基础.assets/image-20200422214350851.png)
+
+
+
+![image-20200425161902897](JavaScript基础.assets/image-20200425161902897.png)
+
+
 
 
 
@@ -812,6 +940,16 @@
 
 
 
+![image-20200425163321273](JavaScript基础.assets/image-20200425163321273.png)
+
+
+
+![image-20200425163335799](JavaScript基础.assets/image-20200425163335799.png)
+
+
+
+
+
 ![image-20200422215523353](JavaScript基础.assets/image-20200422215523353.png)
 
 
@@ -850,6 +988,12 @@
 
 
 
+![image-20200425164521254](JavaScript基础.assets/image-20200425164521254.png)
+
+
+
+
+
 ![image-20200422220209181](JavaScript基础.assets/image-20200422220209181.png)
 
 
@@ -859,6 +1003,12 @@
 
 
 ![image-20200422220744224](JavaScript基础.assets/image-20200422220744224.png)
+
+
+
+![image-20200425164915149](JavaScript基础.assets/image-20200425164915149.png)
+
+
 
 
 
@@ -888,11 +1038,27 @@
 
 
 
+![image-20200425165532303](JavaScript基础.assets/image-20200425165532303.png)
+
+
+
 ![image-20200422221320221](JavaScript基础.assets/image-20200422221320221.png)
 
 
 
+![image-20200425165653488](JavaScript基础.assets/image-20200425165653488.png)
+
+
+
+
+
 ![image-20200422221335784](JavaScript基础.assets/image-20200422221335784.png)
+
+
+
+![image-20200425165815987](JavaScript基础.assets/image-20200425165815987.png)
+
+
 
 
 
@@ -911,6 +1077,12 @@
 
 
 ![image-20200422221533331](JavaScript基础.assets/image-20200422221533331.png)
+
+
+
+![image-20200425170200420](JavaScript基础.assets/image-20200425170200420.png)
+
+
 
 
 
@@ -1276,6 +1448,12 @@
 
 
 
+![image-20200425211942066](JavaScript基础.assets/image-20200425211942066.png)
+
+
+
+
+
 ![image-20200423102244737](JavaScript基础.assets/image-20200423102244737.png)
 
 
@@ -1305,8 +1483,6 @@
 ### arguments的使用
 
 ![image-20200423102718823](image-20200423102718823.png)
-
-
 
 ![image-20200423102808544](JavaScript基础.assets/image-20200423102808544.png)
 
@@ -1348,6 +1524,10 @@
 
 
 
+![image-20200425214225592](JavaScript基础.assets/image-20200425214225592.png)
+
+
+
 ![image-20200423103829654](JavaScript基础.assets/image-20200423103829654.png)
 
 
@@ -1380,7 +1560,19 @@
 
 
 
+![image-20200425214608610](JavaScript基础.assets/image-20200425214608610.png)
+
+
+
+
+
 ![image-20200424211709219](JavaScript基础.assets/image-20200424211709219.png)
+
+
+
+![image-20200425214745292](JavaScript基础.assets/image-20200425214745292.png)
+
+
 
 
 
@@ -1404,13 +1596,43 @@
 
 
 
+![image-20200425214957987](JavaScript基础.assets/image-20200425214957987.png)
+
+
+
+
+
+![image-20200425215403112](JavaScript基础.assets/image-20200425215403112.png)
+
+
+
+
+
 ![image-20200424212035141](JavaScript基础.assets/image-20200424212035141.png)
+
+
+
+![image-20200425215142973](JavaScript基础.assets/image-20200425215142973.png)
+
+
+
+![image-20200425215740545](JavaScript基础.assets/image-20200425215740545.png)
 
 
 
 
 
 ![image-20200424212104963](JavaScript基础.assets/image-20200424212104963.png)
+
+
+
+![image-20200425215856461](JavaScript基础.assets/image-20200425215856461.png)
+
+
+
+![image-20200425220152102](JavaScript基础.assets/image-20200425220152102.png)
+
+
 
 
 
@@ -1435,6 +1657,14 @@
 
 
 ![image-20200424213712957](JavaScript基础.assets/image-20200424213712957.png)
+
+
+
+![image-20200425220553646](JavaScript基础.assets/image-20200425220553646.png)
+
+
+
+
 
 
 
@@ -1476,9 +1706,35 @@
 
 
 
+
+
+![image-20200425221814752](JavaScript基础.assets/image-20200425221814752.png)
+
+
+
+
+
+![image-20200425221734337](JavaScript基础.assets/image-20200425221734337.png)
+
+
+
+![image-20200425222205444](JavaScript基础.assets/image-20200425222205444.png)
+
+
+
+
+
 ![image-20200424214417013](JavaScript基础.assets/image-20200424214417013.png)
 
 但是对于匿名函数，JavaScript的预解析是它当作一个变量的预解析的形式来解析的么？
+
+![image-20200425222517092](JavaScript基础.assets/image-20200425222517092.png)
+
+
+
+![image-20200425222635526](JavaScript基础.assets/image-20200425222635526.png)
+
+
 
 
 
@@ -1498,6 +1754,12 @@
 
 
 
+![image-20200425222929557](JavaScript基础.assets/image-20200425222929557.png)
+
+结果为undefined
+
+
+
 ![image-20200424214949308](JavaScript基础.assets/image-20200424214949308.png)
 
 
@@ -1511,6 +1773,28 @@
 
 
 ![image-20200424215138486](JavaScript基础.assets/image-20200424215138486.png)
+
+
+
+![image-20200425233143412](JavaScript基础.assets/image-20200425233143412.png)
+
+
+
+![image-20200425233225926](JavaScript基础.assets/image-20200425233225926.png)
+
+
+
+![image-20200425233250818](JavaScript基础.assets/image-20200425233250818.png)
+
+
+
+![image-20200425233324005](JavaScript基础.assets/image-20200425233324005.png)
+
+
+
+![image-20200425233414580](JavaScript基础.assets/image-20200425233414580.png)
+
+
 
 
 
@@ -1560,7 +1844,21 @@
 
 
 
+![image-20200425234157833](JavaScript基础.assets/image-20200425234157833.png)
+
+
+
+
+
 ![image-20200424220117346](JavaScript基础.assets/image-20200424220117346.png)
+
+
+
+
+
+![image-20200425234414457](JavaScript基础.assets/image-20200425234414457.png)
+
+
 
 
 
@@ -1568,7 +1866,15 @@
 
 
 
+
+
+
+
 ![image-20200424220147249](JavaScript基础.assets/image-20200424220147249.png)
+
+
+
+
 
 
 
@@ -1584,6 +1890,20 @@
 
 
 
+
+
+![image-20200425235054773](JavaScript基础.assets/image-20200425235054773.png)
+
+
+
+
+
+![image-20200425235210499](JavaScript基础.assets/image-20200425235210499.png)
+
+
+
+
+
 ![image-20200424220458727](JavaScript基础.assets/image-20200424220458727.png)
 
 
@@ -1592,11 +1912,29 @@
 
 
 
+![image-20200425235540475](JavaScript基础.assets/image-20200425235540475.png)
+
 
 
 ![image-20200424220610148](JavaScript基础.assets/image-20200424220610148.png)
 
 
+
+
+
+![image-20200426094236210](JavaScript基础.assets/image-20200426094236210.png)
+
+
+
+![image-20200426094439798](JavaScript基础.assets/image-20200426094439798.png)
+
+
+
+![image-20200426094850582](JavaScript基础.assets/image-20200426094850582.png)
+
+
+
+![image-20200426095039281](JavaScript基础.assets/image-20200426095039281.png)
 
 
 
@@ -1612,6 +1950,14 @@
 
 
 
+
+
+![image-20200426095346527](JavaScript基础.assets/image-20200426095346527.png)
+
+
+
+
+
 ### new关键字
 
 
@@ -1622,11 +1968,23 @@
 
 
 
+![image-20200426095800415](JavaScript基础.assets/image-20200426095800415.png)
+
+
+
+
+
+
+
 ### 遍历对象属性
 
 
 
 ![image-20200424221022525](JavaScript基础.assets/image-20200424221022525.png)
+
+
+
+![image-20200426100123668](JavaScript基础.assets/image-20200426100123668.png)
 
 
 
@@ -1686,11 +2044,51 @@
 
 
 
+![image-20200426101032180](JavaScript基础.assets/image-20200426101032180.png)
+
+
+
+![image-20200426101620871](JavaScript基础.assets/image-20200426101620871.png)
+
+
+
+
+
+![image-20200426101804503](JavaScript基础.assets/image-20200426101804503.png)
+
+
+
+![image-20200426101929520](JavaScript基础.assets/image-20200426101929520.png)
+
+
+
+
+
 ![image-20200424223045398](JavaScript基础.assets/image-20200424223045398.png)
 
 
 
+![image-20200426101238555](JavaScript基础.assets/image-20200426101238555.png)
+
+
+
+![image-20200426101313650](JavaScript基础.assets/image-20200426101313650.png)
+
+
+
+![image-20200426101433533](JavaScript基础.assets/image-20200426101433533.png)
+
+
+
 ![image-20200424223101009](JavaScript基础.assets/image-20200424223101009.png)
+
+
+
+![image-20200426102735223](JavaScript基础.assets/image-20200426102735223.png)
+
+
+
+![image-20200426102420585](JavaScript基础.assets/image-20200426102420585.png)
 
 
 
@@ -1701,6 +2099,8 @@
 ![image-20200424223430330](JavaScript基础.assets/image-20200424223430330.png)
 
 
+
+![image-20200426150016858](JavaScript基础.assets/image-20200426150016858.png)
 
 
 
@@ -1714,6 +2114,12 @@
 
 
 
+![image-20200426150524467](JavaScript基础.assets/image-20200426150524467.png)
+
+
+
+
+
 ![image-20200424223814479](JavaScript基础.assets/image-20200424223814479.png)
 
 
@@ -1722,11 +2128,15 @@
 
 
 
+![image-20200426151036888](JavaScript基础.assets/image-20200426151036888.png)
+
 
 
 ![image-20200424230351337](JavaScript基础.assets/image-20200424230351337.png)
 
 
+
+![image-20200426151450181](JavaScript基础.assets/image-20200426151450181.png)
 
 
 
@@ -1736,7 +2146,19 @@
 
 
 
+![image-20200426151738468](JavaScript基础.assets/image-20200426151738468.png)
+
+
+
+
+
 ![image-20200424230514958](JavaScript基础.assets/image-20200424230514958.png)
+
+
+
+![image-20200426152523384](JavaScript基础.assets/image-20200426152523384.png)
+
+
 
 
 
@@ -1756,13 +2178,39 @@
 
 
 
+![image-20200426152804568](JavaScript基础.assets/image-20200426152804568.png)
+
+
+
+
+
 ![image-20200424230827303](JavaScript基础.assets/image-20200424230827303.png)
 
 
 
 
 
+![image-20200426153148007](JavaScript基础.assets/image-20200426153148007.png)
+
+
+
+
+
 ![image-20200424230929230](JavaScript基础.assets/image-20200424230929230.png)
+
+
+
+![image-20200426153457112](JavaScript基础.assets/image-20200426153457112.png)
+
+
+
+![image-20200426153548547](JavaScript基础.assets/image-20200426153548547.png)
+
+
+
+![image-20200426153814359](JavaScript基础.assets/image-20200426153814359.png)
+
+
 
 
 
@@ -1778,9 +2226,17 @@
 
 
 
+![image-20200426154244523](JavaScript基础.assets/image-20200426154244523.png)
+
+
+
+
+
 ![image-20200424231323815](JavaScript基础.assets/image-20200424231323815.png)
 
 
+
+![image-20200426154738537](JavaScript基础.assets/image-20200426154738537.png)
 
 
 
@@ -1794,9 +2250,17 @@
 
 
 
+![image-20200426155130339](JavaScript基础.assets/image-20200426155130339.png)
+
+
+
 
 
 ![image-20200424231557494](JavaScript基础.assets/image-20200424231557494.png)
+
+
+
+![image-20200426155358424](JavaScript基础.assets/image-20200426155358424.png)
 
 
 
@@ -1820,6 +2284,12 @@
 
 
 
+![image-20200426155642364](JavaScript基础.assets/image-20200426155642364.png)
+
+
+
+
+
 ![image-20200424232013716](JavaScript基础.assets/image-20200424232013716.png)
 
 
@@ -1827,6 +2297,10 @@
 
 
 ![image-20200424232119788](JavaScript基础.assets/image-20200424232119788.png)
+
+
+
+![image-20200426163947140](JavaScript基础.assets/image-20200426163947140.png)
 
 
 
@@ -1842,9 +2316,23 @@
 
 
 
-![image-20200424232432974](JavaScript基础.assets/image-20200424232432974.png)
+![image-20200426165013585](JavaScript基础.assets/image-20200426165013585.png)
 
 
+
+
+
+![image-20200426165055240](JavaScript基础.assets/image-20200426165055240.png)
+
+
+
+
+
+![image-20200426170053879](JavaScript基础.assets/image-20200426170053879.png)
+
+
+
+![image-20200426170141638](JavaScript基础.assets/image-20200426170141638.png)
 
 
 
@@ -1855,6 +2343,24 @@
 
 
 ![image-20200424232607456](JavaScript基础.assets/image-20200424232607456.png)
+
+
+
+![image-20200426170335688](JavaScript基础.assets/image-20200426170335688.png)
+
+
+
+
+
+![image-20200426170714349](JavaScript基础.assets/image-20200426170714349.png)
+
+
+
+![image-20200426170943699](JavaScript基础.assets/image-20200426170943699.png)
+
+
+
+
 
 
 
@@ -1870,11 +2376,47 @@
 
 
 
+![image-20200426171153531](JavaScript基础.assets/image-20200426171153531.png)
+
+
+
+
+
+
+
 ![image-20200424232934685](JavaScript基础.assets/image-20200424232934685.png)
 
 
 
+
+
+![image-20200426171408316](JavaScript基础.assets/image-20200426171408316.png)
+
+
+
+
+
+
+
+
+
 ![image-20200424233047347](JavaScript基础.assets/image-20200424233047347.png)
+
+
+
+![image-20200426171546218](JavaScript基础.assets/image-20200426171546218.png)
+
+
+
+
+
+![image-20200426171613502](JavaScript基础.assets/image-20200426171613502.png)
+
+
+
+
+
+
 
 
 
@@ -1905,6 +2447,12 @@
 ### 简单类型与复杂类型
 
 ![image-20200424233529419](JavaScript基础.assets/image-20200424233529419.png)
+
+
+
+![image-20200426171933539](JavaScript基础.assets/image-20200426171933539.png)
+
+
 
 
 
