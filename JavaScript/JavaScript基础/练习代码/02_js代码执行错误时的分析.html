@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 以下代码可以被执行
+    var e;
+    console.log(e);
+    console.log(c); // 此处直接报错，说明不可以使用别的js代码块中的变量，与预期的不符合。所以此代码块中的接下来的其余js代码均不会执行。
+
+    // 错误代码
+    console.log(b);
+    // 以下代码没有被执行
+    var d = 999;
+    console.log(d);
+    console.log(c);
+    
+    
+</script>
+<script src="./02_js代码执行错误时候的分析.js"></script> 
+<!-- 45 直接可以运行，说明外部的js代码块与在当前页面的script代码块片段是一样的 -->
+<script>
+    var a = 456;
+    var c;
+    //以下代码可以被执行
+    console.log(a);//456
+    console.log(c)//undefined
+</script>
+</html>

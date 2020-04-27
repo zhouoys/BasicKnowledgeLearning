@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var num1  = "78.9999";
+    var num2  = "78.1111";
+    var num3 = '0.23';
+    var num4 = '.23';
+    var num5 = '023';
+    var num6 = 'abc'
+    var num7 = '123px';
+    var num8 = 'px123';
+    console.log("-----------parseInt------------------");
+    // 向下取整
+    console.log(parseInt(num1)); // 78
+    console.log(parseInt(num2)); // 78
+    console.log(parseInt(num3)); // 0
+    console.log(parseInt(num4)); // NaN
+    console.log(parseInt(num5)); // 23
+    console.log(parseInt(num6)); // NaN
+    console.log(parseInt(num7)); // 123
+    console.log(parseInt(num8)); // NaN
+
+    console.log("-----------parseFloat------------------");
+    console.log(parseFloat(num1)); // 78.9999
+    console.log(parseFloat(num2)); // 78.1111
+    console.log(parseFloat(num3)); // 0.23
+    console.log(parseFloat(num4)); // 0.23
+    console.log(parseFloat(num5)); // 23
+    console.log(parseFloat(num6)); // NaN
+    console.log(parseFloat(num7)); // 123
+    console.log(parseFloat(num8)); // NaN
+
+    console.log("-----------Number-----------------------");
+    console.log(Number(num1)); // 78.9999
+    console.log(Number(num2)); // 78.1111
+    console.log(Number(num3)); // 0.23
+    console.log(Number(num4)); // 0.23
+    console.log(Number(num5)); // 23
+    console.log(Number(num6)); // NaN
+    console.log(Number(num7)); // NaN
+    console.log(Number(num8)); // NaN
+    
+    console.log("----------Boolean----------------------");
+    var a = -7;
+    console.log(Boolean(a));// true
+    var b = -1;
+    console.log(Boolean(b));// true
+    var c = 0;
+    console.log(Boolean(c));// false
+    var d = "0";
+    console.log(Boolean(d));// true
+    
+    var e= -1;
+    if(e){
+        console.log("-1的布尔值不为false"); //-1的布尔值不为false
+    }
+</script>
+</html>

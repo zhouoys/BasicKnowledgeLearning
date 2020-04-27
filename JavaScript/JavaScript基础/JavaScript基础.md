@@ -6,35 +6,51 @@
 
 ![image-20200422174110267](JavaScript基础.assets/image-20200422174110267.png)
 
+​	
 
+### 1.编程语言
 
-
-
-
+#### 1.1编程
 
 ![image-20200422174310742](JavaScript基础.assets/image-20200422174310742.png)
+
+
+
+#### 1.2 计算机语言
 
 ![image-20200422174336959](JavaScript基础.assets/image-20200422174336959.png)
 
 
 
+#### 1.3 编程语言
+
 ![image-20200422174408887](JavaScript基础.assets/image-20200422174408887.png)
 
 
+
+#### 1.4 翻译器
 
 ![image-20200422174456551](JavaScript基础.assets/image-20200422174456551.png)
 
 
 
+#### 1.5 编程语言和标记语言的区别
+
 ![image-20200422174516446](JavaScript基础.assets/image-20200422174516446.png)
 
 
+
+#### 总结
 
 ![image-20200422174530745](JavaScript基础.assets/image-20200422174530745.png)
 
 
 
 
+
+### 2.计算机基础
+
+#### 2.1计算机组成
 
 ![image-20200422174547824](JavaScript基础.assets/image-20200422174547824.png)
 
@@ -44,15 +60,21 @@
 
 
 
-
+#### 2.2 数据存储
 
 ![image-20200422174620782](JavaScript基础.assets/image-20200422174620782.png)
 
 
 
+#### 2.3 数据存储单位
+
 ![image-20200422174635362](JavaScript基础.assets/image-20200422174635362.png)
 
 
+
+
+
+#### 2.4 程序运行
 
 ![image-20200422174651871](JavaScript基础.assets/image-20200422174651871.png)
 
@@ -66,13 +88,19 @@
 
 
 
+### 1.初识JavaScript
+
 ![image-20200422174828064](JavaScript基础.assets/image-20200422174828064.png)
 
+​	 **布兰登艾奇**
 
+	#### 1.1 JavaScript是什么
 
 ![image-20200422174844411](JavaScript基础.assets/image-20200422174844411.png)
 
 
+
+#### 1.2 JavaScript的作用
 
 ![image-20200422174906829](JavaScript基础.assets/image-20200422174906829.png)
 
@@ -80,55 +108,161 @@
 
 
 
+#### 1.3 HTML/CSS/JS的关系
+
 ![image-20200422174936380](JavaScript基础.assets/image-20200422174936380.png)
 
 
 
+#### 1.4 浏览器执行JS简介
+
 ![image-20200422174949169](JavaScript基础.assets/image-20200422174949169.png)
 
+​      渲染引擎：解析HTML和CSS，如浏览器的blink,老版本的webkit
+
+​      JS引擎：也称为JS解释器，读取，解析后运行js代码,比如chrome浏览器的V8,逐行解释每一句源码（转换为机器语言），然后由计算机去执行。
 
 
 
+#### 1.5 JS的组成
 
 ![image-20200422175025770](JavaScript基础.assets/image-20200422175025770.png)
 
+​    javaScript由三部分组成，分别是ECMAScript（JavaScript语法），DOM(页面文档对象模型)，BOM(浏览器对象模型)这三部分组成
 
-
-
+##### 1.ECMAScript
 
 ![image-20200422175038341](JavaScript基础.assets/image-20200422175038341.png)
 
 
 
+##### 2.DOM-文档对象模型
+
 ![image-20200422175114260](JavaScript基础.assets/image-20200422175114260.png)
 
 
+
+##### 3.BOM-浏览器对象模型
 
 ![image-20200422175134403](JavaScript基础.assets/image-20200422175134403.png)
 
 
 
+#### 1.6JS初体验
+
+##### 1.行内式JS
+
 ![image-20200422175156190](JavaScript基础.assets/image-20200422175156190.png)
 
 
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 行内式JS -->
+    <input type="text" onclick="alert('干嘛点我')">
+</body>
+</html>
+~~~
+
+
+
+##### 2.内嵌JS
 
 ![image-20200422175318046](JavaScript基础.assets/image-20200422175318046.png)
 
 
 
+##### 3.外部JS文件
+
 ![image-20200422175431553](JavaScript基础.assets/image-20200422175431553.png)
 
+**注意：引用外部JS文件的script标签中间不可以写代码，否则将只执行标签中间的js代码，而不是外部js代码**
 
+
+
+### 2. JavaScript注释
+
+
+
+#### 2.1 单行注释
 
 ![image-20200422175455627](JavaScript基础.assets/image-20200422175455627.png)
 
+~~~javascript
+  // 单行注释 ctrl + /
+    console.log('单行注释');
+~~~
 
+
+
+
+
+#### 2.2 多行注释
 
 ![image-20200422175516967](JavaScript基础.assets/image-20200422175516967.png)
 
+~~~javascript
+ /* 多行注释 alt+shift+a */
+    console.log('多行注释');
+~~~
 
+
+
+#### 2.3 文档注释（添加）
+
+~~~javascript
+ /**
+    * 
+    * 文档API注释 /**+enter
+    *
+    */
+   console.log('文档注释');
+~~~
+
+
+
+### 3.JavaScript输入输出语句
 
 ![image-20200422175557794](JavaScript基础.assets/image-20200422175557794.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var input = prompt('请输入你的年龄')
+    alert('你的年龄是'+input);
+    console.log('你的年龄是'+input);
+</script>
+</html>
+~~~
+
+
+
+![image-20200426221430221](JavaScript基础.assets/image-20200426221430221.png)
+
+
+
+![image-20200426221439831](JavaScript基础.assets/image-20200426221439831.png)
+
+
+
+![image-20200426221451702](JavaScript基础.assets/image-20200426221451702.png)
 
 
 
@@ -138,55 +272,126 @@
 
 
 
-### 变量额概述
+### 1.变量的概述
+
+#### 1.1 什么是变量
 
 ![image-20200422175721676](JavaScript基础.assets/image-20200422175721676.png)
 
 
 
-
+#### 1.2 变量在内存中的存储
 
 ![image-20200422175753595](JavaScript基础.assets/image-20200422175753595.png)
 
+**可以如此理解，变量声明：就是在内存中申请一块用来存放数据的空间，也就是"预定酒店"，变量赋值：就是将值存放如内存空间中，也就是相当于"入住酒店"**
 
 
-### 变量的使用
+
+### 2.变量的使用
+
+#### 2.1 声明变量
 
 ![image-20200422175859419](JavaScript基础.assets/image-20200422175859419.png)
 
+ **通过变量名来访问内存中给对应变量分配的空间**
 
+#### 2.2 赋值
 
 ![image-20200422175947035](JavaScript基础.assets/image-20200422175947035.png)
 
 
 
+#### 2.3 变量的初始化
+
+变量的初始化：就是在声明一个变量的同时也给这个变量赋值，一步完成。这个过程就是变量的初始化。
+
 ![image-20200422180021819](JavaScript基础.assets/image-20200422180021819.png)
 
 
+
+#### 2.4 案例一
 
 ![image-20200422180047307](JavaScript基础.assets/image-20200422180047307.png)
 
 
 
+#### 2.5 案例二
+
 ![image-20200422180107875](JavaScript基础.assets/image-20200422180107875.png)
 
 
 
-### 变量语法的拓展
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var uName = prompt('请输入你的用户名');
+    alert('你的姓名是:'+uName);
+</script>
+</html>
+~~~
+
+
+
+
+
+###  3.变量语法的拓展
+
+#### 3.1 更新变量
 
 ![image-20200422180220667](JavaScript基础.assets/image-20200422180220667.png)
 
 
 
+
+
+#### 3.2 同时声明多个变量
+
 ![image-20200422180239148](JavaScript基础.assets/image-20200422180239148.png)
 
 
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = 15, b="name", c=true;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+</script>
+</html>
+~~~
+
+
+
+![image-20200426223520321](JavaScript基础.assets/image-20200426223520321.png)
+
+
+
+#### 3.3 声明变量特殊情况
 
 ![image-20200422180302039](JavaScript基础.assets/image-20200422180302039.png)
 
 
 
-### 变量命名的规范
+### 4.变量命名的规范
 
 ![image-20200422180354415](JavaScript基础.assets/image-20200422180354415.png)
 
@@ -194,11 +399,49 @@
 
 ![image-20200422180422847](JavaScript基础.assets/image-20200422180422847.png)
 
+第一组中： 第五个以数字开头====》不合法
 
+第二组中：第五个包含了非法字符&====》不合法
+
+第三组中：第五个以for也就是关键字===》不合法
+
+
+
+### 实例一
 
 ![image-20200422180444336](JavaScript基础.assets/image-20200422180444336.png)
 
 
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+   var uName = 'smith',age=88;
+   console.log(uName,age);
+   var temp;
+    temp = uName;
+    uName = age;
+    age = temp;
+    console.log(uName,age);
+</script>
+</html>
+~~~
+
+
+
+![image-20200426224341000](JavaScript基础.assets/image-20200426224341000.png)
+
+
+
+### 5.小结
 
 ![image-20200422180459212](JavaScript基础.assets/image-20200422180459212.png)
 
@@ -207,6 +450,32 @@
 ![image-20200425105702297](JavaScript基础.assets/image-20200425105702297.png)
 
 
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = 10;
+    console.log(a); // 10 
+    var b;
+    console.log(b); // undefined
+    console.log(name); // 什么也没有
+    console.log(d); // d is not defined
+</script>
+</html>
+~~~
+
+
+
+![image-20200426225124660](JavaScript基础.assets/image-20200426225124660.png)
 
 
 
@@ -220,9 +489,15 @@
 
 
 
-### 数据类型简介
+### 1. 数据类型简介
+
+#### 1.1 为什么需要数据类型
 
 ![image-20200422180733681](JavaScript基础.assets/image-20200422180733681.png)
+
+
+
+#### 1.2 变量的数据类型
 
 
 
@@ -234,27 +509,239 @@
 
 
 
+#### 1.3 数据类型的分类
+
 ![image-20200422181033525](JavaScript基础.assets/image-20200422181033525.png)
 
 
 
-### 简单数据类型
+JS中把数据类型分成了两类
+
+1.简单数据类型，包括（Number,String,Boolean,Undefined,Null）
+
+2.复杂数据类型，包括（object）
+
+#### **typeof 操作符**
+
+由于`js`中的变量是松散类型的，所以它提供了一种检测当前变量的数据类型的方法，也就是typeof关键字.
+
+typeof  123　　 //Number
+
+typeof  'abc'　　//String
+
+typeof   true    //Boolean
+
+typeof   undefined  //Undefined
+
+typeof   null     //Object
+
+typeof   { }      //Object
+
+typeof   [ ]      //Object
+
+typeof   console.log()    //Function
+
+null类型进行typeof操作符后，结果是object，原因在于，null类型被当做一个空对象引用。
+
+##### **1.Number类型**
+
+Number类型包含整数和浮点数（浮点数数值必须包含一个小数点，且小数点后面至少有一位数字）两种值。
+
+NaN:非数字类型。特点：① 涉及到的 任何关于NaN的操作，都会返回NaN  ② NaN不等于自身。
+
+isNaN() 函数用于检查其参数是否是非数字值。
+
+isNaN(123)  //false  isNaN("hello")  //true
+
+##### **2.String类型**
+
+字符串有length属性。
+
+字符串转换：转型函数String(),适用于任何数据类型（null,undefined 转换后为null和undefined）；toString()方法（null,undefined没有toString()方法）。
+
+##### **3.Boolean类型**
+
+该类型只有两个值，true和false
+
+##### **4.Undefined类型**
+
+只有一个值，即undefined值。使用var声明了变量，但未给变量初始化值，那么这个变量的值就是undefined。
+
+##### **5.Null类型**
+
+null类型被看做空对象指针，前文说到null类型也是空的对象引用。
+
+##### **6.Object类型**
+
+**js中对象是一组属性与方法的集合**。这里就要说到引用类型了，**引用类型是一种数据结构**，用于将数据和功能组织在一起。引用类型有时候也被称为对象定义，因为它们描述的是一类对象所具有的属性和方法。
+
+#### 三大引用类型
+
+##### **1.Object类型**
+
+我们看到的大多数类型值都是Object类型的实例，创建Object实例的方式有两种。
+
+第一种是使用new操作符后跟Object构造函数，如下所示
+
+var person = new Object();
+
+person.name = "Micheal";
+
+person.age = 24;
+
+第二种方式是使用对象字面量表示法，如下所示
+
+var person = {
+
+　　name : "Micheal",
+
+　　age : 24
+
+};
+
+或者var person = Object.create(原型);
+
+##### **2.Array类型**
+
+数组的每一项可以用来保存任何类型的数据，也就是说，可以用数组的第一个位置来保存字符串，第二个位置保存数值，第三个位置保存对象....另外，数组的大小是可以动态调整的。
+
+创建数组的基本方式有两种
+
+第一种是使用Array构造函数，如下所示
+
+var colors = new Array("red","blue","yellow");
+
+第二种是使用数组字面量表示法，如下所示
+
+var colors = ["red","blue","yellow"];
+
+##### **3 Function类型**
+
+每个函数都是Function类型的实例，而且都与其他引用类型一样具有属性和方法。函数通常是使用函数声明语法定义的，如下所示
+
+function sum(num1,num2){
+
+　　return num1 + num2;
+
+};
+
+这和使用函数表达式定义函数的方式相差无几。
+
+var sun = function (){
+
+　　return sum1 + sum2;
+
+};
+
+**也就是说，js按照存储方式分为值类型和引用类型。那么他们的计算有什么区别呢？**
+
+题目1： var a = 100;
+
+　　　　var b = a;
+
+　　　  a = 200;
+
+　　　　console.log (b);
+
+题目2： var a = {age : 20};
+
+　　　　var b = a;
+
+　　　　b.age = 21;
+
+　　　　console.log (a.age);
+
+题目1的答案是 100，题目2的答案是21，
+
+题目1是简单的值类型，在从一个变量向另一个变量赋值基本类型时，会在该变量上创建一个新值，然后再把该值复制到为新变量分配的位置上。
+
+此时，a中保存的值为 100 ，当使用 a 来初始化 b 时，b 中保存的值也为100，但b中的100与a中的是完全独立的，该值只是a中的值的一个副本，此后，
+这两个变量可以参加任何操作而相互不受影响。也就是说基本类型在赋值操作后，两个变量是相互不受影响的。
+
+题目2是引用类型，当从一个变量向另一个变量赋值引用类型的值时，同样也会将存储在变量中的对象的值复制一份放到为新变量分配的空间中。
+
+这时保存在变量中的是对象在堆内存中的地址，所以，与简单赋值不同，这个值的副本实际上是一个指针，而这个指针指向存储在堆内存的一个对象。那么赋值操作后，
+两个变量都保存了同一个对象地址，则这两个变量指向了同一个对象。因此，改变其中任何一个变量，都会相互影响。
+
+因此，引用类型的赋值其实是对象保存在栈区地址指针的赋值，因此两个变量指向同一个对象，任何的操作都会相互影响
+
+
+
+### 2.简单数据类型
+
+#### 2.1 简单数据类型（基本数据类型）
 
 ![image-20200422181113307](JavaScript基础.assets/image-20200422181113307.png)
 
 
 
+#### 2.2 数字型Number
+
 ![image-20200422181153934](JavaScript基础.assets/image-20200422181153934.png)
 
 
 
+##### 1.数字型进制
+
 ![image-20200422181209043](JavaScript基础.assets/image-20200422181209043.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 八进制与十进制
+    var num1 = 017;
+    console.log(num1);//15
+    var num2  = 018;
+    console.log(num2);//18
+    var num3 = 019;
+    console.log(num3);//19
+    var num4 = 010;
+    console.log(num4); //8
+    var num5 = 012;
+    console.log(num5); //10
+    
+    // 十六进制
+    var num6 = 0x9;
+    console.log(num6);//9
+
+    var num7 = 0xa;
+    console.log(num7);//10
+
+    var num8 =0xa8;
+    console.log(num8);//168
+    
+    // js中的最大值与最小值
+
+    console.log(Number.MAX_VALUE);//1.7976931348623157e+308
+    console.log(Number.MIN_VALUE);//5e-324
+
+    console.log(Number.MAX_VALUE*2);//Infinity
+    console.log(-Number.MAX_VALUE*2);//Infinity
+    console.log(Number.MIN_VALUE*2);//1e-323
+    console.log(-Number.MIN_VALUE*2);//-1e-323
+</script>
+</script>
+</html>
+~~~
 
 
 
 ![image-20200425111539840](JavaScript基础.assets/image-20200425111539840.png)
 
 
+
+##### 2.数字型范围
 
 ![image-20200422181305447](JavaScript基础.assets/image-20200422181305447.png)
 
@@ -264,6 +751,8 @@
 
 
 
+##### 3.数字型三个特殊值
+
 ![image-20200422181341069](JavaScript基础.assets/image-20200422181341069.png)
 
 
@@ -272,13 +761,21 @@
 
 
 
+##### 4.isNaN()
+
 ![image-20200422181409311](JavaScript基础.assets/image-20200422181409311.png)
 
 
 
+#### 2.3 字符串型String
+
 ![image-20200422181529375](JavaScript基础.assets/image-20200422181529375.png)
 
 
+
+**因为HTML标签里面的属性使用的是双引号，JS这里我们更推荐使用单引号**
+
+##### 1.字符串引号嵌套
 
 ![image-20200422181613094](JavaScript基础.assets/image-20200422181613094.png)
 
@@ -290,7 +787,7 @@
 
 
 
-
+##### 2.字符串转义符
 
 ![image-20200422181657136](JavaScript基础.assets/image-20200422181657136.png)
 
@@ -308,13 +805,19 @@
 
 
 
-
+##### 3.字符串长度
 
 ![image-20200422181753910](JavaScript基础.assets/image-20200422181753910.png)
 
 
 
+##### 4.字符串拼接
+
 ![image-20200422181812945](JavaScript基础.assets/image-20200422181812945.png)
+
+
+
+**数值相加，字符相连**
 
 
 
@@ -322,7 +825,11 @@
 
 
 
+##### 5.字符串拼接加强
+
 ![image-20200422194324211](JavaScript基础.assets/image-20200422194324211.png)
+
+**引引加加**
 
 
 
@@ -342,11 +849,13 @@
 
 
 
+#### 2.4 布尔型Boolean
+
 ![image-20200422195600436](JavaScript基础.assets/image-20200422195600436.png)
 
 
 
-
+#### 2.5 Undefined和Null
 
 ![image-20200422195703523](JavaScript基础.assets/image-20200422195703523.png)
 
@@ -362,7 +871,9 @@
 
 
 
-### 获取变量数据类型
+### 3.获取变量数据类型
+
+#### 3.1 获取检测变量的数据类型
 
 ![image-20200422195830972](JavaScript基础.assets/image-20200422195830972.png)
 
@@ -372,27 +883,35 @@
 
 
 
+#### 3.2 字面量
+
 ![image-20200422195917805](JavaScript基础.assets/image-20200422195917805.png)
 
 
 
 
 
-### 数据类型转换
+### 4.数据类型转换
 
 
+
+#### 4.1 什么是数据类型转换
 
 ![image-20200422200029980](JavaScript基础.assets/image-20200422200029980.png)
 
 
 
+#### 4.2 转换为字符串
+
 ![image-20200422200123387](JavaScript基础.assets/image-20200422200123387.png)
 
 
 
-
+#### 4.3 转换为数字型(重点)
 
 ![image-20200422200232172](JavaScript基础.assets/image-20200422200232172.png)
+
+
 
 
 
@@ -405,6 +924,63 @@
 
 
 ![image-20200425115247225](JavaScript基础.assets/image-20200425115247225.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var num1  = "78.9999";
+    var num2  = "78.1111";
+    var num3 = '0.23';
+    var num4 = '.23';
+    var num5 = '023';
+    var num6 = 'abc'
+    var num7 = '123px';
+    var num8 = 'px123';
+    console.log("-----------parseInt------------------");
+    // 向下取整
+    console.log(parseInt(num1)); // 78
+    console.log(parseInt(num2)); // 78
+    console.log(parseInt(num3)); // 0
+    console.log(parseInt(num4)); // NaN
+    console.log(parseInt(num5)); // 23
+    console.log(parseInt(num6)); // NaN
+    console.log(parseInt(num7)); // 123
+    console.log(parseInt(num8)); // NaN
+
+    console.log("-----------parseFloat------------------");
+    console.log(parseFloat(num1)); // 78.9999
+    console.log(parseFloat(num2)); // 78.1111
+    console.log(parseFloat(num3)); // 0.23
+    console.log(parseFloat(num4)); // 0.23
+    console.log(parseFloat(num5)); // 23
+    console.log(parseFloat(num6)); // NaN
+    console.log(parseFloat(num7)); // 123
+    console.log(parseFloat(num8)); // NaN
+
+    console.log("-----------Number-----------------------");
+    console.log(Number(num1)); // 78.9999
+    console.log(Number(num2)); // 78.1111
+    console.log(Number(num3)); // 0.23
+    console.log(Number(num4)); // 0.23
+    console.log(Number(num5)); // 23
+    console.log(Number(num6)); // NaN
+    console.log(Number(num7)); // NaN
+    console.log(Number(num8)); // NaN
+    
+    
+</script>
+</html>
+~~~
 
 
 
@@ -438,6 +1014,27 @@
 
 
 
+**代表空、否定的值会被转换成false,如 ""、0、NaN、null、undefined**
+
+~~~javascript
+  console.log("----------Boolean----------------------");
+    var a = -7;
+    console.log(Boolean(a));// true
+    var b = -1;
+    console.log(Boolean(b));// true
+    var c = 0;
+    console.log(Boolean(c));// false
+    var d = "0";
+    console.log(Boolean(d));// true
+    
+    var e= -1;
+    if(e){
+        console.log("-1的布尔值不为false"); //-1的布尔值不为false
+    }
+~~~
+
+
+
 ## 扩展阅读
 
 
@@ -450,27 +1047,35 @@
 
 
 
-### 解释型语言与编译型语言
+### 1.解释型语言与编译型语言
+
+#### 1.概述
 
 ![image-20200422201149053](JavaScript基础.assets/image-20200422201149053.png)
 
 
 
-
+#### 2.执行过程
 
 ![image-20200422201240254](JavaScript基础.assets/image-20200422201240254.png)
 
 
 
-### 标识符，关键字，保留字
+### 2.标识符，关键字，保留字
+
+#### 1.标识符
 
 ![image-20200422201351675](JavaScript基础.assets/image-20200422201351675.png)
 
 
 
+#### 2.关键字
+
 ![image-20200422201411329](JavaScript基础.assets/image-20200422201411329.png)
 
 
+
+#### 3.保留字
 
 ![image-20200422201442118](JavaScript基础.assets/image-20200422201442118.png)
 
