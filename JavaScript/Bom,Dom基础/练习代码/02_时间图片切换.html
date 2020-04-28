@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+        width: 200px;
+        height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/goodmorning.jpg" title="上午好">
+    <div class="desc">上午好</div>
+</body>
+<script>
+    var img = document.querySelector("img");
+    var descList = document.getElementsByClassName("desc")
+    // 获取当前的时间
+    var date = new Date();
+    var hour = date.getHours();
+    console.log(hour);
+    console.log(descList);
+    hour  = 20;
+    if (hour > 0 && hour <= 12){
+        img.src="./image/goodmorning.jpg";
+        img.title = '上午好';
+        descList[0].innerHTML = "上午好"
+    } else if( hour > 12 && hour <= 18) {
+        img.src="./image/pkq.png";
+        img.title = '下午好';
+        descList[0].innerHTML = '下午好'
+    } else {
+        img.src="./image/rain.png";
+        img.title = "晚上好";
+        descList[0].innerHTML = '晚上好'
+    }
+</script>
+</html>

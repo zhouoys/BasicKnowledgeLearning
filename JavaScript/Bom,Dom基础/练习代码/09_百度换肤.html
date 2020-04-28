@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除样式 */
+        body{
+            margin: 0;
+            padding: 0;
+            background-image:url('./image/1.jpg');
+            background-repeat: no-repeat;
+            background-position:top center;
+        }
+        ul,li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* 自定义样式 */
+        .baidu{
+            width:400px ;
+            height:100px;
+            margin:200px auto;
+            border:2px solid #fff;
+        }
+        .baidu ul li{
+            float:left;
+            width: 100px;
+            height: 100px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="baidu">
+        <ul>
+            <li><img src="./image/1.jpg" alt=""></li>
+            <li><img src="./image/2.jpg" alt=""></li>
+            <li><img src="./image/3.jpg" alt=""></li>
+            <li><img src="./image/4.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+<script>
+    var btnImg = document.querySelector(".baidu").getElementsByTagName("img")
+    for(var i = 0; i<btnImg.length;i++){
+        btnImg[i].onclick = function(){
+            document.body.style.backgroundImage = "url("+this.src+")"
+        }
+    }
+</script>
+</html>

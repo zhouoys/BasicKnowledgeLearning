@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="first">第一张图片</button>
+    <button id="second">第二张图片</button>
+    <img src="./image/pkq.png" title="皮卡丘">
+</body>
+<script>
+    var firstBtn = document.getElementById("first")
+    var secondBtn = document.getElementById("second")
+    var img = document.querySelector("img")
+    firstBtn.onclick = function(){
+        img.src="./image/pkq.png";
+        img.title="皮卡丘"
+    }
+    secondBtn.onclick = function(){
+        img.src="./image/rain.png";
+        img.title="小孩与狗"
+    }
+</script>
+</html>

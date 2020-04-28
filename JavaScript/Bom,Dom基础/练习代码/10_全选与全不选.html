@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border: 1px solid #333;
+            border-collapse: collapse;
+            margin: 50px auto;
+        }
+        td{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+          <tr>
+              <th><input type="checkbox" id="is_check_all"/>全选</th>
+              <th>商品</th>
+              <th>价格</th>
+          </tr>
+        </thead>
+        <tbody id="is_check_body">
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果1</td>
+                <td>1120</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果2</td>
+                <td>2220</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果3</td>
+                <td>3330</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果4</td>
+                <td>4440</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    // 全选控制 单选
+    var isCheckAll = document.querySelector("#is_check_all")
+    var isChecks = document.querySelector("#is_check_body").querySelectorAll("input")
+    isCheckAll.onclick = function(){
+        for(var i = 0; i<isChecks.length;i++){
+            isChecks[i].checked = isCheckAll.checked 
+        }        
+    }
+    // 单选控制全选
+    for(var i = 0;i<isChecks.length;i++){
+        isChecks[i].onclick = function(){
+            var flag = true;            
+            for(var i = 0;i<isChecks.length;i++){
+                if(!isChecks[i].checked){
+                    flag = false;
+                    break;
+                }
+            }
+            isCheckAll.checked = flag;
+        }
+    }
+</script>
+</html>

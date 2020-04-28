@@ -82,6 +82,14 @@
 
 
 
+![image-20200428133824216](DOM、BOM基础.assets/image-20200428133824216.png)
+
+
+
+![image-20200428133853976](DOM、BOM基础.assets/image-20200428133853976.png)
+
+
+
 
 
 ### 2.2 根据ID获取
@@ -98,9 +106,49 @@
 
 
 
+![image-20200428135657572](DOM、BOM基础.assets/image-20200428135657572.png)
+
+
+
+![image-20200428140342138](DOM、BOM基础.assets/image-20200428140342138.png)
+
+
+
+![image-20200428140641693](DOM、BOM基础.assets/image-20200428140641693.png)
+
+
+
+![image-20200428140936431](DOM、BOM基础.assets/image-20200428140936431.png)
+
+
+
+![image-20200428141009823](DOM、BOM基础.assets/image-20200428141009823.png)
+
+
+
+
+
+![image-20200428141059248](DOM、BOM基础.assets/image-20200428141059248.png)
+
+
+
+
+
 ### 2.4 通过HTML5新增的方法获取
 
 ![image-20200427105629906](DOM、BOM基础.assets/image-20200427105629906.png)
+
+
+
+![image-20200428141737922](DOM、BOM基础.assets/image-20200428141737922.png)
+
+
+
+
+
+
+
+
 
 
 
@@ -112,7 +160,11 @@
 
 
 
+![image-20200428142000033](DOM、BOM基础.assets/image-20200428142000033.png)
 
+
+
+![image-20200428142019658](DOM、BOM基础.assets/image-20200428142019658.png)
 
 
 
@@ -134,9 +186,21 @@
 
 
 
+![image-20200428142322914](DOM、BOM基础.assets/image-20200428142322914.png)
+
+
+
+![image-20200428142530155](DOM、BOM基础.assets/image-20200428142530155.png)
+
+
+
+
+
 ### 案例一：点击按钮弹出警示框
 
 ![image-20200427110304683](DOM、BOM基础.assets/image-20200427110304683.png)
+
+
 
 
 
@@ -182,11 +246,87 @@
 
 
 
+![image-20200428143026153](DOM、BOM基础.assets/image-20200428143026153.png)
+
+
+
+![image-20200428143044925](DOM、BOM基础.assets/image-20200428143044925.png)
+
+
+
+![image-20200428143241118](DOM、BOM基础.assets/image-20200428143241118.png)
+
+
+
+![image-20200428143410616](DOM、BOM基础.assets/image-20200428143410616.png)
+
+
+
+
+
+![image-20200428143944846](DOM、BOM基础.assets/image-20200428143944846.png)
+
+
+
+![image-20200428143840793](DOM、BOM基础.assets/image-20200428143840793.png)
+
+
+
+![image-20200428144244062](DOM、BOM基础.assets/image-20200428144244062.png)
+
+
+
+
+
+![image-20200428144058365](DOM、BOM基础.assets/image-20200428144058365.png)
+
+
+
 
 
 ### 4.2 常见元素的属性操作
 
 ![image-20200427111627759](DOM、BOM基础.assets/image-20200427111627759.png)
+
+
+
+![image-20200428144718307](DOM、BOM基础.assets/image-20200428144718307.png)
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="first">第一张图片</button>
+    <button id="second">第二张图片</button>
+    <img src="./image/pkq.png" title="皮卡丘">
+</body>
+<script>
+    var firstBtn = document.getElementById("first")
+    var secondBtn = document.getElementById("second")
+    var img = document.querySelector("img")
+    firstBtn.onclick = function(){
+        img.src="./image/pkq.png";
+        img.title="皮卡丘"
+    }
+    secondBtn.onclick = function(){
+        img.src="./image/rain.png";
+        img.title="小孩与狗"
+    }
+</script>
+</html>
+~~~
+
+
 
 
 
@@ -200,11 +340,81 @@
 
 
 
+![image-20200428145102790](DOM、BOM基础.assets/image-20200428145102790.png)
+
+
+
+![image-20200428145311245](DOM、BOM基础.assets/image-20200428145311245.png)
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+        width: 200px;
+        height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/goodmorning.jpg" title="上午好">
+    <div class="desc">上午好</div>
+</body>
+<script>
+    var img = document.querySelector("img");
+    var descList = document.getElementsByClassName("desc")
+    // 获取当前的时间
+    var date = new Date();
+    var hour = date.getHours();
+    console.log(hour);
+    console.log(descList);
+    hour  = 20;
+    if (hour > 0 && hour <= 12){
+        img.src="./image/goodmorning.jpg";
+        img.title = '上午好';
+        descList[0].innerHTML = "上午好"
+    } else if( hour > 12 && hour <= 18) {
+        img.src="./image/pkq.png";
+        img.title = '下午好';
+        descList[0].innerHTML = '下午好'
+    } else {
+        img.src="./image/rain.png";
+        img.title = "晚上好";
+        descList[0].innerHTML = '晚上好'
+    }
+</script>
+</html>
+~~~
+
+
+
 
 
 ### 4.3 表单元素的属性操作
 
 ![image-20200427111834907](DOM、BOM基础.assets/image-20200427111834907.png)
+
+
+
+![image-20200428153809375](DOM、BOM基础.assets/image-20200428153809375.png)
+
+
+
+![image-20200428153925999](DOM、BOM基础.assets/image-20200428153925999.png)
+
+
+
+![image-20200428154019734](DOM、BOM基础.assets/image-20200428154019734.png)
+
+
+
+![image-20200428154136620](DOM、BOM基础.assets/image-20200428154136620.png)
+
+
 
 
 
@@ -222,7 +432,61 @@
 
 
 
-![image-20200427112401394](DOM、BOM基础.assets/image-20200427112401394.png)
+![image-20200428154927274](DOM、BOM基础.assets/image-20200428154927274.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            margin:50px auto;
+            border-right: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            border:none;
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="password" id="pwd">
+        <img src="./image/close.png">
+    </div>
+</body>
+<script>
+    var eyeImg = document.querySelector("img");
+    var pwd  = document.querySelector('#pwd');
+    var flag = 0;
+    eyeImg.onclick = function(){
+        if (flag == 0) {
+            eyeImg.src="./image/open.png";
+            pwd.type="text";
+            flag = 1;
+        } else {
+            eyeImg.src="./image/close.png";
+            pwd.type="password";
+            flag = 0;
+        }
+    }
+</script>
+</html>
+~~~
 
 
 
@@ -231,6 +495,18 @@
 ### 4.4 样式属性操作
 
 ![image-20200427112427646](DOM、BOM基础.assets/image-20200427112427646.png)
+
+
+
+![image-20200428161128022](DOM、BOM基础.assets/image-20200428161128022.png)
+
+
+
+![image-20200428161235648](DOM、BOM基础.assets/image-20200428161235648.png)
+
+
+
+
 
 
 
@@ -248,6 +524,76 @@
 
 
 
+![image-20200428161357050](DOM、BOM基础.assets/image-20200428161357050.png)
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            width: 150px;
+            height: 180px;
+            margin: 50px auto;
+            text-align: center;
+            color:#EF4F2b;
+            padding:5px;
+            border:1px solid #999;
+            background-color: #eee;
+        }
+        .container span{
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+        }
+        img{
+            width: 150px;
+        }
+        .btn-close{
+            position: absolute;
+            top:-1px;
+            left:-36px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #eee;
+            border:1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>手机淘宝</span>
+        <img src="./image/tao.png">
+        <i class="btn-close">×</i>
+    </div>
+</body>
+<script>
+    // var spanText = document.querySelector('span');
+    // var img = document.querySelector('img');
+    var container = document.querySelector(".container")
+    console.log(container);
+    var i = document.querySelector("i")
+    i.onclick = function(){
+        // img.style.display = 'none';
+        // spanText.style.display = 'none';
+        console.log(container);
+        container.style.display = 'none';
+    }
+</script>
+</html>
+~~~
+
+
+
+
+
+
+
 ### 案例：循环精灵图背景
 
 ![image-20200427112749612](DOM、BOM基础.assets/image-20200427112749612.png)
@@ -259,6 +605,12 @@
 
 
 ![image-20200427112937804](DOM、BOM基础.assets/image-20200427112937804.png)
+
+
+
+![image-20200428170255014](DOM、BOM基础.assets/image-20200428170255014.png)
+
+
 
 
 
@@ -274,11 +626,75 @@
 
 
 
+![image-20200428172119631](DOM、BOM基础.assets/image-20200428172119631.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="手机">
+</body>
+<script>
+    var inputText = document.querySelector("input")
+    inputText.onfocus = function(){
+        if (inputText.value == '手机'){
+            inputText.value = '';
+            inputText.style.color = "333";
+        }
+    }
+
+    inputText.onblur = function(){
+        if(inputText.value == ''){
+            inputText.value = '手机';
+            inputText.style.color = '#999';
+        }
+    }
+</script>
+</html>
+~~~
+
+
+
 
 
 ### 4.5 样式属性操作
 
 ![image-20200427114432155](DOM、BOM基础.assets/image-20200427114432155.png)
+
+
+
+![image-20200428173154879](DOM、BOM基础.assets/image-20200428173154879.png)
+
+
+
+![image-20200428173256478](DOM、BOM基础.assets/image-20200428173256478.png)
+
+
+
+
+
+![image-20200428173513730](DOM、BOM基础.assets/image-20200428173513730.png)
+
+
+
+![image-20200428173633701](DOM、BOM基础.assets/image-20200428173633701.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -289,6 +705,97 @@
 
 
 ![image-20200427114811292](DOM、BOM基础.assets/image-20200427114811292.png)
+
+
+
+![image-20200428173839273](DOM、BOM基础.assets/image-20200428173839273.png)
+
+
+
+![image-20200428174212951](DOM、BOM基础.assets/image-20200428174212951.png)
+
+
+
+![image-20200428174238388](DOM、BOM基础.assets/image-20200428174238388.png)
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pwd{
+            width: 600px;
+            display: flex;
+            align-items: center;
+            margin: 50px auto;
+        }
+        .pwd i{
+            display: inline-block;
+            width: 20px;
+            height: 25px;
+            box-sizing: border-box;
+            padding: 5px 0px;
+            text-align: center;
+        }
+        .pwd label{
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+        }
+        .pwd input{
+            height: 25px;
+            width: 200px;
+        }
+        .info{
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            width: 120px;
+            height: 25px;
+            line-height: 25px;
+            background-size: 50px 25px;
+            background: url(image/mess.png) no-repeat left center;
+            margin-left: 10px;
+            padding-left:20px;
+        }
+        .wrong{
+            background-image: url("./image/wrong.png");
+        }
+        .right{
+        background-image: url("./image/right.png");
+        }
+    </style>
+</head>
+<body>
+    <div class="pwd">
+        <i>*</i>
+        <label for="pwd">
+            设置密码：
+        </label>
+        <input type="password"  name ="pwd"  id="pwd"/>
+        <div class="info">请输入6~16位密码</div>
+    </div>
+</body>
+<script>
+    var pwd = document.querySelector("#pwd")
+    var tip = document.querySelector(".info")
+    pwd.onblur = function(){
+        if(pwd.value.length<6 || pwd.value.length>16){
+            tip.innerHTML = '您输入的位数不够，应该为6~16位';
+            tip.className = "info wrong"
+            } else {
+                tip.innerHTML = '您输入的密码正确';
+                tip.className = 'info right'
+            }
+    }
+</script>
+</html>
+~~~
+
+
 
 
 
@@ -312,6 +819,72 @@
 
 
 
+![image-20200428194406838](DOM、BOM基础.assets/image-20200428194406838.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            margin: 200px auto;;
+        }
+        .active{
+            background-color: brown;
+        }
+        button{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>按钮1</button>
+        <button>按钮2</button>
+        <button>按钮3</button>
+        <button>按钮4</button>
+        <button>按钮5</button>
+    </div>
+</body>
+<script>
+     var btns = document.getElementsByTagName('button')
+     for(var i =0;i<btns.length;i++){
+         btns[i].onclick = function(){
+            //  先清除掉所有的样式
+            for(var i = 0; i<btns.length;i++){
+                btns[i].className = '';
+            }
+            // 给被点击的按钮添加样式
+            this.className = 'active'
+         }
+     }
+</script>
+</html>
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 案例：百度换肤
 
 ![image-20200427115202163](DOM、BOM基础.assets/image-20200427115202163.png)
@@ -326,6 +899,87 @@
 
 
 
+![image-20200428195941395](DOM、BOM基础.assets/image-20200428195941395.png)
+
+
+
+![image-20200428200014518](DOM、BOM基础.assets/image-20200428200014518.png)
+
+
+
+
+
+![image-20200428200320729](DOM、BOM基础.assets/image-20200428200320729.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除样式 */
+        body{
+            margin: 0;
+            padding: 0;
+            background-image:url('./image/1.jpg');
+            background-repeat: no-repeat;
+            background-position:top center;
+        }
+        ul,li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* 自定义样式 */
+        .baidu{
+            width:400px ;
+            height:100px;
+            margin:200px auto;
+            border:2px solid #fff;
+        }
+        .baidu ul li{
+            float:left;
+            width: 100px;
+            height: 100px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="baidu">
+        <ul>
+            <li><img src="./image/1.jpg" alt=""></li>
+            <li><img src="./image/2.jpg" alt=""></li>
+            <li><img src="./image/3.jpg" alt=""></li>
+            <li><img src="./image/4.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+<script>
+    var btnImg = document.querySelector(".baidu").getElementsByTagName("img")
+    for(var i = 0; i<btnImg.length;i++){
+        btnImg[i].onclick = function(){
+            document.body.style.backgroundImage = "url("+this.src+")"
+        }
+    }
+</script>
+</html>
+~~~
+
+
+
+
+
+
+
 
 
 ### 案例：表格隔行变色
@@ -335,6 +989,12 @@
 
 
 ![image-20200427115437775](DOM、BOM基础.assets/image-20200427115437775.png)
+
+
+
+![image-20200428202555138](DOM、BOM基础.assets/image-20200428202555138.png)
+
+
 
 
 
@@ -352,11 +1012,113 @@
 
 
 
+![image-20200428203113544](DOM、BOM基础.assets/image-20200428203113544.png)
+
+
+
+![image-20200428203635039](DOM、BOM基础.assets/image-20200428203635039.png)
+
+ 
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border: 1px solid #333;
+            border-collapse: collapse;
+            margin: 50px auto;
+        }
+        td{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+          <tr>
+              <th><input type="checkbox" id="is_check_all"/>全选</th>
+              <th>商品</th>
+              <th>价格</th>
+          </tr>
+        </thead>
+        <tbody id="is_check_body">
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果1</td>
+                <td>1120</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果2</td>
+                <td>2220</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果3</td>
+                <td>3330</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="is_check"/></td>
+                <td>苹果4</td>
+                <td>4440</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    // 全选控制 单选
+    var isCheckAll = document.querySelector("#is_check_all")
+    var isChecks = document.querySelector("#is_check_body").querySelectorAll("input")
+    isCheckAll.onclick = function(){
+        for(var i = 0; i<isChecks.length;i++){
+            isChecks[i].checked = isCheckAll.checked 
+        }        
+    }
+    // 单选控制全选
+    for(var i = 0;i<isChecks.length;i++){
+        isChecks[i].onclick = function(){
+            var flag = true;            
+            for(var i = 0;i<isChecks.length;i++){
+                if(!isChecks[i].checked){
+                    flag = false;
+                    break;
+                }
+            }
+            isCheckAll.checked = flag;
+        }
+    }
+</script>
+</html>
+~~~
+
+
+
+
+
 ### 4.7 自定义属性的操作
 
 #### 1. 获取属性值
 
 ![image-20200427115732915](DOM、BOM基础.assets/image-20200427115732915.png)
+
+
+
+![image-20200428213203438](DOM、BOM基础.assets/image-20200428213203438.png)
+
+
+
+
+
+
 
 
 
@@ -366,11 +1128,19 @@
 
 
 
+![image-20200428213449548](DOM、BOM基础.assets/image-20200428213449548.png)
+
+
+
 
 
 #### 3. 移除属性
 
 ![image-20200427120005196](DOM、BOM基础.assets/image-20200427120005196.png)
+
+
+
+![image-20200428213621521](DOM、BOM基础.assets/image-20200428213621521.png)
 
 
 
@@ -385,6 +1155,20 @@
 
 
 ![image-20200427134525311](DOM、BOM基础.assets/image-20200427134525311.png)
+
+
+
+![image-20200428215034115](DOM、BOM基础.assets/image-20200428215034115.png)
+
+
+
+![image-20200428215134727](DOM、BOM基础.assets/image-20200428215134727.png)
+
+
+
+![image-20200428215250592](DOM、BOM基础.assets/image-20200428215250592.png)
+
+
 
 
 
@@ -406,11 +1190,15 @@
 
 
 
+![image-20200428215927643](DOM、BOM基础.assets/image-20200428215927643.png)
 
 
 
+![image-20200428220020610](DOM、BOM基础.assets/image-20200428220020610.png)
 
 
+
+![image-20200428220230102](DOM、BOM基础.assets/image-20200428220230102.png)
 
 
 
