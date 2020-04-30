@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    var params  = window.location.search;
+    console.log(params);
+    var param  = params.substr(1).split("=")[1];
+    div.innerHTML = '参数name:' + param;
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid #000;
+            height: 30px;
+            line-height: 30px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+               <tr>
+                    <th>姓名</th>
+                    <th>科目</th>
+                    <th>成绩</th>
+                    <th>操作</th>
+               </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>hello</td>
+                    <td>hello</td>
+                    <td>hello</td>
+                </tr>
+                <tr>
+                    <td>hello</td>
+                    <td>hello</td>
+                    <td>hello</td>
+                </tr> <tr>
+                    <td>hello</td>
+                    <td>hello</td>
+                    <td>hello</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    var datas = [
+        {
+            name:'silly',
+            course:'javascript',
+            grade:99
+        },
+        {
+            name:'smith',
+            course:'Math',
+            grade:100
+        },
+        {
+            name:'alice',
+            course:'javascript',
+            grade:60
+        },
+        {
+            name:'Job',
+            course:'science',
+            grade:99
+        },
+        {
+            name:'Job',
+            course:'science',
+            grade:99
+        },
+        {
+            name:'Job',
+            course:'science',
+            grade:99
+        }
+    ];
+    var tbody = document.querySelector('tbody')
+    // 依据数组来创建tr
+    for(var i = 0; i<datas.length;i++){
+
+        var tr = document.createElement("tr")
+        for(var item in datas[i]){
+            var td = document.createElement("td");
+            td.innerHTML = datas[i][item]
+            tr.appendChild(td)
+        }
+        // 添加删除选项
+        var bta = document.createElement("td")
+        bta.innerHTML = "<a href='javascript:;'>删除</a>";
+        tr.appendChild(bta)
+        tbody.appendChild(tr)
+    }
+    // 处理删除事件
+    var as = document.querySelectorAll("a");
+    for(var i = 0;i<as.length;i++){
+        as[i].onclick = function(){
+            tbody.removeChild(this.parentNode.parentNode)
+        }
+    }
+</script>
+</html>

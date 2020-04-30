@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 20px;
+            width: 2000px;
+            line-height: 20px;
+            font-size: 20px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>点击跳转</button>
+</body>
+<script>
+    var div = document.querySelector('div');
+    var btn = document.querySelector("button");
+    btn.addEventListener('click',function(){
+        var countTime = 3;
+        var time  = window.setInterval(function(){
+                    if(countTime == 0){
+                    window.location.href="https://www.baidu.com/"
+                    } else {
+                        div.innerHTML = '还剩下'+countTime+'s跳转';
+                        countTime--;
+                    } 
+
+
+        },1000)
+    })
+    
+</script>
+</html>

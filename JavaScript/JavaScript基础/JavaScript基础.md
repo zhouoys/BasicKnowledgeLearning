@@ -777,6 +777,10 @@ var sun = function (){
 
 ##### 1.字符串引号嵌套
 
+**JS可以使用单引号嵌套双引号，或者用双引号嵌套单引号（外双内单，外单内双)**
+
+
+
 ![image-20200422181613094](JavaScript基础.assets/image-20200422181613094.png)
 
 
@@ -809,6 +813,8 @@ var sun = function (){
 
 ![image-20200422181753910](JavaScript基础.assets/image-20200422181753910.png)
 
+字符串只是一个变量，怎么有length属性？
+
 
 
 ##### 4.字符串拼接
@@ -833,6 +839,8 @@ var sun = function (){
 
 
 
+##### 案例：显示年龄
+
 ![image-20200422194410705](JavaScript基础.assets/image-20200422194410705.png)
 
 
@@ -852,6 +860,8 @@ var sun = function (){
 #### 2.4 布尔型Boolean
 
 ![image-20200422195600436](JavaScript基础.assets/image-20200422195600436.png)
+
+
 
 
 

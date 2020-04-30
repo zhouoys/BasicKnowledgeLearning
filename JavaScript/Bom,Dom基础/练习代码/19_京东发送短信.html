@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 40px;
+            width: 400px;
+            margin: 50px auto;
+            font-size: 0px;
+        }
+        input{
+            height: 26px;
+            outline: none;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button{
+            height: 26px;
+            padding: 0px 5px;
+            vertical-align: top;
+            font-size: 16px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" placeholder="请输入验证码"/><button>发送</button>
+    </div>
+</body>
+<script>
+    var btn = document.querySelector('button')
+     
+     btn.addEventListener('click',function(){
+        btn.disabled = true;
+         var countTime = 10;
+        //设置定时器
+        var time  = window.setInterval(function(){
+          if(countTime == 0){
+            window.clearInterval(time);
+            btn.disabled = false;
+            btn.innerHTML = '发送'
+          } else {
+            btn.innerHTML = '还剩下'+countTime+'s';
+            countTime--;
+          }
+        },1000)
+
+     })
+</script>
+</html>

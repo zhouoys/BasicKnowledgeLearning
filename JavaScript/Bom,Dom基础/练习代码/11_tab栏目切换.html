@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 初始化样式 */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* 自定义样式 */
+        .tab_list ul {
+            display: flex;
+            justify-content: space-around;
+            width: 800px;
+            margin: 50px auto;
+            margin-bottom: 0px;
+        }
+        .tab_list ul li{
+            flex:1;
+            height: 30px;
+            line-height: 30px;
+            padding:5px 5px;
+            text-align: center;
+            background-color: #999;
+
+        }
+       .tab_list .tab_current{
+            background-color: #f00;
+        }
+        .content_item{
+            display: none;
+            width: 800px;
+            height: 400px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tab_list">
+            <ul>
+                <li class="tab_current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价（50000）</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab_content">
+            <div class="content_item" style="display: block;">商品介绍的内容</div>
+            <div class="content_item">规格与包装的内容</div>
+            <div class="content_item">售后保障的内容</div>
+            <div class="content_item">商品评价（50000）的内容</div>
+            <div class="content_item">手机社区的内容</div>
+        </div>
+    </div>
+</body>
+<script>
+    // 获取tabList
+    var tabList = document.querySelector(".tab_list").querySelectorAll("li")
+
+    // 获取所有的tabContentList
+    var tabContentList = document.querySelectorAll(".content_item")
+
+    // 给tabList添加自定义属性
+    for(var i = 0; i<tabList.length;i++){
+        // 依次将0,1,2,3,4 设置进去
+        tabList[i].setAttribute("data-index",i);
+        // 给所有tab选项添加点击事件
+        tabList[i].onclick = function(){
+            // 执行排他
+            for(var i = 0;i<tabList.length;i++){
+                tabList[i].className = '';
+            }
+            for(var i = 0;i<tabContentList.length;i++){
+                tabContentList[i].style.display = 'none'
+            }
+            // 选中点击的tab
+            this.className = 'tab_current'
+            tabContentList[this.getAttribute("data-index")].style.display = 'block'
+        }
+    }
+</script>
+</html>

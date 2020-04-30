@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name = ''/>
+</body>
+<script>
+    // 获取inputDom
+    var input = document.querySelector('input')
+    // 创建监听
+    document.addEventListener('keyup',function(e){
+        console.log(e);
+    if(e.keyCode == 83){
+        input.focus()
+    }     
+    })
+</script>
+</html>

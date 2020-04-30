@@ -646,7 +646,7 @@
     inputText.onfocus = function(){
         if (inputText.value == '手机'){
             inputText.value = '';
-            inputText.style.color = "333";
+            inputText.style.color = "#333";
         }
     }
 
@@ -1083,7 +1083,7 @@
             isChecks[i].checked = isCheckAll.checked 
         }        
     }
-    // 单选控制全选
+    // 单选控制 全选
     for(var i = 0;i<isChecks.length;i++){
         isChecks[i].onclick = function(){
             var flag = true;            
@@ -1170,6 +1170,106 @@
 
 
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 初始化样式 */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* 自定义样式 */
+        .tab_list ul {
+            display: flex;
+            justify-content: space-around;
+            width: 800px;
+            margin: 50px auto;
+            margin-bottom: 0px;
+        }
+        .tab_list ul li{
+            flex:1;
+            height: 30px;
+            line-height: 30px;
+            padding:5px 5px;
+            text-align: center;
+            background-color: #999;
+
+        }
+       .tab_list .tab_current{
+            background-color: #f00;
+        }
+        .content_item{
+            display: none;
+            width: 800px;
+            height: 400px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tab_list">
+            <ul>
+                <li class="tab_current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价（50000）</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab_content">
+            <div class="content_item" style="display: block;">商品介绍的内容</div>
+            <div class="content_item">规格与包装的内容</div>
+            <div class="content_item">售后保障的内容</div>
+            <div class="content_item">商品评价（50000）的内容</div>
+            <div class="content_item">手机社区的内容</div>
+        </div>
+    </div>
+</body>
+<script>
+    // 获取tabList
+    var tabList = document.querySelector(".tab_list").querySelectorAll("li")
+
+    // 获取所有的tabContentList
+    var tabContentList = document.querySelectorAll(".content_item")
+
+    // 给tabList添加自定义属性
+    for(var i = 0; i<tabList.length;i++){
+        // 依次将0,1,2,3,4 设置进去
+        tabList[i].setAttribute("data-index",i);
+        // 给所有tab选项添加点击事件
+        tabList[i].onclick = function(){
+            // 执行排他
+            for(var i = 0;i<tabList.length;i++){
+                tabList[i].className = '';
+            }
+            for(var i = 0;i<tabContentList.length;i++){
+                tabContentList[i].style.display = 'none'
+            }
+            // 选中点击的tab
+            this.className = 'tab_current'
+            tabContentList[this.getAttribute("data-index")].style.display = 'block'
+        }
+    }
+</script>
+</html>
+~~~
+
+
+
+![image-20200429093701644](DOM、BOM基础.assets/image-20200429093701644.png)
+
 
 
 ### 4.8 H5自定义属性
@@ -1204,8 +1304,6 @@
 
 
 
-
-
 ## 5. 节点操作
 
  
@@ -1223,6 +1321,8 @@
 ![image-20200427135142942](DOM、BOM基础.assets/image-20200427135142942.png)
 
 
+
+![image-20200429094254662](DOM、BOM基础.assets/image-20200429094254662.png)
 
 
 
@@ -1242,6 +1342,12 @@
 
 
 
+![image-20200429094930908](DOM、BOM基础.assets/image-20200429094930908.png)
+
+
+
+
+
 #### 2.子节点:
 
 ##### 2.1 childNode
@@ -1256,15 +1362,57 @@
 
 
 
+![image-20200429095325789](DOM、BOM基础.assets/image-20200429095325789.png)
+
+
+
+
+
+
+
 ##### 2.3 firstChild、lastChild
 
 ![image-20200427135944014](DOM、BOM基础.assets/image-20200427135944014.png)
 
 
 
+![image-20200429095707444](DOM、BOM基础.assets/image-20200429095707444.png)
+
+
+
+
+
+![image-20200429095733429](DOM、BOM基础.assets/image-20200429095733429.png)
+
+
+
+
+
+
+
 ##### 2.4 firstElementChild、lastElementChild
 
 ![image-20200427140022248](DOM、BOM基础.assets/image-20200427140022248.png)
+
+
+
+
+
+![image-20200429100244438](DOM、BOM基础.assets/image-20200429100244438.png)
+
+
+
+![image-20200429100337556](DOM、BOM基础.assets/image-20200429100337556.png)
+
+
+
+![image-20200429100528765](DOM、BOM基础.assets/image-20200429100528765.png)
+
+
+
+
+
+
 
 
 
@@ -1288,6 +1436,154 @@
 
 
 
+
+
+![image-20200429101035504](DOM、BOM基础.assets/image-20200429101035504.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*样式重置*/
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color:#000;
+        }
+        /*自定义样式*/
+        .nav{
+            display:flex;
+            width: 400px;
+            justify-content:space-around;
+            margin:50px auto;
+            text-align: center;
+        }
+        .nav>li{
+            position: relative;
+        }
+        .nav li a{
+            display:inline-block;
+            width:100px ;
+            height: 40px;
+            line-height: 40px;
+        }
+        .nav>li>a:hover{
+            background-color: #eee;
+        }
+        .nav>li ul{
+            position: absolute;
+            display: none;
+            top:40px;
+            left:0px;
+            width: 98px;
+            border-left: 1px solid #FECC5B;
+            border-right: 1px soLid #FECC5B;
+        }
+        .nav>li ul li{
+            border-bottom: 1px solid #FECC5B;
+        }
+        .nav>li ul li a:hover{
+            background-color: #FECC5B;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul class="">
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script>
+    // 获取所有的孩子
+    var nav_list = document.querySelector(".nav").children
+    // 循环注册事件
+    for(var i= 0;i<nav_list.length;i++){
+        // 鼠标进入
+        nav_list[i].onmouseover = function(){
+            this.children[1].style.display = 'block'
+            // nav_list[i].children[1].style.display = 'block'
+        }
+        // 鼠标离开
+        nav_list[i].onmouseout = function(){
+            this.children[1].style.display = 'none'
+        }
+    }
+</script>
+</html>
+~~~
+
+
+
+
+
 #### 3.兄弟节点
 
 ##### 3.1.nextSibling
@@ -1303,6 +1599,14 @@
 ##### 3.4.previousElementSibling
 
 ![image-20200427141743203](DOM、BOM基础.assets/image-20200427141743203.png)
+
+
+
+![image-20200429104119214](DOM、BOM基础.assets/image-20200429104119214.png)
+
+
+
+![image-20200429104139151](DOM、BOM基础.assets/image-20200429104139151.png)
 
 
 
@@ -1326,6 +1630,12 @@
 
 
 
+![image-20200429104836962](DOM、BOM基础.assets/image-20200429104836962.png)
+
+
+
+
+
 ### 案例：简单版发布留言案列
 
 ![image-20200427142508698](DOM、BOM基础.assets/image-20200427142508698.png)
@@ -1336,11 +1646,94 @@
 
 
 
+![image-20200429105243118](DOM、BOM基础.assets/image-20200429105243118.png)
+
+
+
+
+
+![image-20200429105331266](DOM、BOM基础.assets/image-20200429105331266.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 400px;
+            height: 700px;
+            margin: 0 auto;
+        }
+        .container textarea{
+            display: block;
+            height: 200px;
+            width: 300px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <textarea name="desc">
+        </textarea>
+        <button>添加</button>
+        <ul>
+        </ul>
+    </div>
+</body>
+<script>
+    var btn = document.querySelector("button");
+    var textareaContent = document.querySelector("textarea")
+    var ul = document.querySelector("ul")
+    btn.onclick = function(){
+        if(!textareaContent.value){
+            alert('请输入内容');
+            return ;
+        }
+        // 创建dom
+        var li = document.createElement("li");
+        // 添加文本
+        li.innerHTML = textareaContent.value;
+        // 添加到父元素中
+        // ul.appendChild(li); 向父元素的末尾添加元素，类似于数组的push
+        ul.insertBefore(li,ul.children[0])
+    }
+</script>
+</html>
+~~~
+
+
+
+![image-20200429144458516](DOM、BOM基础.assets/image-20200429144458516.png)
+
+
+
 
 
 ### 5.6 删除节点
 
 ![image-20200427143508555](DOM、BOM基础.assets/image-20200427143508555.png)
+
+
+
+
+
+![image-20200429105651292](DOM、BOM基础.assets/image-20200429105651292.png)
+
+
+
+
 
 
 
@@ -1356,9 +1749,96 @@
 
 
 
+![image-20200429110138740](DOM、BOM基础.assets/image-20200429110138740.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 400px;
+            height: 700px;
+            margin: 0 auto;
+        }
+        .container textarea{
+            display: block;
+            height: 200px;
+            width: 300px;
+            resize: none;
+        }
+        a{
+            float: right;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea name="desc">
+        </textarea>
+        <button>添加</button>
+        <ul>
+        </ul>
+    </div>
+</body>
+<script>
+    var btn = document.querySelector("button");
+    var textareaContent = document.querySelector("textarea")
+    var ul = document.querySelector("ul")
+    btn.onclick = function(){
+        if(!textareaContent.value){
+            alert('请输入内容');
+            return ;
+        }
+        // 创建dom
+        var li = document.createElement("li");
+        // 添加文本
+        li.innerHTML = textareaContent.value+"<a href='javascript:;'>删除</a>";
+        // 添加到父元素中
+        // ul.appendChild(li); 向父元素的末尾添加元素，类似于数组的push
+        ul.insertBefore(li,ul.children[0])
+        textareaContent.value = ''
+        //  点击删除
+        var as = document.querySelectorAll("a")
+        for(var i = 0; i<as.length;i++){
+            as[i].onclick = function(){
+               // node.removeChild(child); 删除的是 li 当前a所在的li  this.parentNode;
+               ul.removeChild(this.parentNode);
+            }
+        }
+    }
+</script>
+</html>
+~~~
+
+
+
+
+
 ### 5.7 复制节点
 
 ![image-20200427143826465](DOM、BOM基础.assets/image-20200427143826465.png)
+
+
+
+
+
+![image-20200429110545571](DOM、BOM基础.assets/image-20200429110545571.png)
+
+
+
+
 
 
 
@@ -1372,9 +1852,170 @@
 
 
 
+![image-20200429111317499](DOM、BOM基础.assets/image-20200429111317499.png)
+
+
+
+![image-20200429111635602](DOM、BOM基础.assets/image-20200429111635602.png)
+
+
+
+![image-20200429112048514](DOM、BOM基础.assets/image-20200429112048514.png)
+
+
+
+![image-20200429141620232](DOM、BOM基础.assets/image-20200429141620232.png)
+
+
+
+![image-20200429141829358](DOM、BOM基础.assets/image-20200429141829358.png)
+
+
+
+![image-20200429142039912](DOM、BOM基础.assets/image-20200429142039912.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid #000;
+            height: 30px;
+            line-height: 30px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+               <tr>
+                    <th>姓名</th>
+                    <th>科目</th>
+                    <th>成绩</th>
+                    <th>操作</th>
+               </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>hello</td>
+                    <td>hello</td>
+                    <td>hello</td>
+                </tr>
+                <tr>
+                    <td>hello</td>
+                    <td>hello</td>
+                    <td>hello</td>
+                </tr> <tr>
+                    <td>hello</td>
+                    <td>hello</td>
+                    <td>hello</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    var datas = [
+        {
+            name:'silly',
+            course:'javascript',
+            grade:99
+        },
+        {
+            name:'smith',
+            course:'Math',
+            grade:100
+        },
+        {
+            name:'alice',
+            course:'javascript',
+            grade:60
+        },
+        {
+            name:'Job',
+            course:'science',
+            grade:99
+        },
+        {
+            name:'Job',
+            course:'science',
+            grade:99
+        },
+        {
+            name:'Job',
+            course:'science',
+            grade:99
+        }
+    ];
+    var tbody = document.querySelector('tbody')
+    // 依据数组来创建tr
+    for(var i = 0; i<datas.length;i++){
+        var tr = document.createElement("tr")
+        for(var item in datas[i]){
+            var td = document.createElement("td");
+            td.innerHTML = datas[i][item]
+            tr.appendChild(td)
+        }
+        // 添加删除选项
+        var bta = document.createElement("td")
+        bta.innerHTML = "<a href='javascript:;'>删除</a>";
+        tr.appendChild(bta)
+        tbody.appendChild(tr)
+    }
+    // 处理删除事件
+    var as = document.querySelectorAll("a");
+    for(var i = 0;i<as.length;i++){
+        as[i].onclick = function(){
+            tbody.removeChild(this.parentNode.parentNode)
+        }
+    }
+</script>
+</html>
+~~~
+
+
+
+
+
 ### 5.8 三种动态创建元素区别
 
 ![image-20200427144115359](DOM、BOM基础.assets/image-20200427144115359.png)
+
+
+
+![image-20200429152948965](DOM、BOM基础.assets/image-20200429152948965.png)
+
+
+
+![image-20200429153143968](DOM、BOM基础.assets/image-20200429153143968.png)
+
+
+
+![image-20200429153613875](DOM、BOM基础.assets/image-20200429153613875.png)
+
+
+
+![image-20200429153659697](DOM、BOM基础.assets/image-20200429153659697.png)
 
 
 
@@ -1454,15 +2095,37 @@
 
 
 
+![image-20200429154318729](DOM、BOM基础.assets/image-20200429154318729.png)
+
+
+
+![image-20200429154551445](DOM、BOM基础.assets/image-20200429154551445.png)
+
+
+
 ### 1.2 addEventListener 事件监听方式
 
 ![image-20200427150544372](DOM、BOM基础.assets/image-20200427150544372.png)
 
 
 
+![image-20200429154856058](DOM、BOM基础.assets/image-20200429154856058.png)
+
+
+
+
+
+
+
+
+
 ### 1.3  attachEvent  事件监听方式
 
 ![image-20200427150719657](DOM、BOM基础.assets/image-20200427150719657.png)
+
+
+
+![image-20200429155537993](DOM、BOM基础.assets/image-20200429155537993.png)
 
 
 
@@ -1483,6 +2146,18 @@
 ### 2.1 删除事件的方式
 
 ![image-20200427151201478](DOM、BOM基础.assets/image-20200427151201478.png)
+
+
+
+![image-20200429155744092](DOM、BOM基础.assets/image-20200429155744092.png)
+
+
+
+![image-20200429160015645](DOM、BOM基础.assets/image-20200429160015645.png)
+
+
+
+![image-20200429160131433](DOM、BOM基础.assets/image-20200429160131433.png)
 
 
 
@@ -1510,6 +2185,26 @@
 
 
 
+![image-20200429161236272](DOM、BOM基础.assets/image-20200429161236272.png)
+
+
+
+![image-20200429161528095](DOM、BOM基础.assets/image-20200429161528095.png)
+
+
+
+![image-20200429161833249](DOM、BOM基础.assets/image-20200429161833249.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 4.事件对象
@@ -1528,17 +2223,43 @@
 
 
 
+![image-20200429162343578](DOM、BOM基础.assets/image-20200429162343578.png)
+
+
+
+![image-20200429162402176](DOM、BOM基础.assets/image-20200429162402176.png)
+
+
+
+
+
 ### 4.3 事件对象的兼容性方案
 
 ![image-20200427152611046](DOM、BOM基础.assets/image-20200427152611046.png)
 
 
 
+![image-20200429162532472](DOM、BOM基础.assets/image-20200429162532472.png)
+
 
 
 ### 4.4 事件对象的常见属性和方法
 
 ![image-20200427152806067](DOM、BOM基础.assets/image-20200427152806067.png)
+
+
+
+![image-20200429162833073](DOM、BOM基础.assets/image-20200429162833073.png)
+
+
+
+![image-20200429162912992](DOM、BOM基础.assets/image-20200429162912992.png)
+
+
+
+![image-20200429163029354](DOM、BOM基础.assets/image-20200429163029354.png)
+
+
 
 
 
@@ -1558,9 +2279,33 @@
 
 
 
+![image-20200429163931425](DOM、BOM基础.assets/image-20200429163931425.png)
+
+
+
+
+
+![image-20200429163504665](DOM、BOM基础.assets/image-20200429163504665.png)
+
+
+
+
+
+![image-20200429163812147](DOM、BOM基础.assets/image-20200429163812147.png)
+
+
+
 ### 5.2  阻止事件冒泡的兼容性解决方案
 
 ![image-20200427153241886](DOM、BOM基础.assets/image-20200427153241886.png)
+
+
+
+
+
+![image-20200429164228582](DOM、BOM基础.assets/image-20200429164228582.png)
+
+
 
 
 
@@ -1584,6 +2329,12 @@
 
 
 
+![image-20200429164858378](DOM、BOM基础.assets/image-20200429164858378.png)
+
+
+
+
+
 
 
 ## 7.常用的鼠标事件
@@ -1598,11 +2349,45 @@
 
 
 
+![image-20200429165733454](DOM、BOM基础.assets/image-20200429165733454.png)
+
+
+
+![image-20200429165854105](DOM、BOM基础.assets/image-20200429165854105.png)
+
 
 
 ### 7.2 鼠标事件对象
 
 ![image-20200427153813799](DOM、BOM基础.assets/image-20200427153813799.png)
+
+
+
+![image-20200429170448838](DOM、BOM基础.assets/image-20200429170448838.png)
+
+
+
+![image-20200429170428761](DOM、BOM基础.assets/image-20200429170428761.png)
+
+
+
+![image-20200429170619156](DOM、BOM基础.assets/image-20200429170619156.png)
+
+
+
+![image-20200429170749819](DOM、BOM基础.assets/image-20200429170749819.png)
+
+
+
+![image-20200429170926925](DOM、BOM基础.assets/image-20200429170926925.png)
+
+
+
+![image-20200429171012495](DOM、BOM基础.assets/image-20200429171012495.png)
+
+
+
+
 
 
 
@@ -1620,6 +2405,42 @@
 
 
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/angel.gif" alt="">
+    <script>
+        var pic = document.querySelector('img');
+        document.addEventListener('mousemove', function(e) {
+            // 1. mousemove只要我们鼠标移动1px 就会触发这个事件
+            // console.log(1);
+            // 2.核心原理： 每次鼠标移动，我们都会获得最新的鼠标坐标， 把这个x和y坐标做为图片的top和left 值就可以移动图片
+            var x = e.pageX;
+            var y = e.pageY;
+            console.log('x坐标是' + x, 'y坐标是' + y);
+            //3 . 千万不要忘记给left 和top 添加px 单位
+            pic.style.left = x - 50 + 'px';
+            pic.style.top = y - 40 + 'px';
+        });
+    </script>
+</body>
+</html>
+~~~
+
 
 
 
@@ -1632,11 +2453,23 @@
 
 
 
+![image-20200429171921477](DOM、BOM基础.assets/image-20200429171921477.png)
+
+
+
+
+
 ### 8.2 键盘事件对象
 
 ![image-20200427154500236](DOM、BOM基础.assets/image-20200427154500236.png)
 
 
+
+![image-20200429172555903](DOM、BOM基础.assets/image-20200429172555903.png)
+
+
+
+![image-20200429172405360](DOM、BOM基础.assets/image-20200429172405360.png)
 
 
 
@@ -1658,9 +2491,40 @@
 
 
 
-
-
 ![image-20200427154754406](DOM、BOM基础.assets/image-20200427154754406.png)
+
+
+
+![image-20200429173028774](DOM、BOM基础.assets/image-20200429173028774.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name = ''/>
+</body>
+<script>
+    // 获取inputDom
+    var input = document.querySelector('input')
+    // 创建监听
+    document.addEventListener('keyup',function(e){
+        console.log(e);
+    if(e.keyCode == 83){
+        input.focus()
+    }     
+    })
+</script>
+</html>
+~~~
+
+
 
 
 
@@ -1671,6 +2535,107 @@
 
 
 ![image-20200427154956951](DOM、BOM基础.assets/image-20200427154956951.png)
+
+
+
+
+
+![image-20200429173259115](DOM、BOM基础.assets/image-20200429173259115.png)
+
+
+
+![image-20200429173524507](DOM、BOM基础.assets/image-20200429173524507.png)
+
+
+
+![image-20200429173845315](DOM、BOM基础.assets/image-20200429173845315.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:300px;
+            height:200px;
+            margin:50px auto;
+            padding-left: 50px;
+            position: relative;
+
+        }
+        .enlargements{
+            display: none;
+            width: 150px;
+            /* height: 30px;
+            line-height: 30px; */
+            border: 1px solid #999;
+            font-size: 20px;
+            margin-bottom: 10px;
+            /* 超出自动换行 */
+            word-break:break-all;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        }
+        .enlargements::after{
+            content: '';
+            position: absolute;
+            left: 64px;
+            top:27px;
+            width: 0px;
+            height: 0px;
+            border-top:8px solid #fff;
+            border-right: 8px dashed transparent;
+            border-left: 8px dashed transparent;
+        }
+        .input{
+            width: 150px;
+            height: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="enlargements"></div>
+        <input type="text" placeholder="请输入快递单号" class="input"/>
+    </div>
+</body>
+<script>
+    var input = document.querySelector('.input')
+    var enlargeContent = document.querySelector(".enlargements")
+    // 监听input框输入事件
+     input.addEventListener('keyup',function(){
+         if(input.value == ''){
+            enlargeContent.innerHTML = '';
+            enlargeContent.style.display = 'none';
+         } else {
+            enlargeContent.style.display = 'inline-block';
+            enlargeContent.innerHTML = input.value
+         }
+     })
+     // 监听input失去焦点事件
+     input.addEventListener('blur',function(){
+         enlargeContent.style.display = 'none';
+     })
+    //  监听input获得焦点事件
+    input.addEventListener('focus',function(){
+        if(input.value == ''){
+            enlargeContent.style.display = 'none'; 
+        } else {
+            enlargeContent.style.display = 'inline-block'; 
+        }
+    })
+</script>
+</html>
+~~~
+
+
+
+![image-20200429220907675](DOM、BOM基础.assets/image-20200429220907675.png)
 
 
 
@@ -1702,9 +2667,23 @@
 
 
 
+![image-20200429174555103](DOM、BOM基础.assets/image-20200429174555103.png)
+
+
+
+
+
 ![image-20200427160112549](DOM、BOM基础.assets/image-20200427160112549.png)
 
 
+
+
+
+![image-20200429174811784](DOM、BOM基础.assets/image-20200429174811784.png)
+
+
+
+![image-20200429174831718](DOM、BOM基础.assets/image-20200429174831718.png)
 
 
 
@@ -1718,7 +2697,19 @@
 
 
 
+![image-20200429175243675](DOM、BOM基础.assets/image-20200429175243675.png)
+
+
+
+![image-20200429175421770](DOM、BOM基础.assets/image-20200429175421770.png)
+
+
+
 ![image-20200427160434865](DOM、BOM基础.assets/image-20200427160434865.png)
+
+
+
+
 
 
 
@@ -1727,6 +2718,24 @@
 ### 2.2 调整窗口大小事件
 
 ![image-20200427160514332](DOM、BOM基础.assets/image-20200427160514332.png)
+
+**这个方法应该比较常用于媒体查询中的编程方式**
+
+
+
+![image-20200429180312644](DOM、BOM基础.assets/image-20200429180312644.png)
+
+
+
+![image-20200429180732949](DOM、BOM基础.assets/image-20200429180732949.png)
+
+
+
+![image-20200429180627316](DOM、BOM基础.assets/image-20200429180627316.png)
+
+
+
+
 
 
 
@@ -1750,6 +2759,14 @@
 
 
 
+![image-20200429181018741](DOM、BOM基础.assets/image-20200429181018741.png)
+
+
+
+![image-20200429181137211](DOM、BOM基础.assets/image-20200429181137211.png)
+
+
+
 ### 案例：5s后自动关闭的广告
 
 ![image-20200427160948444](DOM、BOM基础.assets/image-20200427160948444.png)
@@ -1760,9 +2777,49 @@
 
 
 
+![image-20200429221430540](DOM、BOM基础.assets/image-20200429221430540.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./image/rain.png">
+</body>
+<script>
+    var img  = document.querySelector('img');
+    var spanText = document.querySelector("span");
+    // 利用setTimeOut创建定时器
+    var timer  = window.setTimeout(function(){
+        img.style.display = 'none'
+    },5000)
+</script>
+</html>
+~~~
+
+
+
+
+
+
+
+
+
 ### 3.3 停止setTimeout()定时器
 
 ![image-20200427162742521](DOM、BOM基础.assets/image-20200427162742521.png)
+
+
+
+![image-20200429221845350](DOM、BOM基础.assets/image-20200429221845350.png)
+
+
 
 
 
@@ -1771,6 +2828,10 @@
 ### 3.4 setInterval()定时器
 
 ![image-20200427162839092](DOM、BOM基础.assets/image-20200427162839092.png)
+
+
+
+![image-20200429222200114](DOM、BOM基础.assets/image-20200429222200114.png)
 
 
 
@@ -1784,9 +2845,104 @@
 
 
 
+![image-20200429222348320](DOM、BOM基础.assets/image-20200429222348320.png)
+
+
+
+![image-20200429222941861](DOM、BOM基础.assets/image-20200429222941861.png)
+
+
+
+![image-20200429230458721](DOM、BOM基础.assets/image-20200429230458721.png)
+
+
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 360px;
+            height: 150px;
+            margin:50px auto;
+            display: flex;
+            justify-content:space-around;
+        }
+        .box div{
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            text-align: center;
+            line-height: 100px;
+            font-size: 35px;
+            font-weight: 600;
+            color:#fff;
+
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="hour">00</div>
+        <div class="minute">11</div>
+        <div class="second">22</div>
+    </div>
+</body>
+<script>
+    var hour = document.querySelector('.hour');
+    var minute = document.querySelector('.minute');
+    var second = document.querySelector('.second');
+    var time = '2020-04-30 18:00:00';
+    countTime(time);
+    setInterval(countTime,1000);
+
+    function countTime(){
+        // 将输入事件转成毫秒
+        var inputTime = new Date(time);
+        // 获取当前的系统时间
+        var nowTime = new Date();
+        // 取得差值,并转成秒数
+        var differenceTime = (inputTime - nowTime)/1000;
+        // 获取hour
+        var h = parseInt(differenceTime /60/60%24)
+        h = h <10 ? '0'+h : h;
+        hour.innerHTML = h;
+        // 获取minute
+        var min = parseInt(differenceTime/60%60)
+        min = min <10 ? '0'+min : min;
+        minute.innerHTML = min;
+        // 获取second
+        var sec = parseInt(differenceTime%60)
+        sec = sec <10 ? '0'+sec : sec;
+        second.innerHTML = sec;
+    }
+
+</script>
+</html>
+~~~
+
+
+
+
+
 ### 3.5 停止setInterval()定时器
 
 ![image-20200427163112960](DOM、BOM基础.assets/image-20200427163112960.png)
+
+
+
+![image-20200429231252821](DOM、BOM基础.assets/image-20200429231252821.png)
+
+
+
+
 
 
 
@@ -1800,9 +2956,132 @@
 
 
 
+![image-20200429232341659](DOM、BOM基础.assets/image-20200429232341659.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 40px;
+            width: 400px;
+            margin: 50px auto;
+            font-size: 0px;
+        }
+        input{
+            height: 26px;
+            outline: none;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button{
+            height: 26px;
+            padding: 0px 5px;
+            vertical-align: top;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" placeholder="请输入验证码"/><button>发送</button>
+    </div>
+</body>
+<script>
+    var btn = document.querySelector('button')
+     
+     btn.addEventListener('click',function(){
+        btn.disabled = true;
+         var countTime = 10;
+        //设置定时器
+        var time  = window.setInterval(function(){
+          if(countTime == 0){
+            window.clearInterval(time);
+            btn.disabled = false;
+            btn.innerHTML = '发送'
+          } else {
+            btn.innerHTML = '还剩下'+countTime+'s';
+            countTime--;
+          }
+        },1000)
+
+     })
+</script>
+</html>
+~~~
+
+
+
+![image-20200430204836024](DOM、BOM基础.assets/image-20200430204836024.png)
+
+
+
+
+
 ### 3.6 this
 
 ![image-20200427163403572](DOM、BOM基础.assets/image-20200427163403572.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <script>
+        // this 指向问题 一般情况下this的最终指向的是那个调用它的对象
+        // 1. 全局作用域或者普通函数中this指向全局对象window（ 注意定时器里面的this指向window）
+        console.log(this);
+        function fn() {
+            console.log(this);
+        }
+        window.fn();
+        window.setTimeout(function() {
+            console.log(this);
+        }, 1000);
+        // 2. 方法调用中谁调用this指向谁
+        var o = {
+            sayHi: function() {
+                console.log(this); // this指向的是 o 这个对象
+            }
+        }
+        o.sayHi();
+        var btn = document.querySelector('button');
+        // btn.onclick = function() {
+        //     console.log(this); // this指向的是btn这个按钮对象
+        // }
+        btn.addEventListener('click', function() {
+                console.log(this); // this指向的是btn这个按钮对象
+            })
+            // 3. 构造函数中this指向构造函数的实例
+        function Fun() {
+            console.log(this); // this 指向的是fun 实例对象
+        }
+        var fun = new Fun();
+    </script>
+</body>
+
+</html>
+~~~
+
+
 
 
 
@@ -1826,7 +3105,23 @@
 
 
 
+![image-20200429233431036](DOM、BOM基础.assets/image-20200429233431036.png)
+
+
+
+
+
 ![image-20200427163738333](DOM、BOM基础.assets/image-20200427163738333.png)
+
+
+
+![image-20200429233730047](DOM、BOM基础.assets/image-20200429233730047.png)
+
+
+
+
+
+
 
 
 
@@ -1846,6 +3141,16 @@
 
 
 
+
+
+![image-20200430160304300](DOM、BOM基础.assets/image-20200430160304300.png)
+
+
+
+
+
+
+
 ### 4.4 JS执行机制
 
 ![image-20200427164021636](DOM、BOM基础.assets/image-20200427164021636.png)
@@ -1857,6 +3162,16 @@
 
 
 ![image-20200427164803898](DOM、BOM基础.assets/image-20200427164803898.png)
+
+
+
+
+
+![image-20200430160716452](DOM、BOM基础.assets/image-20200430160716452.png)
+
+
+
+
 
 
 
@@ -1882,6 +3197,8 @@
 
 
 
+![image-20200430161526529](DOM、BOM基础.assets/image-20200430161526529.png)
+
 
 
 ### 案例：5s之后自动跳转页面
@@ -1891,6 +3208,60 @@
 
 
 ![image-20200427165537445](DOM、BOM基础.assets/image-20200427165537445.png)
+
+
+
+
+
+![image-20200430161738116](DOM、BOM基础.assets/image-20200430161738116.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 20px;
+            width: 2000px;
+            line-height: 20px;
+            font-size: 20px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>点击跳转</button>
+</body>
+<script>
+    var div = document.querySelector('div');
+    var btn = document.querySelector("button");
+    btn.addEventListener('click',function(){
+        var countTime = 3;
+        var time  = window.setInterval(function(){
+                    if(countTime == 0){
+                    window.location.href="https://www.baidu.com/"
+                    } else {
+                        div.innerHTML = '还剩下'+countTime+'s跳转';
+                        countTime--;
+                    } 
+        },1000)
+    })
+    
+</script>
+</html>
+~~~
+
+
+
+![image-20200430212049723](DOM、BOM基础.assets/image-20200430212049723.png)
+
+
 
 
 
@@ -1904,9 +3275,77 @@
 
 
 
+![image-20200430162314301](DOM、BOM基础.assets/image-20200430162314301.png)
+
+
+
+![image-20200430162626386](DOM、BOM基础.assets/image-20200430162626386.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="21_2_index.html">
+        <input type="text" name='uname'/>
+        <input type='submit'>
+    </form>
+</body>
+</html>
+~~~
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    var params  = window.location.search;
+    console.log(params);
+    var param  = params.substr(1).split("=")[1];
+    div.innerHTML = '参数name:' + param;
+</script>
+</html>
+~~~
+
+
+
+
+
+
+
+
+
 ### 5.4 location对象的方法
 
 ![image-20200427165749869](DOM、BOM基础.assets/image-20200427165749869.png)
+
+
+
+![image-20200430163007813](DOM、BOM基础.assets/image-20200430163007813.png)
+
+
+
+
+
+
+
+
 
 
 
@@ -1926,3 +3365,4 @@
 
 
 
+![image-20200430163622283](DOM、BOM基础.assets/image-20200430163622283.png)
