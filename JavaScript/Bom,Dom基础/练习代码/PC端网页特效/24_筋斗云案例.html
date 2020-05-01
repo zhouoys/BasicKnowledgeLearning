@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 重置样式 */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+         ul,li{
+             list-style: none;
+             margin: 0px;
+             padding: 0;
+         }
+         a{
+             text-decoration:none;
+             /* 强制继承 */
+            color:inherit;
+         }
+         /* 自定义样式 */
+         .box{
+             position: relative;
+             height: 42px;
+             width: 900px;
+             margin:100px auto;
+             border-radius: 5px;
+             background-image: url("../image/rss.png");
+             background-position: right center;
+             background-repeat: no-repeat;
+         }
+         .cloud{
+             position: absolute;
+             left:0;
+             top:0;
+             height: 42px;
+             width: 83px;
+             background-image: url("../image/cloud.gif");
+             background-repeat: no-repeat;
+         }
+         ul{
+             position: absolute;
+             left: 0px;
+             top:0px;
+             height: 42px;
+             z-index: 999;
+         }
+         ul li{
+             float: left;
+             width: 83px;
+             line-height: 42px;
+             text-align: center;
+         }
+         ul li a{
+             display: block;
+             height: 42px;
+         }
+         ul li a:hover{
+            color:green;
+         }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="cloud"></span>
+        <ul class="nav-list">
+            <li style="color:green;font-weight: 700;"><a href="#">首页新闻</a></li>
+            <li><a href="#">师资力量</a></li>
+            <li><a href="#">活动策划</a></li>
+            <li><a href="#">企业文化</a></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">我是佩奇</a></li>
+            <li><a href="#">啥是佩奇</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    window.addEventListener("load",function(){
+        // 获取图片的dom
+        var imgCloud = document.querySelector(".cloud");
+        // 获取所有的li
+        var lis = document.querySelector(".nav-list").querySelectorAll("li");
+        var currentPosition = 0;
+        // 给所有的li添加鼠标进入事件        
+        for(var i = 0;i<lis.length;i++){
+
+
+            // 1.为每一个li添加鼠标进入事件
+            lis[i].addEventListener('mouseenter',function(){
+                // 调用动画函数移动位置
+                // imgCloud.style.left = this.offsetLeft + 'px';
+                animate(imgCloud,this.offsetLeft);
+            })
+
+
+            // 2.为每一个li添加一个鼠标离开事件
+            lis[i].addEventListener('mouseleave',function(){
+                console.log('鼠标离开');
+                // imgCloud.style.left = currentPosition + 'px';
+                animate(imgCloud,currentPosition);
+
+            })
+
+
+            // 3.为每一个li添加一个鼠标点击事件
+            lis[i].addEventListener('click',function(){
+            // 将当前鼠标的位置赋值给当前li的位置,用于更新位置的描点
+            currentPosition = this.offsetLeft; 
+            // 移动图片的位置(此处应该不需要移动),因为悬浮效果已经移动图片到此位置了
+            // imgCloud.style.left = currentPosition + 'px';
+            // 用排除法替换点击之后字体变色j++
+              for(var j = 0;j<lis.length;j++){
+                  lis[j].style.color = '#000';
+                  lis[j].style.fontWeight = 'normal';
+              }
+            // 点击的tab添加字体颜色
+            this.style.color = 'green'
+            this.style.fontWeight = '700';
+
+            })
+        }
+      
+        // 动画函数
+        function animate(obj,target,callback){
+        // 清除之前的计时器，为了方式多次快速点击的bug
+         window.clearInterval(obj.timer);
+         // 设置计时器
+         obj.timer = window.setInterval(function(){
+             // 计算步长
+             var step = (target - obj.offsetLeft) / 10;
+             // 格式化步长(分正负小数)
+             step = step >0 ? Math.ceil(step) : Math.floor(step);
+             // 到达位置，清除计时器
+             if(obj.offsetLeft == target){
+                 window.clearInterval(obj.timer);
+                 // 判断是否执行回调函数
+                 callback && callback();
+             }
+            // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10
+             obj.style.left = obj.offsetLeft + step + 'px';
+         },15)
+
+
+        }
+    })
+</script>
+</html>

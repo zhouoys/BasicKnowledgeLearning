@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 1000px;
+            margin:10px auto;
+        }
+        .nav{
+            height: 200px;
+            background-color: aqua;
+        }
+        .header{
+            height: 100px;
+            background-color:palegoldenrod;
+        }
+        .main{
+            height: 800px;
+            background-color:palegreen;
+        }
+        .slide-bar{
+            position: absolute;
+            top:320px;
+            right:200px;
+            width: 60px;
+            height: 300px;
+            background-color: palevioletred;
+        }
+        .go-back{
+            position: absolute;
+            bottom: 0px;
+            font-size: 14px;
+            width: 60px;
+            height: 20px;
+            line-height: 20px;
+            background-color:green;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav wrap">这是nav</div>
+    <div class="header wrap">这是header</div>
+    <div class="main wrap">这是一个main</div>
+    <div class="slide-bar">
+        <span class="go-back">返回顶部</span>
+    </div>
+</body>
+<script>
+    var nav = document.querySelector('.nav');
+    var header = document.querySelector('.header');
+    var main = document.querySelector('.main');
+    var slideBar = document.querySelector('.slide-bar');
+    var goBack = document.querySelector('.go-back');
+    // 获取main相对于浏览器顶部的高度
+    var mainTop = main.offsetTop;
+    // 获取nav相对于浏览器顶部的高度
+    var headerTop = header.offsetTop;
+    // 获取bar相对于浏览器顶部的高度
+    var slideBarTop = slideBar.offsetTop;
+    // 获取slideBar固定的时候相对于浏览器的高度
+    var slideBarFixHeight = slideBarTop - headerTop;
+    // 给document添加滚动事件
+    document.addEventListener('scroll',function(){
+        // 判断是否出现固定定位
+        if(window.pageYOffset >= headerTop){            
+            // 替换成固定定位
+            slideBar.style.position = 'fixed'
+            // 设置固定定位的位置
+            slideBar.style.top = slideBarFixHeight + 'px'
+        } else {
+             // 还原绝对定位
+             slideBar.style.position = 'absolute';
+            //  还原绝对定位的位置
+            slideBar.style.top = 320 + 'px';
+        }
+        // 判断是否出现返回顶部字样
+        if(window.pageYOffset >= mainTop){
+            // 出现返回顶部提示
+            goBack.style.display = 'block';
+        } else {
+            goBack.style.display = 'none';
+        }
+    })
+
+    // 给document的滚动事件添加动画效果
+    goBack.addEventListener('click',function(){
+        // 无动画效果
+        //  window.scroll(0,0)
+        // 具有动画效果
+        animate(window,0)
+    })
+    // 添加动画函数(返回顶部，其他类似)
+    function animate(obj,target,callback){
+        // 为了方式对此点击造成动画越来越块的bug,此处需要先清除定时器
+        // 也就是每点击一次，就会重新生成新的定时器，所以需要清除以前
+        // 的定时器，只保留当前的一个定时器执行
+         clearInterval(obj.timer);
+         // 创建定时器
+         obj.timer = window.setInterval(function(){            
+            // 每一次执行都计算步长
+            var step = (target - window.pageYOffset) / 10;//也就是时刻计算当前的距离与目标距离的大小，作动态计算
+            /*
+             因为步长可能会有小数，分正小数和负小数，所以这里需要做以下格式化
+             对于正数，应该向上取整
+             对于负数，应该向下取整
+            */
+           step = step < 0 ? Math.floor(step) : Math.ceil(step);
+            // 到达指定位置后去除setInterval定时器,此处的指定位置，因该为target的位置用作判断。
+            if(window.pageYOffset == target){
+                // 停止动画，本质是停止计时器
+                clearInterval(obj.timer);
+                // 清楚定时器之后，此时可以执行callback函数了
+                callback && callback();
+            }
+            //  定时器每一次平移指定的位置
+            /*
+              因为为doucment的移动，此时不适合用position:absolute中的left，以及top来进行了;
+              可以采用window.scroll(x,y)来进行移动。注意不需要加px;
+              还需要注意累加操作，此处的x,y均指的是坐标;
+            */
+           window.scroll(0,window.pageYOffset + step);           
+        },30)
+
+
+    }
+
+
+
+
+</script>
+</html>
