@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="userName">用户名:</label>
+        <input type="text" name = 'userName' id="userName" />
+    </div>
+    <div>
+        <label for="userPwd">密码:</label>
+        <input type="password" name = 'userPwd' id="userPwd" />
+    </div>
+    <input type="checkbox" id = 'remeber' name = 'remeber'>
+    <label for="remeber">记住用户名，密码。</label>
+</body>
+<script>
+    var userName = document.querySelector('#userName');
+    var userPwd = document.querySelector('#userPwd');
+    var radio = document.querySelector('#remeber')
+    if(window.localStorage.getItem('userName')){
+        userName.value = window.localStorage.getItem('userName');
+        userPwd.value  = window.localStorage.getItem('userPwd');
+        radio.checked = true;
+    }
+    // 监听radin改变事件
+    radio.addEventListener('change',function(){
+        if(this.checked){
+            window.localStorage.setItem('userName',userName.value);
+            window.localStorage.setItem('userPwd',userPwd.value);
+        } else {
+            window.localStorage.removeItem('userName');
+            window.localStorage.removeItem('userPwd');
+        }
+    })
+</script>
+</html>

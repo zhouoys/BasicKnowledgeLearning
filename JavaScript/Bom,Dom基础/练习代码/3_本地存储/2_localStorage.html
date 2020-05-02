@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name = 'uname' class="text" placeholder="输入数据"/>
+    <button class="set">存入数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="clear-all">清除所有数据</button>
+    <div>
+        <input type="text" class="show" placeholder="显示数据"/>
+    </div>
+</body>
+<script>
+    // 获取text
+    var text = document.querySelector('.text')
+    var showText = document.querySelector('.show')
+    // 存入数据(存入，以及修改,key值相同)
+    var set  = document.querySelector('.set');
+    set.addEventListener('click',function(){
+        // 存入sesseionStorage.setItem
+        window.localStorage.setItem('uname',text.value);
+        window.localStorage.setItem('pwd',text.value);
+        window.localStorage.setItem('cardID',text.value);
+    })
+    // 获取数据
+    var get = document.querySelector('.get')
+    get.addEventListener('click',function(){
+        //获取数据
+        var temp = window.localStorage.getItem('uname');
+        // 赋值
+        showText.value  = temp;
+    })
+    // 删除数据
+    var remove = document.querySelector('.remove')
+    remove.addEventListener('click',function(){
+        window.localStorage.removeItem('uname');
+    })
+    // 删除所有的数据
+    var clearAll = document.querySelector('.clear-all');
+    clearAll.addEventListener('click',function(){
+        // 清除所有的数据
+        window.localStorage.clear();
+
+    })
+</script>
+</html>
