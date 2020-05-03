@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    // 保存DOM的位置
+    var X = 0;
+    var Y = 0
+    // 保存触摸的初始位置
+    var touchX = 0;
+    var touchY = 0;
+    // 添加手指触摸事件
+    div.addEventListener('touchstart',function(e){
+        // 获取第一个手机触摸时候的位置
+        console.log(e.targetTouches[0]);
+        // 保存触摸时候的位置
+        // 这两种获取鼠标坐标的方法，区别在于参考对象不同：
+        // pageX和pageY：获取鼠标指针距离文档（HTML）的左上角距离，不会随着滚动条滚动而改变
+        // clientX和clientY：获取鼠标指针距离可视窗口(不包括上面的地址栏和滑动条)的距离，会随着滚动条滚动而改变
+
+        touchX = e.targetTouches[0].pageX;
+        touchY = e.targetTouches[0].pageY;
+        // 设置DOM的初始位置
+        X = this.offsetLeft;
+        Y = this.offsetTop;
+    })
+    // 添加手指划动事件
+    div.addEventListener('touchmove',function(e){
+        // 计算手指划动时候跟触摸时候的位置之差。
+        var differenceX = e.targetTouches[0].pageX - touchX;
+        var differenceY = e.targetTouches[0].pageY - touchY;
+
+        // 重新计算DOM的位置
+        div.style.left = X + differenceX + 'px';
+        div.style.top = Y + differenceY + 'px';
+
+        // 阻止划动的默认滚动事件
+        e.preventDefault();
+
+    })
+</script>
+</html>
