@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 父构造函数
+      class  Father {
+        constructor(uname,age){
+            this.uname = uname;
+            this.age = age;
+            }
+        say(){
+            return '我是父元素:'+this.uname + this.age;
+            }
+        }
+    // 子构造函数
+      class Son extends Father{
+          constructor(uname,age){
+              super(uname,age)
+              this.age = age;
+          }
+          say(){
+              console.log(super.uname);
+              console.log(this);
+              return '我是子元素:' + this.uname + this.age + super.say();;
+          }
+      }
+      //很明显此处，子类继承了父类的构造函数
+      var son = new Son('周',55);
+    //   console.dir(Son.prototype.constructor)
+      //console.log(son._proto_.constructor);  在ES6中是否没有对象原型这个属性，因为这个属性来自于ES5中的构造函数中的。
+      console.log(son.say());
+      
+    // // 默认没写构造函数
+    //     class ChildFactory{}
+    //     var chiid = new ChildFactory('silly');
+    //     console.log(ChildFactory.prototype.constructor);
+        
+    //     // console.log(child.uname);
+    // // 测试构造函数方法
+
+    // function PersonFactory(uname,age){
+    //     this.uname = uname;
+    //     this.age = age;
+    // }
+    // var person  = new PersonFactory('silly',25);
+    // console.log(PersonFactory.prototype);
+    // console.log(person);
+    // console.log(person.uname);
+    // console.log(person._proto_);
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

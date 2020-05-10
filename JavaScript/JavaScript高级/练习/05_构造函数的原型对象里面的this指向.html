@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建构造函数
+        function Person(uname,age){
+            this.uname = uname;
+            this.age = age;
+        }
+        // 利用构造函数的prototype原型对象添加公共的方法
+        Person.prototype.say = function(){
+            // 打印里面的this
+            console.log(this);
+        }
+        // 分别实例化对象并且调用say方法
+        var ps1  = new Person('ldh',77);
+        ps1.say();
+        var ps2 = new Person('zxy',66);
+        ps2.say();
+        // 测试prototype和__proto__
+        console.log(Person.prototype === ps1.__proto__);//true
+        
+    </script>
+</body>
+</html>

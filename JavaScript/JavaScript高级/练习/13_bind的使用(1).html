@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            id:'1001',
+            name:'smilly',
+            age:78
+        }
+        function func(a,b){
+            console.log(this);
+            console.log(a + b); 
+        }
+        // 查看调用bind时是否调用函数
+        var newFunc = func.bind(obj,7,8);
+        console.log(newFunc);
+        console.log(newFunc());
+    </script>
+</body>
+</html>

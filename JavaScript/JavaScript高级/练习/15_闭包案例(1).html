@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>点击1</li>
+        <li>点击2</li>
+        <li>点击3</li>
+        <li>点击4</li>
+        <li>点击5</li>
+    </ul>
+</body>
+<script>
+    var btns = document.querySelectorAll('li');
+    // for(var i = 0;i<btns.length;i++){
+    //      // 不采用闭包
+    //     btns[i].index = i; // 需要添加一个index属性
+    //     btns[i].addEventListener('click',function(){
+    //         console.log(this.index);
+    //     })
+    // }
+    for(var i = 0;i<btns.length;i++){
+         // 采用小闭包
+         (function(i){
+            btns[i].addEventListener('click',function(){
+            console.log(i);
+        })
+         })(i)
+    }
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 构造函数
+        function Func(uname,age){
+            this.uname = uname;
+            this.age = age;
+            this.say = function(){
+                console.log('hello world');
+            }
+        }
+        // 实例对象
+        var person = new Func('smith',99);
+
+        console.log("----------测试静态成员，添加静态成员--------------------");
+        Func.sex  = 'male';
+        Func.go = function(){console.log('前往巴黎');}
+        // 测试静态成员
+        console.log(Func.sex);  //male
+        Func.go()   //前往巴黎
+        // 测试实例成员
+        console.log(person.sex);    // undefinec
+        // person.go();    // person.go is not a function
+
+        console.log("----------测试实例成员，添加实例成员--------------------");
+        console.log(Func.uname);
+        console.log(Func.age);
+        Func.say();
+
+        console.log(person.uname);
+        console.log(person.age);
+        person.say();
+        
+        
+
+        
+
+        
+
+    </script>
+</body>
+</html>

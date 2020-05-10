@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 父类
+        function Father(uname,age,sex){
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            console.log(this); 
+        }
+        // 子类
+        function Son(uname,age,sex){
+            Father.call(this,uname,age,sex)
+        }
+        var son = new Son('ldh',55,'男');
+        console.log(son);
+        
+    </script>
+</body>
+</html>

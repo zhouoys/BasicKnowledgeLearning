@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    class Father {
+        constructor(uname){
+            this.uname = uname;
+        }
+        say(){
+            console.dir(this);// 在子类中调用指向子类
+            console.log(JSON.stringify(this)+'这是父类里面的this');
+            return this.uname
+        }
+    }
+    class Son extends Father{
+        constructor(uname,age){
+            super(uname);
+            this.age = age;
+        }
+        show(){
+            console.dir(this); // 在子类中调用指向子类
+            console.log(JSON.stringify(this) + '这是子类里面的this')
+            super.say();// 在子类的方法中通过super调用，仍然指向子类
+            return this.uname + this.age;
+        }
+    }
+    var person = new Son('Smith',88);
+    // 调用父类的方法
+    person.say();  
+    // 调用子类的方法
+    person.show();
+</script>
+</html>

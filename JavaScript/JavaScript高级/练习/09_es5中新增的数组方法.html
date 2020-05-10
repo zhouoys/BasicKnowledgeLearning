@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // 打印数组所有的元素以及对应的下标
+     var arr = [1,90,'smilly','hello worold',88,67];
+     arr.forEach(function(value,index,arr){
+         console.log(value+ '--'+index+'--'+arr);
+     })
+    //1--0--1,90,smilly,hello worold,88,67
+    //90--1--1,90,smilly,hello worold,88,67
+    //smilly--2--1,90,smilly,hello worold,88,67
+    //hello worold--3--1,90,smilly,hello worold,88,67
+    //88--4--1,90,smilly,hello worold,88,67
+    //67--5--1,90,smilly,hello worold,88,67
+    //过滤数组，获取数组中的所有的数字元素，并且返回一个新数组。
+    var numArr = arr.filter(function(value,index,arr){
+        if(typeof value === 'number'){
+           return true;
+        } else {
+            return false;
+        }
+     })
+     console.log(numArr);//[1, 90, 88, 67]
+    // 查找数组中的第一个偶数
+    var evenNumber = arr.some(function(value,index,arr){
+        return value% 2 === 0 ? true:false;
+    })
+    console.log(evenNumber);//true
+
+    // 给数组中的每一个元素加上其索引，如果为字符串，则加一个字符
+
+    var newArr = arr.map(function(value,index,arr){
+        return value + index;
+    })
+    console.log(newArr); // [1, 91, "smilly2", "hello worold3", 92, 72]
+    
+    
+    // 检测数组中的所有元素是否都是数值
+    var isFlag = arr.every(function(value,index,arr){
+        return typeof value === 'number'
+    })
+    console.log(isFlag);//false
+
+    var arr1 = [1,2,3,4]
+
+    var isFlag1 = arr1.every(function(value,index,arr){
+        return typeof value === 'number'
+    })
+    console.log(isFlag1);//truetrue
+</script>
+</html>

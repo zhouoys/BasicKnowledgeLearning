@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 40%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        table{
+            border-collapse:collapse;
+            margin: 0 auto;
+            width: 400px;
+            text-align: center;
+        }
+        th,td{
+            border:1px solid #333;
+        }
+        .container input{
+            width: 50px;
+        }
+        .container .search,.search-by-price,.search-by-name{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .search{
+            margin-bottom: 20px;
+        }
+        .search input:last-child{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div class="search">
+          <div class="search-by-price">
+              <span>按照价格查询：</span>
+              <input type="number" class="start-price"/>
+              <span>-</span>
+              <input type="number" class="end-price"/>
+              <input type="button" value ="查询" class="btn-search-price"/>
+          </div>
+          <div class="search-by-name">
+              <span>按照商品名称查询：</span>
+              <input type="text" class="search-name">
+              <input type="button" class="btn-search-name" value = '查询'>
+          </div>
+      </div>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>商品名称</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>001</td>
+                <td>小米</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>苹果</td>
+                <td>9000</td>
+            </tr> 
+            <tr>
+                <td>003</td>
+                <td>华为</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Oppo</td>
+                <td>4000</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>vivo</td>
+                <td>3000</td>
+            </tr> -->
+        </tbody>
+    </table>
+  </div>
+</body>
+<script>
+    window.onload = function(){
+        // 页面加载完成之后，再重新设置
+        var datas = [
+        {
+            id:'001',
+            name:'小米',
+            price:1000
+        },{
+            id:'002',
+            name:'苹果',
+            price:9000
+        },{
+            id:'003',
+            name:'华为',
+            price:5000
+        },{
+            id:'004',
+            name:'vivo',
+            price:2000
+        },{
+            id:'005',
+            name:'努比亚N5',
+            price:3000
+        },{
+            id:'荣耀',
+            name:'vivo',
+            price:4000
+        }];
+        // 将数据渲染到页面中
+        var tbody = document.querySelector('tbody');
+        // 封装渲染方法
+        function renderDatas(datas){
+            datas.forEach(function(value,index,arr){
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>'+value.id + '</td>'+'<td>'+value.name + '</td>'+'<td>'+value.price + '</td>';
+            tbody.appendChild(tr);
+            })
+        }
+        // 初始化调用渲染方法
+        renderDatas(datas);
+        // 按照价格查询
+        var  btnSearchByPrice =document.querySelector(".btn-search-price");
+        btnSearchByPrice.addEventListener('click',function(){
+            var startPrice = document.querySelector('.start-price');
+            var endPrice = document.querySelector('.end-price');
+            // 对输入的价格做检验(略)
+            // 通过filter
+            var priceResults = datas.filter(function(value,index,arr){
+                return value.price >= startPrice.value && value.price <= endPrice.value
+            })
+            // 在渲染之前，先清空之前的渲染结果
+            tbody.innerHTML = '';
+            // 重新渲染之后过滤的数据
+            console.log(priceResults);
+            renderDatas(priceResults);
+        })
+        // 按照商品名称查询
+        var btnSearchByName = document.querySelector('.btn-search-name')
+        btnSearchByName.addEventListener('click',function(){
+            var name = document.querySelector('.search-name')
+            var item = [];
+            datas.some(function(value,index,arr){
+                if(value.name === name.value){
+                    item.push(value);
+                    return true;
+                }else {
+                    return false
+                }
+            })
+            // 重新渲染数据
+            tbody.innerHTML = '';
+            renderDatas(item)
+        })
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var calculateTaxiFare = (function(){
+        var startPrice = 13;// 起步价
+        var totalPrice = 0;// 总价0
+        return {
+            regularPrice:function(n){ // n为公里数
+               if(n<3){ // 如果距离小于13公里
+                totalPrice = startPrice;
+               } else {
+                totalPrice = (n-3)*5 + startPrice;
+               }
+               return totalPrice;
+            },
+            congestionPrice:function(flag){
+                return flag ? totalPrice + 10 : totalPrice;
+            }
+        }
+    })()
+    console.log(calculateTaxiFare.regularPrice(5));// 23;
+    console.log(calculateTaxiFare.congestionPrice(true));// 33
+    console.log(calculateTaxiFare.regularPrice(1));//13
+    console.log(calculateTaxiFare.congestionPrice(false));//13
+</script>
+</html>

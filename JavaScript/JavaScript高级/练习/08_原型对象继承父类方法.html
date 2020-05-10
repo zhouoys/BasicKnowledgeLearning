@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function Father (uname){
+                this.unameb = uname;
+            }
+            Father.prototype.earnMoney = function(){
+                console.log('父类挣钱');  
+            }
+            function Son(age){
+                this.age = age;
+            }
+            Son.prototype.costMoney = function(){
+                console.log('子类花钱');
+            }
+            Son.prototype = new Father();
+            var son = new Son('son');
+            var father = new Father('father');
+            // 第二种继承方式 尝试给子类添加新的方法查看父类的变化
+            Son.prototype.say = function(){
+                console.log('我要说话');
+            }
+            console.log(son);
+            console.log(father);
+    </script>
+</body>
+</html>

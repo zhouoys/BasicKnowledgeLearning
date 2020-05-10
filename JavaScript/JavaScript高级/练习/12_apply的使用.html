@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,67.34,90,67,8,90,116]
+        // 求数组的最大值
+        var max1 = Math.max.apply(null,arr);
+        console.log(max1);
+        var max2 = Math.max.apply(Math,arr);
+        console.log(max2);
+    </script>
+</body>
+</html>
