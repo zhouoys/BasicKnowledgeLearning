@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // 定义一个复杂对象
+    var arr = [{
+        id:"1001",
+        name:'smilly',
+        hobbies:[{
+            id:'1',
+            name:'baseball'
+        },{
+            id:'2',
+            name:'playfootball'
+        },{
+            id:'3',
+            name:'basketball'
+        }]
+    },{
+        id:'1002',
+        name:'alice1002',
+        dosomething:[{
+            id:'90',
+            name:'piano'
+        },{
+            id:'100',
+            name:'flySket'
+        }]
+    },{
+        id:'1003',
+        name:'alice1003',
+        dohouseWord:[{
+            id:'901',
+            name:'piano1003'
+        },{
+            id:'1000',
+            name:'flySket1003'
+        }]
+    },{
+        id:'1004',
+        name:'alice1004',
+        friends:[{
+            id:'910',
+            name:'piano1004'
+        },{
+            id:'1100',
+            name:'flySket1004'
+        }]
+    }]
+    // 根据id查找指定的项目
+    function getByID(target,id){
+        // 遍历数组对象
+        target.forEach(function(item){
+            // 遍历对象所有的属性
+            for(var k in item){
+                // 判断对象是否具有id属性
+                if(k === 'id' && item.id === id){
+                    console.log(item);
+                    // 判断对象的属性值有没有数组，如果有就继续遍历，没有则跳过。
+                    } else if( Array.isArray(item[k])  && item[k].length > 0){
+                        getByID(item[k],id)
+                    }
+            }
+        })
+    }
+    getByID(arr,'901');
+</script>
+</html>

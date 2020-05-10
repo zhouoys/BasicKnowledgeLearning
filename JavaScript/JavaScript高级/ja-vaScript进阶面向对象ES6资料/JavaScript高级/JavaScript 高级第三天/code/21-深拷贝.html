@@ -41,6 +41,11 @@
 
             }
         }
+        var s1 = [1,3,2,8,0]
+        var s2 = [];
+        deepCopy(s2,s1);
+        console.log(s2);
+        
         deepCopy(o, obj);
         console.log(o);
 
@@ -48,6 +53,56 @@
         console.log(arr instanceof Object);
         o.msg.age = 20;
         console.log(obj);
+
+  var arr = [{
+    id:"1001",
+    name:'smilly',
+    hobbies:[{
+        id:'1',
+        name:'baseball'
+    },{
+        id:'2',
+        name:'playfootball'
+    },{
+        id:'3',
+        name:'basketball'
+    }]
+},{
+    id:'1002',
+    name:'alice1002',
+    dosomething:[{
+        id:'90',
+        name:'piano'
+    },{
+        id:'100',
+        name:'flySket'
+    }]
+},{
+    id:'1003',
+    name:'alice1003',
+    dohouseWord:[{
+        id:'901',
+        name:'piano1003'
+    },{
+        id:'1000',
+        name:'flySket1003'
+    }]
+},{
+    id:'1004',
+    name:'alice1004',
+    friends:[{
+        id:'910',
+        name:'piano1004'
+    },{
+        id:'1100',
+        name:'flySket1004'
+    }]
+}]
+
+var sss = [];
+deepCopy(sss,arr);
+console.log(sss);
+
     </script>
 </body>
 

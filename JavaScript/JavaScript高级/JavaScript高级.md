@@ -2428,6 +2428,41 @@ Function 是所有函数的构造函数，也属于对象。
 
 
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // 递归函数
+    var num = 1;
+    function func(){
+        // 执行操作
+        console.log('打印六次');
+        if(num === 6){
+            return 
+        }
+        num ++; // 注意要把判断递归结束的条件放在递归执行的前面否则不起效果
+        func();
+    }
+    func();
+</script>
+</html>
+~~~
+
+
+
+
+
+![image-20200510104037304](JavaScript高级.assets/image-20200510104037304.png)
+
+
+
 
 
 
@@ -2438,15 +2473,87 @@ Function 是所有函数的构造函数，也属于对象。
 
 
 
-
+#### 1.求1*2\*3...\*n的阶层
 
 ![image-20200509135519488](JavaScript高级.assets/image-20200509135519488.png)
 
 
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // 利用递归求n的阶层
+    function factorial(n){
+        if(n==1){
+            return 1;
+        }
+        return  n*factorial(n-1);
+    }
+    console.log(factorial(5));
+    console.log(factorial(10));
+</script>
+</html>
+~~~
 
+
+
+![image-20200510105127762](JavaScript高级.assets/image-20200510105127762.png)
+
+
+
+
+
+#### 2.利用递归求斐波那契数列
 
 ![image-20200509135819268](JavaScript高级.assets/image-20200509135819268.png)
+
+
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function fibonacciSequence(n){
+        if(n==1 || n==2){
+            return 1;
+        }
+        return fibonacciSequence(n-1) + fibonacciSequence(n-2);
+    }
+    console.log(fibonacciSequence(1));
+    console.log(fibonacciSequence(2));
+    console.log(fibonacciSequence(3));
+    console.log(fibonacciSequence(4));
+    console.log(fibonacciSequence(5));
+    console.log(fibonacciSequence(6));
+    console.log(fibonacciSequence(7));
+    console.log(fibonacciSequence(8));
+    console.log(fibonacciSequence(9));
+    console.log(fibonacciSequence(10));
+</script>
+</html>
+~~~
+
+
+
+
+
+![image-20200510105902489](JavaScript高级.assets/image-20200510105902489.png)
 
 
 
@@ -2480,11 +2587,102 @@ Function 是所有函数的构造函数，也属于对象。
 
 
 
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // 定义一个复杂对象
+    var arr = [{
+        id:"1001",
+        name:'smilly',
+        hobbies:[{
+            id:'1',
+            name:'baseball'
+        },{
+            id:'2',
+            name:'playfootball'
+        },{
+            id:'3',
+            name:'basketball'
+        }]
+    },{
+        id:'1002',
+        name:'alice1002',
+        dosomething:[{
+            id:'90',
+            name:'piano'
+        },{
+            id:'100',
+            name:'flySket'
+        }]
+    },{
+        id:'1003',
+        name:'alice1003',
+        dohouseWord:[{
+            id:'901',
+            name:'piano1003'
+        },{
+            id:'1000',
+            name:'flySket1003'
+        }]
+    },{
+        id:'1004',
+        name:'alice1004',
+        friends:[{
+            id:'910',
+            name:'piano1004'
+        },{
+            id:'1100',
+            name:'flySket1004'
+        }]
+    }]
+    // 根据id查找指定的项目
+    function getByID(target,id){
+        // 遍历数组对象
+        target.forEach(function(item){
+            // 遍历对象所有的属性
+            for(var k in item){
+                // 判断对象是否具有id属性
+                if(k === 'id' && item.id === id){
+                    console.log(item);
+                    // 判断对象的属性值有没有数组，如果有就继续遍历，没有则跳过。
+                    } else if( Array.isArray(item[k])  && item[k].length > 0){
+                        getByID(item[k],id)
+                    }
+            }
+        })
+    }
+    getByID(arr,'901');
+</script>
+</html>
+~~~
+
+
+
+
+
+
+
+
+
 ### 6.4 浅拷贝和深拷贝
 
 ![image-20200503160920728](JavaScript高级.assets/image-20200503160920728.png)
 
 
+
+#### Object.assign()方法
+
+
+
+#### 浅拷贝
 
 ![image-20200509142518246](JavaScript高级.assets/image-20200509142518246.png)
 
@@ -2501,6 +2699,228 @@ Function 是所有函数的构造函数，也属于对象。
 ![image-20200509143455362](JavaScript高级.assets/image-20200509143455362.png)
 
 
+
+~~~javascript
+var arr = [{
+    id:"1001",
+    name:'smilly',
+    hobbies:[{
+        id:'1',
+        name:'baseball'
+    },{
+        id:'2',
+        name:'playfootball'
+    },{
+        id:'3',
+        name:'basketball'
+    }]
+},{
+    id:'1002',
+    name:'alice1002',
+    dosomething:[{
+        id:'90',
+        name:'piano'
+    },{
+        id:'100',
+        name:'flySket'
+    }]
+},{
+    id:'1003',
+    name:'alice1003',
+    dohouseWord:[{
+        id:'901',
+        name:'piano1003'
+    },{
+        id:'1000',
+        name:'flySket1003'
+    }]
+},{
+    id:'1004',
+    name:'alice1004',
+    friends:[{
+        id:'910',
+        name:'piano1004'
+    },{
+        id:'1100',
+        name:'flySket1004'
+    }]
+}]
+
+//深拷贝 arr
+function deepCopy(resource,target){
+        // 遍历对象
+        for(var index in resource){
+        // 判断对象的属性值类型
+        if(Array.isArray(resource[index]) && resource[index].length > 0){
+            // 属性值为数组
+            target[index] = [];
+            deepCopy(resource[index],target[index])
+        } else if(target[index] instanceof Object){
+            // 属性值为对象
+            target[index] = {}
+            deepCopy(resource[index] , target[index])
+        } else {
+            // 属性值为普通类型
+            target[index] = resource[index]
+        }
+        }
+}
+var obj1 = arr;
+var obj2 = [];
+deepCopy(obj1,obj2);
+console.log(obj1);
+console.log("------------------------------------------------------------------");
+console.log(obj2);
+
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 补充：typeof与instanceof区别
+
+
+
+### typeof
+
+用于判断数据类型，返回值为6个字符串，分别为`string`、`Boolean`、`number`、`function`、`object`、`undefined`。
+
+```jsx
+  var a = [34,4,3,54],
+        b = 34,
+        c = 'adsfas',
+        d = function(){console.log('我是函数')},
+        e = true,
+        f = null,
+        g;
+
+        console.log(typeof(a));//object
+        console.log(typeof(b));//number
+        console.log(typeof(c));//string
+        console.log(typeof(d));//function
+        console.log(typeof(e));//boolean
+        console.log(typeof(f));//object
+        console.log(typeof(g));//undefined
+```
+
+
+
+**但是你可能会发现，`typeof`在判断`null`、`array`、`object`以及函数实例`（new + 函数）`时，得到的都是`object`。这使得在判断这些数据类型的时候，得不到真是的数据类型。由此引出`instanceof`。**
+
+**注意关键字：typeof无法对**
+
+**array,**
+
+**null,**
+
+**object ,**
+
+**new 构造函数,**
+
+**做判断，因为他们统一都返回object，所以才引入instanceof方式**
+
+### instanceof
+
+instance中文翻译为实例，因此instanceof的含义就不言而喻，判断该对象是谁的实例，同时我们也就知道instanceof是对象运算符。
+ 这里的实例就牵扯到了对象的继承，它的判断就是根据原型链进行搜寻，在对象obj1的原型链上如果存在另一个对象obj2的原型属性，那么表达式（obj1 instanceof obj2）返回值为true；否则返回false。
+
+### 总结：
+
+想必到这里大家也都明白两者的含义和用法，总之，typeof和instanceof都是用来判断变量类型的，两者的区别在于：
+
+- typeof判断所有变量的类型，返回值有number，boolean，string，function，object，undefined。
+- typeof对于丰富的对象实例，只能返回"Object"字符串。
+- instanceof用来判断对象，代码形式为obj1 instanceof obj2（obj1是否是obj2的实例），obj2必须为对象，否则会报错！其返回值为布尔值。
+- instanceof可以对不同的对象实例进行判断，判断方法是根据对象的原型链依次向下查询，如果obj2的原型属性存在obj1的原型链上，（obj1 instanceof obj2）值为true。
+
+在javascript中，判断一个变量的类型可以用typeof
+
+　　(1) 数字类型、typeof返回的值是number。比如说：typeof(1)，返回值是number
+
+　　(2) 字符串类型，typeof返回的值是string。比如typeof(“123”返回值时string)
+
+　　(3) 布尔类型，typeof返回的值是boolean。比如typeof(true)返回值时boolean
+
+　　(4) 对象、数组、null返回的值是object。比如typeof(window)，typeof(document)，typeof(null)返回的值都是object
+
+　　(5) 函数类型，返回的值是function。比如：typeof(eval)，typeof(Date)返回的值都是function。
+
+　　(6) 不存在的变量、函数或者undefined，将返回undefined。比如：typeof(abc)、typeof(undefined)都返回undefined
+
+ 
+
+在javascript中，instanceof用于判断某个对象是否被另一个函数构造。
+
+使用typeof运算符时采用引用类型存储值会出现一个问题，无论引用的是什么类型的对象，它都返回”object”。ECMAScript引入了另一个Java运算符instanceof来解决这个问题。Instanceof运算符与typeof运算符相似，用于识别正在处理的对象的类型。与typeof方法不同的是，instanceof方法要求开发者明确地确认对象为某特定类型
+
+
+
+
+
+**JS中会使用typeof 和 instanceof来判断一个变量是否为空或者是什么类型的。**
+
+ES6规范中有7种数据类型，分别是基本类型和引用类型两大类
+
+基本类型（简单类型、原始类型）：String、Number、Boolean、Null、Undefined、Symbol
+
+引用类型（复杂类型）：Object（对象、Function、Array）
+
+1、**typeof**返回结果是该类型的字符串形式表示【6】（number、string、undefined、boolean、function、object）
+
+**注意**
+
+- typeof对于原始类型来说，除了null都可以显示正确类型
+- typeof对于对象来说，除了函数都会显示object
+
+2、**instanceof**是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true,否则返回 false。 在这里需要特别注意的是：instanceof 检测的是原型。 
+
+
+
+~~~java
+[] instanceof Array; //true
+{} instanceof Object;//true
+new Date() instanceof Date;//true
+ 
+function Person(){};
+new Person() instanceof Person;
+ 
+[] instanceof Object; //true
+new Date() instanceof Object;//true
+new Person instanceof Object;//true
+~~~
+
+　
+
+​    但是instanceof可以判断出[]是Array的实例，同时也认为是Object的实例，Why？？？？
+
+​    **instanceof 只能用来判断两个对象是否属于实例关系， 而不能判断一个对象实例具体属于哪种类型。**
+
+​    之后增加了**Array.isArray()**方法判断这个值是不是数组的。
+
+总结一下：
+
+1、typeof能够检测出了null之外的原型类型（String、Number、Boolean、Undefined），对于对象类型能判断出function、其他的都为Object
+
+2、判断一个值是否为数组，使用Array.isArray()
+
+3、如果需要判断一个值是否为null，最直接就是与null比较
+
+```javascript
+value === null;    //true or false
+```
+
+注意这里需要三等号操作符“===”，因为三等号操作符在进行比较的时候不会将变量强制转换为另一种类型。
+
+由此可见，无论是typeof还是instanceof都不能准确判断出正确的类型。
 
 
 
