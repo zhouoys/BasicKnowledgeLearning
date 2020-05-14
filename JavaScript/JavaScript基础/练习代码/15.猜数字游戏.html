@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 生成1-10之间的随机数字
+    function getRandomNum(startNum,endNum){
+        return Math.floor(Math.random()*(endNum - startNum +1)) +startNum
+    }
+    // 调用函数
+    var randdomNum = getRandomNum(1,10);
+    while(true){
+        var inputNum = window.prompt('请输入数字');
+        if(inputNum > randdomNum){
+            window.alert('你输入的数字太大了');
+        } else if(inputNum == randdomNum){
+            window.alert('你输入的数字正确');
+            break;
+        } else {
+            window.alert('你输入的数字太小了');
+        }
+    }
+</script>
+</html>

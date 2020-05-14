@@ -2792,7 +2792,7 @@ console.log(obj2);
 
 ### typeof
 
-用于判断数据类型，返回值为6个字符串，分别为`string`、`Boolean`、`number`、`function`、`object`、`undefined`。
+用于判断数据类型，返回值为6个字符串，分别为`string`、`Boolean`、`number`、`function`、`object`、undefined。
 
 ```jsx
   var a = [34,4,3,54],
