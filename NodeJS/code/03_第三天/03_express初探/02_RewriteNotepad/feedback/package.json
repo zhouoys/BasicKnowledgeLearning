@@ -1,0 +1,15 @@
+{
+  "name": "feedback",
+  "version": "1.0.0",
+  "description": "重写留言板案例",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zw",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "express": "^4.17.1"
+  }
+}
