@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+      .box{
+        width: 1000px;
+        margin-left:50px;
+      }
+    </style>
+</head>
+<body>
+  <div class="box">
+    <h3>评论信息:{{title}}</h3>
+    <a class="btn btn-default btn-info" href="/addItem" role="button">添加评论信息</a>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>姓名</th>
+          <th>评论内容</th>
+          <th>时间</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{each commonList}}
+        <tr>
+          <th scope="row">{{ $value.id }}</th>
+          <td>{{ $value.name }}</td>
+          <td>{{ $value.comment }}</td>
+          <td>{{ $value.dateTime }}</td>
+        </tr>
+       {{/each}}
+      </tbody>
+    </table>  
+  </div>
+</body>
+</html>
