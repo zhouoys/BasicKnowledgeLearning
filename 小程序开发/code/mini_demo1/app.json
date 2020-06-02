@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/template/template",
+    "pages/Mustache/Mustache",
+    "pages/wxss/wxss",
+    "pages/module/module",
+    "pages/scene/scene",
+    "pages/about/about",
+    "pages/main/main"
+  ],
+  "sitemapLocation": "sitemap58.json"
+}

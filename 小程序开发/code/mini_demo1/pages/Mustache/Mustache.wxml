@@ -1,0 +1,42 @@
+<!--pages/Mustache/Mustache.wxml-->
+<text>测试Mustache语法 \n</text>
+<!-- mustache显示数据 -->
+<text>{{message}} \n</text>
+<text>{{ age > 18 ? '成年人':'青少年'}} \n</text>
+<text>{{ age + 29}} \n</text>
+<text>{{age + '岁'}} \n</text>
+<button size="mini" type="primary" bindtap="changeCSS">切换样式</button>
+<view></view>
+<!-- mustache控制属性显示 -->
+<text class="default {{ active ? 'active':''}}">mustache控制dom属性值展示 \n</text>
+<text>{{time}}</text>
+
+<text>------wx:if------------------</text>
+<button type="primary" bindtap="switchover">切换显示隐藏</button>
+<view wx:if="{{isShow}}">我要动态显示和隐藏</view>
+<!-- wx:if不会占据位置 -->
+<view>我是测试</view>
+<button size="mini" type="primary" bindtap="handle">点我试一试</button>
+<!-- 多层wx:if做判断 年龄属于哪种类型-->
+<view wx:if = "{{ score > 90}}">我是优秀</view>
+<view wx:elif = "{{score > 80 }}">我是良好</view>
+<view wx:elif = "{{score > 70 }}">我是及格</view>
+<view wx:else >我是很差</view>
+<!-- 比较wx:if和hidden -->
+<view hidden="{{true}}">我是比较</view>
+<view>我是测试</view>
+<!-- 测试wx:for -->
+<view wx:for="{{movies}}">
+<text>{{index}}</text><text>{{item}}</text>
+</view>
+<view wx:for="{{5}}">
+<text>{{index}}</text><text>{{item}}</text>
+</view>
+<view wx:for="hello world">
+<text>{{index}}</text><text>{{item}}</text>
+</view>
+
+<view wx:for="{{personInfo}}" wx:for-item="person" wx:key="person">
+<view wx:for="{{person}}" wx:key="item">{{item}}----{{index}}</view>
+</view>
+

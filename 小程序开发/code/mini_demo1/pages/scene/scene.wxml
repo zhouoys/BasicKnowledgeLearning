@@ -1,0 +1,13 @@
+<!--pages/scene/scene.wxml-->
+<text>HELLO BUTTON</text>
+<button 
+    open-type="getUserInfo"
+    bindgetuserinfo="getUserDetail">
+    获取用户信息</button>
+
+    <open-data type="userNickName"></open-data>
+    <open-data type="userGender"></open-data>
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userCity"></open-data>
+    <open-data type="userCountry"></open-data>
+    <open-data type="userLanguage"></open-data>

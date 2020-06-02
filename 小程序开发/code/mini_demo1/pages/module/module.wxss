@@ -1,0 +1,20 @@
+/* pages/module/module.wxss */
+.btn-hover{
+  background-color: purple;
+}
+.box{
+  height: 200px;
+  width: 200px;
+  background-color:purple;
+}
+.hover-view{
+  background-color: red;
+}
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: sandybrown;
+}
+.box1-hover-view{
+ background-color: skyblue;
+}

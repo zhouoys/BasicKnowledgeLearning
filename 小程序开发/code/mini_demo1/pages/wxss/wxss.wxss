@@ -1,0 +1,8 @@
+/* pages/wxss/wxss.wxss */
+
+/* 采用绝对定位导入样式 */
+@import "/pages/wxss/style/normal.wxss";
+.page{
+  color:purple;
+  font-size: 50rpx;
+}

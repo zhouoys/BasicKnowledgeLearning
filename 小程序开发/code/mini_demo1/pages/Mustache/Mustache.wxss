@@ -1,0 +1,10 @@
+/* pages/Mustache/Mustache.wxss */
+
+text.active{
+  color:red;
+  font-size: 50rpx;
+}
+.default{
+  color:purple;
+  font-size: 30rpx;
+}

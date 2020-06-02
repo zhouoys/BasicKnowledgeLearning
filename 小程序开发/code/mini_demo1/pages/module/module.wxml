@@ -1,0 +1,39 @@
+<!-- pages/module/module.wxml -->
+<!-- <text>--------------------</text>
+<!-- text文本默认长按是无法选中文中的
+可以通过设置selectable属性来控制长按是否选中 -->
+<!-- <text>我是text组件</text>
+<text>你好小程序</text> -->
+<!-- <text selectable="{{true}}">text长按可以选中 \n</text> -->
+<!-- 关于空格的处理显示问题 -->
+<!-- <text space="nbsp">HELLO WORLD \n</text>
+<text space="ensp">HELLO WORLD \n</text>
+<text space="emsp">HELLO WORLD \n</text> -->
+<!-- 关于解码(也就是微信小程序无法解析字符实体，必须要采用decode属性)-->
+<!-- <text> 5 &gt;3 \n</text>
+<text decode> 5 &gt;3 \n</text> -->
+<!-- 
+<text>-----------button基本使用------------------\n</text>
+<button>按钮</button>
+<button size="mini">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<button size='mini' type="primary">按钮</button>
+<button size="mini" plain>按钮</button>
+<button size="mini" disabled="{{true}}">按钮</button>
+<button size="mini" loading="{{true}}">按钮</button>
+<button size="mini" hover-class="btn-hover">按钮</button> -->
+
+<!-- <text>--------view的基本使用------------------</text>
+
+<view class="box" hover-class="hover-view" hover-start-time="10" hover-stay-time="3000">
+  <view class="box1" hover-class="box1-hover-view" hover-stop-propagation="true"></view>
+</view> -->
+
+<!-- <text>------image----------</text>
+<image src="../../assets/image/4.jpg"/>
+<image src="/assets/image/笔记本.jpg"></image> -->
+<!-- 获取手机相册中的图片并展示出来 -->
+<!-- <button bindtap="getPic">获取手机图片信息</button>
+<image src="{{Picurl}}"></image> -->
+

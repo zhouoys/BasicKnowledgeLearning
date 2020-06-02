@@ -1,0 +1,16 @@
+<!--pages/about/about.wxml-->
+<text>你好啊，about</text>
+<view>数据渲染：{{name}}</view>
+<view>小程序列表渲染</view>
+<!-- <view wx:for="{{movies}}" wx:key="item">{{item}}</view>
+<view wx:for="{{personInfo}}">{{item.name}}------{{item.age + 20}}-----{{item.hobby}}</view>
+<view>多重列表渲染</view>
+<view wx:for="{{personInfo}}"wx:key="item">
+<view wx:for= "{{item.hobby}}"wx:for-item="hobby">{{hobby}}</view>
+</view>
+<view>事件绑定</view>
+<button size="mini" bindtap="add">按钮组件 + </button>
+<view>{{counter}}</view>
+<button size="mini"bindtap="reduce">按钮组件 - </button>
+
+ -->

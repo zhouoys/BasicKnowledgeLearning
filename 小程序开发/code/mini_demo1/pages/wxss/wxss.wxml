@@ -1,0 +1,14 @@
+<text>页面样式的三种写法 \n</text>
+<!-- 行内样式 -->
+<text style="color:red;font-weight:bold">我是行内样式 \n</text>
+<!-- 页面样式 -->
+<text class="page">我是页面样式 \n</text>
+<!-- 全局样式 -->
+<text class="content">我是全局样式 \n</text>
+<!-- 比较全局样式和页面样式 -->
+<text class="content page">测试全局样式和页面样式\n</text>
+<!-- 样式导入 -->
+<!-- 我是page页面导入的页面样式 -->
+<text class="normal">我是页面样式文件inport导入样式</text>
+<!-- 我是app.wxss文件导入的全局样式 -->
+<text class="public">我是app全局页面样式文件导入的样式</text>

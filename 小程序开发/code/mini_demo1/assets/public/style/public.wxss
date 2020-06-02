@@ -1,0 +1,5 @@
+/* 这是公共的样式，可以被全局的app.wxss样式导入，从而所有页面都可以使用 */
+.public{
+  color:skyblue;
+  font-size: 80rpx;
+}

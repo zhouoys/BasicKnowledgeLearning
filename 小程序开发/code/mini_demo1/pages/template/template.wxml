@@ -1,0 +1,9 @@
+<!--pages/template/template.wxml-->
+<text>测试模板语法 \n</text>
+<!-- 定义模板 -->
+<template name="temp1">
+<text>{{name}}</text>--<text>{{age}}</text>--<text>{{sex}}  \n</text>
+</template>
+<!-- 使用模板 -->
+<template is="temp1" data="{{ name :'silly',age:45,sex:'女'}}"></template>
+<template is="temp1" data="{{ name: 'smith',age:88,sex:'男'}}"/>
