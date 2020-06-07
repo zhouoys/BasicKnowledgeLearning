@@ -1,0 +1,5 @@
+<!--components/my-prop/my-prop.wxml-->
+<text>components/my-prop/my-prop.wxml</text>
+<view>title:{{title}}</view>
+<view>content:{{content}}</view>
+<view>counter:{{counter}}</view>

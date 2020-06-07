@@ -1,0 +1,20 @@
+<!--pages/event/event.wxml-->
+<view bind:touchstart = "onTouchStart"
+      bind:touchmove = "onTouchMove"
+      bind:touchend = "onTouchEnd"
+      bind:touchcancel = "onTouchCancel"
+      bind:tap = "onTap"
+      bind:longpress = "onLongPress">
+    常见手势类型
+</view>
+
+<!-- <view class="father" data-name="father" bind:tap = "handFatherTap">
+<view class="son" bind:tap = "handSonTap" data-name="son">子元素</view>
+</view> -->
+
+
+<view class="view1" capture-catch:tap = "handleCaptureView1" bind:tap="handleBindView1">
+    <view class="view2" capture-bind:tap = "handleCaptureView2" bind:tap="handleBindView2">
+        <view class="view3" capture-bind:tap = "handleCaptureView3" bind:tap="handleBindView3"></view>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<!--components/my-extern/my-extern.wxml-->
+<text>components/my-extern/my-extern.wxml</text>
+<view class="title">我是组件的标题</view>
+<view class="content">我是组件的内容</view>

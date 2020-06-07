@@ -1,2 +1,4 @@
 <!--pages/main/main.wxml-->
 <text>你好啊 main</text>
+<!-- <my-cpn/> -->
+<my-tab tabList = "{{tabList}}" bind:itemClick = "handleClick" bind:tap="handleIncrement" class="tab_increment"/>

@@ -1,0 +1,3 @@
+<!--components/cpn2/cpn2.wxml-->
+<text>components/cpn2/cpn2.wxml</text>
+<text>我是自定组件中被引入的组件</text>

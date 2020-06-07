@@ -1,0 +1,16 @@
+/* components/my-cpn/my-cpn.wxss */
+
+.title{
+  color:red;
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.content{
+  color:purple;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+/* view{
+  background-color: purple;
+} */

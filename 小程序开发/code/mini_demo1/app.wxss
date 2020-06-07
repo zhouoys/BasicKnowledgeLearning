@@ -1,6 +1,6 @@
-.content{
+/* .content{
   color:yellow;
   font-size: 60rpx;
-}
+} */
 /* 在全局样式中使用相对路径导入公共的样式 */
 @import "./assets/public/style/public.wxss"

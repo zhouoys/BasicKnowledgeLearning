@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "compo-1":"/components/my-cpn/my-cpn",
+    "my-prop":"/components/my-prop/my-prop",
+    "my-extern":"/components/my-extern/my-extern",
+    "my-event":"/components/my-event/my-event"
+  }
+}

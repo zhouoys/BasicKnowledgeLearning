@@ -5,7 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tabList:['流行','新款','精选','潮流']
+  },
+  handleClick(event){
+    console.log(event);
+  },
+  handleIncrement(){
+    var tab_sel = this.selectComponent(".tab_increment");
+    console.log(tab_sel);
+    // tab_sel.setData({
+    //   counter:tab_sel.data.counter + 20
+    // })
+    tab_sel.increment(50);
   },
 
   /**

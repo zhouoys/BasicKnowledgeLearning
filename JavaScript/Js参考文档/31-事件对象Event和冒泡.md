@@ -28,7 +28,7 @@
     btn.onclick = function () {
         console.log("事件1");
     }
-
+	// 第二个注册的事件会将第一个注册的事件覆盖掉
     btn.onclick = function () {
         console.log("事件2");
     }
@@ -189,11 +189,14 @@ event 有很多属性，比如：
 </head>
 <body>
 <img src="" width="100" height="100"/>
-    <!-- offsetLeft：
+    <!--    offsetLeft：
             获取自身左外边框到定位父级的左内边框的距离
             offsetTop
             获取自身上外边框到定位父级的上内边框的距离
-            只能获取不能修改 -->
+            只能获取不能修改。
+			前面几种，都是针对鼠标的位置的，
+			而offsetLeft,offsetTop是子元素相对于它的具有定位元素的父元素的位置
+    -->
 <script>
     //需求：点击页面的任何地方，图片跟随鼠标移动到点击位置。
     //思路：获取鼠标在页面中的位置，然图片缓慢运动到鼠标点击的位置。
@@ -217,9 +220,10 @@ event 有很多属性，比如：
         //兼容获取事件对象
         event = event || window.event;
         //鼠标在页面的位置 = 被卷去的部分+可视区域部分。
+        // 至于为什么要采用pageX/pageY是因为定位就是相当于document进行定位的，也就是页面，而不是浏览器可视窗口
         var pagey = event.pageY || scroll().top + event.clientY;
         var pagex = event.pageX || scroll().left + event.clientX;
-
+		// 让鼠标在div的里面
         targety = pagey - 30;
         targetx = pagex - 50;
 
@@ -227,7 +231,7 @@ event 有很多属性，比如：
         clearInterval(timer);
         timer = setInterval(function () {
             
-            //为盒子的位置获取值
+            //为盒子的X轴位置获取值
             leaderx = img.offsetLeft;
             //获取步长
             var stepx = (targetx - leaderx) / 10;
@@ -238,7 +242,7 @@ event 有很多属性，比如：
             img.style.left = leaderx + "px";
 
 
-            //为盒子的位置获取值
+            //为盒子的Y轴位置获取值
             leadery = img.offsetTop;
             //获取步长
             var stepy = (targety - leadery) / 10;
@@ -249,7 +253,7 @@ event 有很多属性，比如：
             img.style.top = leadery + "px";
 
             //清定时器
-            if (Math.abs(targety - img.offsetTop) <= Math.abs(stepy) && Math.abs(targetx - img.offsetLeft) <= Math.abs(stepx)) {
+            if (Math.abs(targety - img.offsetTop) <= Math.abs(stepy) && Math.abs(targetx - img.offsetLeft) <= Math.abs(stepx)) { // 这套逻辑是否是为移动增加一层保险
                 img.style.top = targety + "px";
                 img.style.left = targetx + "px";
                 clearInterval(timer);
@@ -518,6 +522,8 @@ function scroll() {  // 开始封装自己的scrollTop
             top: window.pageYOffset
         }
     }
+    所有主流浏览器都支持 pageXOffset 和 pageYOffset 属性。
+	注意： IE 8 及 更早 IE 版本不支持该属性,但可以使用 document.documentElement.scrollLeft 和 document.documentElement.scrollTop 属性 。
     else if (document.compatMode === "CSS1Compat") {    // 标准浏览器   来判断有没有声明DTD
         return {
             left: document.documentElement.scrollLeft,

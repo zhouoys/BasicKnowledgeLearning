@@ -1,0 +1,2 @@
+<!--components/my-event/my-event.wxml-->
+<button size="mini" bind:tap="handleIncrement" id="zw" data-name="silly">点击按钮+1</button>

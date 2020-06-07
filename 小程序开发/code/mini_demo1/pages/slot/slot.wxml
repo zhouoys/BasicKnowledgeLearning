@@ -1,0 +1,12 @@
+<!--pages/slot/slot.wxml-->
+<slot-cpn>
+<text>我是插入的一段文字</text>
+</slot-cpn>
+
+<slot-cpn>
+<button size="mini">按钮</button>
+</slot-cpn>
+
+<slot-cpn>
+<image src="https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%89%A1%E4%B8%B9&hs=2&pn=1&spn=0&di=110&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1621084288%2C630333706&os=753766402%2C300603140&simid=4178050304%2C426098210&adpicid=0&lpn=0&ln=30&fr=ala&fm=&sme=&cg=&bdtype=0&oriquery=%E7%89%A1%E4%B8%B9&objurl=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fphotoblog%2F6%2F5%2F8%2F2%2F6582517%2F20084%2F7%2F1207554692921.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3F1r_z%26e3Brv5gstgj_z%26e3Bv54_z%26e3BvgAzdH3F1ri5p5AzdH3Fstfp_9dmnb9_z%26e3Bip4s&gsm=2&islist=&querylist="></image>
+</slot-cpn>

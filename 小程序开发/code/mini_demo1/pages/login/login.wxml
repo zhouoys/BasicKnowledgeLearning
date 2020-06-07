@@ -1,0 +1,11 @@
+<!--pages/login/login.wxml-->
+<!-- <text class="title">pages/login/login.wxml</text>
+<text>测试自定义组件一：基础</text>
+<compo-1/>
+<text>测试自定义组件二：页面向组件传参数</text>
+<my-prop title="我是标题档"
+         content = "我是内容区"
+         counter = "{{234}}" /> -->
+<!-- <my-extern title="title" content="content" /> -->
+<view>数据展示:{{counter}}</view>
+<my-event bind:increment = "dataIncrement"/>
