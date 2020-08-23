@@ -1,0 +1,11 @@
+/* components/z-goods/z-goods.wxss */
+.goods{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 8rpx;
+}
+.goods > .good-item{
+  position: relative;
+  width: 47%;
+}

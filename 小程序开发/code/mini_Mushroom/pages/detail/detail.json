@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "z-swiper":"/components/z-swiper/z-swiper",
+    "z-basegoodinfo":"./childCompon/z-goodbaseinfo/z-goodbaseinfo",
+    "z-detailInfo":"./childCompon/z-detailInfo/z-detailInfo",
+    "z-shopinfo":"./childCompon/z-shopinfo/z-shopinfo",
+    "z-paramInfo":"./childCompon/z-paramInfo/z-paramInfo",
+    "z-commentInfo":"./childCompon/z-commentInfo/z-commentInfo",
+    "z-goods":"/components/z-goods/z-goods",
+    "w-recommend-info": "./childCompon/w-recommend-info/w-recommend-info",
+    "z-button-bar":"./childCompon/z-botton-bar/z-botton-bar"
+  },
+    "navigationBarTitleText":"商品详情"
+}

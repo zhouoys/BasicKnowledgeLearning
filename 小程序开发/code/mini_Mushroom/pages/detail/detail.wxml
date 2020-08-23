@@ -1,0 +1,16 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view class="detail" scroll-y>
+	<z-swiper bannerList="{{bannersTopImage}}" class="d-swiper"></z-swiper>
+	<z-basegoodinfo goodBaseInfo="{{goodBaseInfo}}"></z-basegoodinfo>
+	<view class="line"></view>
+	<z-shopinfo shopInfo="{{shopInfo}}"></z-shopinfo>
+	<view class="line"></view>
+	<z-detailInfo detailInfo="{{detailInfo}}" />
+	<view class="line"></view>
+	<z-paramInfo paramInfo="{{paramInfo}}" />
+	<view class="line"></view>
+	<z-commentInfo commentInfo="{{commentInfo}}" />
+	<view class="line"></view>
+	<w-recommend-info recommends="{{recommends}}" />
+</scroll-view>
+<z-button-bar  bind:addcart="handleAddCar"/>

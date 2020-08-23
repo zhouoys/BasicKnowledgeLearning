@@ -1,0 +1,35 @@
+/* pages/detail/childCompon/z-bottom-bar/z-botton-bar.wxss */
+
+.botton-bar{
+  display: flex;
+  height: 120rpx;
+  width: 100%;
+  box-shadow: 0 -1px 1px rgba(100, 100, 100, 0.1);
+  font-size: 32rpx;
+}
+.bar-item{
+  flex:1
+}
+.bar-left,.bar-right{
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.bar-left-item,.bar-right-item{
+  flex:1
+}
+.bar-left-item .image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.bar-right-item{
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.add-shop-cart{
+  background: #ffe817;
+}
+.buy{
+  background-color: #ff5777;
+  color:white;
+}

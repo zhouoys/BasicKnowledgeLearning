@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "z-header":"./childCompon/z-header/z-header",
+    "z-info":"./childCompon/z-info/z-info",
+    "z-list-view":"./childCompon/z-list-view/z-list-view"
+  },
+  "navigationBarTitleText":"我的信息"
+}

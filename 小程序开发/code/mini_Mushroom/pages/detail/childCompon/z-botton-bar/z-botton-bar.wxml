@@ -1,0 +1,25 @@
+<!--pages/detail/childCompon/z-bottom-bar/z-botton-bar.wxml-->
+<view class="botton-bar">
+	<view class="bar-left bar-item">
+		<view class="bar-left-item service">
+			<image src="/assets/images/detail/service.png" class="image"></image>
+			<view>客服</view>
+		</view>
+		<view class="bar-left-item shop">
+			<image src="/assets/images/detail/shop.png" class="image"></image>
+			<view>店铺</view>
+		</view>
+		<view class="bar-left-item collect">
+			<image src="/assets/images/detail/collect.png" class="image"></image>
+			<view>收藏</view>
+		</view>
+	</view>
+	<view class="bar-right bar-item">
+		<view class="bar-right-item add-shop-cart" bindtap='onAddCart'>
+			加入购物车
+		</view>
+		<view class="bar-right-item buy">
+			购买
+		</view>
+	</view>
+</view>

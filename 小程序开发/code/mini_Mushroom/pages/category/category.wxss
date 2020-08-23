@@ -1,0 +1,10 @@
+/* pages/category/category.wxss */
+.category{
+  display: flex;
+}
+.category z-menu{
+  width:30%;
+}
+.category z-content{
+  width: 70%;
+}

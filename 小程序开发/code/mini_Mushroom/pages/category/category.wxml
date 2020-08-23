@@ -1,0 +1,5 @@
+<!--pages/category/category.wxml-->
+<view class="category">
+	<z-menu menus="{{categorys}}" bind:handlemenuTab="handleTab" />
+	<z-content subCategorys="{{subCategorys}}" subCategoryDetails="{{subCategoryDetails}}" id="scrolltop" />
+</view>

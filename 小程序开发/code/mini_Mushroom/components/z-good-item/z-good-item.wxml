@@ -1,0 +1,12 @@
+<!--components/z-good-item/z-good-item.wxml-->
+<view class="good-item" bind:tap="handlegoto">
+	<view >
+		<image src="{{goodItem.show.img || goodItem.img || goodItem.image}}" mode="widthFix" class="good-item-image"/>
+	</view>
+  <view class="good-item-info">
+  <view class="good-item-title">{{goodItem.title}}</view>
+  <text class="good-item-price">¥{{goodItem.price}}</text>
+  <image src="/assets/images/common/favor.png" class="good-item-icon" mode="widthFix"/>
+  <text class="good-item-cfav">{{goodItem.cfav}}</text>
+  </view>
+</view>

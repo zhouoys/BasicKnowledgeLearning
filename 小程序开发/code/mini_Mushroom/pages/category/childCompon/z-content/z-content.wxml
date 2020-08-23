@@ -1,0 +1,12 @@
+<!--pages/category/childCompon/z-content/z-content.wxml-->
+	<scroll-view class="content-scroll" scroll-y scroll-top="{{topPosition}}" >
+  <view class="content-info">
+  <block wx:for="{{subCategorys}}" wx:key="index">
+			<view class="content-item">
+				<image src="{{item.image}}" class="content-image" mode="widthFix"></image>
+        <view class="content-text">{{item.title}}</view>
+			</view>
+		</block>
+  </view>
+	<z-goods goodslist="{{subCategoryDetails}}"/>
+	</scroll-view>

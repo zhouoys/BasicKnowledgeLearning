@@ -1,0 +1,35 @@
+/* pages/detail/childCompon/z-paramInfo/z-paramInfo.wxss */
+.size{
+  padding: 40rpx 20rpx 0rpx 20rpx;
+  font-size: 32rpx;
+}
+.size-table{
+}
+.row{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:2rpx solid #eee;
+}
+.col{
+  flex:1;
+}
+.info{
+  padding: 0rpx 20rpx;
+  font-size: 32rpx;
+}
+.info-row{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:2rpx solid #eee;
+}
+.key{
+  width: 180rpx;
+}
+.value{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color:#f55777;
+}

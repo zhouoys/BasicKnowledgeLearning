@@ -1,0 +1,14 @@
+/* pages/detail/detail.wxss */
+.detail{
+  width: 100%;
+  height: calc(100% - 120rpx);
+}
+.d-swiper swiper{
+  height: 800rpx;
+}
+.line{
+  height: 20rpx;
+  width: 100%;
+  background-color: #eee;
+  margin-top: -20rpx;
+}

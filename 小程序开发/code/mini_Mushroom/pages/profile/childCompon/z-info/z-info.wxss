@@ -1,0 +1,26 @@
+/* pages/profile/childCompon/z-info/z-info.wxss */
+
+.info {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 32rpx;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+.info .info-item {
+  width: 33%;
+  background-color: #ffffff;
+  padding: 50rpx 0;
+
+}
+.money,
+.discounts,
+.fonta {
+  color: #ff5777;
+  font-size: 40rpx;
+  font-weight: 700;
+  line-height: 1;
+
+}

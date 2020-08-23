@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "z-swiper":"/components/z-swiper/z-swiper",
+    "z-tabControl":"/components/z-tabControl/z-tabControl",
+    "z-goods":"/components/z-goods/z-goods",
+    "z-backtop":"/components/z-backtop/z-backtop",
+    "z-recommend":"./childCompon/z-recommend/z-recommend"
+  },
+  "navigationBarTitleText":"首页"
+}

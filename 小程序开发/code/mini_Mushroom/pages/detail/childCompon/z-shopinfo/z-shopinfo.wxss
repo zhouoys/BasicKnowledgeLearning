@@ -1,0 +1,86 @@
+/* pages/detail/childCompon/z-shopinfo/z-shopinfo.wxss */
+.shop-info {
+  width: 100%;
+  box-sizing: border-box;
+  padding:20rpx
+}
+.shop-info .title-info{
+  /* border:1px solid red; */
+  margin-bottom: 32rpx;
+}
+.shop-info .title-info .shop-logo{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border:1px solid #eee;
+  vertical-align: middle;
+}
+.shop-info .title-info .shop-title{
+  margin-left: 20rpx;
+}
+.sale-info{
+  display: flex;
+}
+.total-goods{
+  /* margin-right: 40rpx; */
+}
+.count-info{
+  display: flex;
+  /* border:1px solid red; */
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.count-info::after{
+  content: "";
+  width: 1rpx;
+  height: 130rpx;
+  background-color: #eee;
+}
+.total-sale,.total-goods{
+  /* border:1rpx solid red; */
+  flex:1;
+}
+.count{
+  font-size: 40rpx;
+}
+.text {
+  font-size: 28rpx;
+}
+.count-info,.grade-info{
+  flex:1;
+}
+
+.grade-info{
+  padding:30rpx 0rpx;
+}
+.grade-item{
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-between;
+  text-align: center;
+  box-sizing: border-box;
+  padding-left:20rpx;
+}
+.grade-name{
+  width: 200rpx;
+}
+.grade-score,.grade-desc{
+  flex: 1;
+}
+.better{
+  color:#ff5777;
+}
+.less{
+  color:#5ea732;
+}
+.gotoshop{
+  width: 200rpx;
+  height: 70rpx;
+  background-color: #eee;
+  font-size: 40rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin: 30rpx auto;
+  margin-bottom: 60rpx;
+}

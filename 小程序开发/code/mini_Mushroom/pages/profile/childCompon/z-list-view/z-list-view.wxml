@@ -1,0 +1,9 @@
+<!--pages/profile/childCompon/z-list-view/z-list-view.wxml-->
+<view class="list-info">
+	<block wx:for="{{infos}}" wx:key="index">
+		<view class="info-item">
+			<image src="/assets/images/profile/{{item.icon}}" class="info-item-image" mode="widthFix"></image>
+			<text class="info-item-text">{{item.info}}</text>
+		</view>
+	</block>
+</view>

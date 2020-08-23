@@ -1,0 +1,19 @@
+<view class="header">
+
+	<view class="avatar">
+		<image src="/assets/images/profile/avatar.png" class="avatar-image"></image>
+	</view>
+
+	<view class="login-info">
+		<view class="login-register">登录/注册</view>
+		<view class="phone">
+			<image src="/assets/images/profile/phone.png" class="phone-icon"></image>
+			<text>暂无绑定手机号</text>
+		</view>
+	</view>
+
+	<view class="arrow">
+		<image src="/assets/images/common/arrow-right.png" class="arrow-icon"></image>
+	</view>
+
+</view>

@@ -1,0 +1,25 @@
+<view class="home">
+
+	<!-- 商品信息展示 -->
+	<view hidden='{{!showTable}}'>
+		<z-tabControl tabList="{{tabList}}" bind:handleTab="handleTabChange" />
+	</view>
+	<!-- 顶部轮播图 -->
+	<scroll-view class="content" scroll-y bindscrolltolower="loadMore" scroll-top="{{topPosition}}" bind:scroll="handleScroll">
+		<z-swiper bannerList="{{bannerList}}" />
+		<!-- 推荐商品 -->
+		<z-recommend recommends="{{recommends}}" />
+		<!-- 灰色线条-->
+		<view class="line"></view>
+		<!-- 本周流行 -->
+		<view class="popular">
+			<image src="/assets/images/home/recommend_bg.jpg" class="popular-image" bind:load="handleImageLoad"></image>
+		</view>
+		<!-- tab-control -->
+		<z-tabControl tabList="{{tabList}}" bind:handleTab="handleTabChange" id="tab-control" hidden='{{showTable}}'/>
+		<!--商品信息展示 -->
+		<z-goods goodslist="{{goods[currentType].list}}" />
+		<!-- 返回顶部 -->
+		<z-backtop class="backtop" wx:if="{{showbacktop}}" bind:backtop="backtoTop" />
+	</scroll-view>
+</view>

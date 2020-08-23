@@ -1,0 +1,15 @@
+/* pages/home/home.wxss */
+
+.line{
+  height: 50rpx;
+  background-color: #eee;
+}
+.popular .popular-image{
+  width: 100%;
+}
+.home{
+  height:100%;
+}
+.content{
+  height:100%;
+}

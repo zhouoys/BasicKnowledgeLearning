@@ -1,0 +1,6 @@
+<!--pages/dialog/dialog.wxml-->
+<text>测试弹窗</text>
+<button size="mini" bind:tap="onToastClick">showToast</button>
+<button size="mini" bind:tap="onModalClick">showModal</button>
+<button size="mini" bind:tap="onLoadingClick">showLoading</button>
+<button size="mini" bind:tap="onActionSheetClick">showActionSheet</button>

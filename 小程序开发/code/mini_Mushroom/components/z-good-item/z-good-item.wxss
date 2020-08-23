@@ -1,0 +1,36 @@
+/* components/z-good-item/z-good-item.wxss */
+ .good-item{
+  text-align: center;
+  color: #333;
+  padding-bottom: 85rpx;
+  border-radius: 10%;
+ }
+.good-item-image {
+  width: 100%;
+  border-radius: 2%;
+}
+.good-item .good-item-title{
+  font-size: 32rpx;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.good-item-info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5rpx;
+  /* display: flex;
+  justify-content: center; */
+  font-size: 32rpx;
+
+}
+.good-item-info .good-item-price{
+  color:#ff5777;
+}
+.good-item .good-item-icon{
+  width: 32rpx;
+  height: 32rpx;
+  position:relative;
+  top:6rpx;
+}

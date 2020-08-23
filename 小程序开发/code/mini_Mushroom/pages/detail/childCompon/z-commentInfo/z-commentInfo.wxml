@@ -1,0 +1,40 @@
+<!--pages/detail/childCompon/z-commentInfo/z-commentInfo.wxml-->
+<view class="comment">
+	<block wx:for="{{commentInfo}}" wx:for-item="outItem" wx:for-index="outIndex" wx:key="outIndex">
+		<view class="comment-info">
+			<view class="title">用户评价</view>
+			<view class="more">更多>></view>
+		</view>
+		<view class="user-info">
+			<image src="{{outItem.user.avatar}}" class="avator" mode="widthFix" />
+			<view class="userName">{{outItem.user.uname}}</view>
+		</view>
+		<view class="content">{{outItem.content}}</view>
+		<view class="good-info">
+			<view class="create-time">{{timeFormat.getDateTime(outItem.created)}}</view>
+			<view class="good-style">{{outItem.style}}</view>
+		</view>
+	</block>
+</view>
+<wxs module="timeFormat">
+function formatTime(value){
+  //不能使用 new Date()
+      var time = getDate(value * 1000);
+      var year = time.getFullYear();
+      var month = time.getMonth() + 1;
+      var date = time.getDate();
+      var hour = time.getHours();
+      var minute = time.getMinutes();
+      var second = time.getSeconds();
+      month = month < 10 ? "0" + month : month;
+      date = date < 10 ? "0" + date : date;
+      hour = hour < 10 ? "0" + hour : hour;
+      minute = minute < 10 ? "0" + minute : minute;
+      second = second < 10 ? "0" + second : second;
+      return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+  }
+// 导出对外暴露的属性
+module.exports = {
+  getDateTime: formatTime
+}
+</wxs>

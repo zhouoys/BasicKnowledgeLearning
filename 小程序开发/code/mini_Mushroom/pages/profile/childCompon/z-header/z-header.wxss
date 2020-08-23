@@ -1,0 +1,50 @@
+/* pages/profile/childCompon/z-header/z-header.wxss */
+
+.header{
+  height: 180rpx;
+  background-color:#ff5777;
+  display: flex;
+  align-items: center;
+  color:#fff;
+}
+.avatar{
+  width: 27%;
+  height: 140rpx;
+  text-align: center;
+}
+.avatar .avatar-image{
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #f2f2f2;
+  border-radius: 70rpx;
+}
+.login-info{
+  width: 53%;
+  height: 140rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  padding:25rpx 0rpx;
+}
+.login-info .login-register{
+  margin-bottom: 6rpx;
+}
+.login-info .phone-icon{
+  position: relative;
+  top:10rpx;
+  height: 40rpx;
+  width: 40rpx;
+  padding:5rpx;
+}
+.arrow{
+  position:relative;
+  width: 20%;
+  height: 140rpx;
+}
+.arrow .arrow-icon{
+  position: absolute;
+  left:70%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 80rpx;
+  height: 80rpx;
+}

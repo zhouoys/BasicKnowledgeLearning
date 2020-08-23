@@ -1,0 +1,17 @@
+/* pages/home/childCompon/z-recommend/z-recommend.wxss */
+
+.recommend{
+  margin: 30rpx 0rpx;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.recommend .recommend-item{
+  flex:1
+}
+.recommend .recommend-item .recommend-item-image{
+  width: 90%;
+}
+.recommend .recommend-item .recommend-item-text{
+  font-size: 32rpx;
+}

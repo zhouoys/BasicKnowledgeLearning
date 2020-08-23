@@ -1,0 +1,4 @@
+<!--components/z-backtop/z-backtop.wxml-->
+<view class="backtop" bind:tap="handleBacktop">
+<image src="/assets/images/common/top.png" class="backtop-image" mode="widthFix"></image>
+</view>

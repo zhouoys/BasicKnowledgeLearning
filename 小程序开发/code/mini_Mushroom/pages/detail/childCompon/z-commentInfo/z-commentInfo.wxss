@@ -1,0 +1,38 @@
+/* pages/detail/childCompon/z-commentInfo/z-commentInfo.wxss */
+.comment{
+  padding: 0rpx 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 34rpx;
+}
+.comment-info{
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0rpx;
+  border-bottom: 2rpx solid #eee;
+  margin-bottom: 30rpx;
+}
+.user-info .avator{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 16rpx;
+}
+.userName{
+  display: inline-block;
+}
+.content{
+  font-size: 32rpx;
+  text-align: justify;
+  padding: 20rpx 0rpx;
+  text-indent:2em;
+}
+.good-info{
+  display: flex;
+  font-size: 28rpx;
+  padding-bottom: 40rpx;
+}
+.create-time{
+  margin-right: 16rpx;
+}

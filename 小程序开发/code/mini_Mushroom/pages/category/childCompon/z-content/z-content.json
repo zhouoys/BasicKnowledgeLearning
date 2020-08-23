@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "z-goods":"/components/z-goods/z-goods",
+    "z-backtop":"/components/z-backtop/z-backtop"
+  }
+}

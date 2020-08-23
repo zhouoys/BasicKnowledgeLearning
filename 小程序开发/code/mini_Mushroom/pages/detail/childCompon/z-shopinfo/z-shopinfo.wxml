@@ -1,0 +1,31 @@
+<!--pages/detail/childCompon/z-shopinfo/z-shopinfo.wxml-->
+<view class="shop-info">
+	<view class="title-info">
+		<image src="{{shopInfo.logo}}" class="shop-logo"></image>
+		<text class="shop-title">{{shopInfo.name}}</text>
+	</view>
+	<view class="sale-info">
+		<view class="count-info">
+			<view class="total-sale">
+				<view class="count">{{shopInfo.sells}}</view>
+				<view class="text">总销量</view>
+			</view>
+			<view class="total-goods">
+				<view class="count">{{shopInfo.goodsCount}}</view>
+				<view class="text">全部宝贝</view>
+			</view>
+		</view>
+		<view class="grade-info">
+			<block wx:for="{{shopInfo.score}}" wx:key="index">
+				<view class="grade-item">
+					<view class="grade-name">{{item.name}}</view>
+					<view class="grade-score {{item.isBetter ? 'better':'less'}}">{{item.score}}</view>
+					<view class="grade-desc {{item.isBetter ? 'better':'less'}}">{{item.isBetter ? '高':'低'}}</view>
+				</view>
+			</block>
+		</view>
+	</view>
+	<view class="gotoshop">
+		<view class="gotoshop-button">进店逛逛</view>
+	</view>
+</view>

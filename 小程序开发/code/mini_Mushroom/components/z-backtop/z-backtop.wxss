@@ -1,0 +1,10 @@
+/* components/z-backtop/z-backtop.wxss */
+
+.backtop{
+  position: fixed;
+  right: 30rpx;
+  bottom: 40rpx;
+}
+.backtop .backtop-image{
+  width: 120rpx;
+}

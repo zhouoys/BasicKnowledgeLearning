@@ -1,0 +1,25 @@
+<!--pages/detail/childCompon/z-paramInfo/z-paramInfo.wxml-->
+<!-- 尺寸 -->
+<view class="size">
+	<block wx:for="{{paramInfo.size}}" wx:for-item="ItemX" wx:for-index="IndexX" wx:key="IndexX">
+		<view class="size-table">
+			<block wx:for="{{ItemX}}" wx:for-item="ItemY" wx:for-index="IndexY" wx:key="IndexY">
+				<view class="row">
+					<block wx:for="{{ItemY}}" wx:for-item="ItemZ" wx:for-index="IndexZ" wx:key="IndexZ">
+						<view class="col">{{ItemZ}}</view>
+					</block>
+				</view>
+			</block>
+		</view>
+	</block>
+</view>
+
+<!-- 信息 -->
+<view class="info">
+	<block wx:for="{{paramInfo.info}}" wx:for-item="outerItem" wx:for-index="outerIndex" wx:key="outerIndex">
+		<view class="info-row">
+		<view class="info-col key">{{outerItem.key}}</view>
+		<view class="info-col value">{{outerItem.value}}</view>
+		</view>
+	</block>
+</view>

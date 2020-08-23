@@ -1,0 +1,24 @@
+/* pages/category/childCompon/z-content/z-content.wxss */
+
+.content-scroll{
+  height: 100vh;
+}
+.content-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-item{
+  width: 33%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.content-image{
+  width:80%;
+}
+
+.content-text{
+  font-size: 32rpx;
+}

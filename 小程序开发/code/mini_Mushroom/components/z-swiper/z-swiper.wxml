@@ -1,0 +1,9 @@
+<!--components/z-swiper/z-swiper.wxml-->
+
+<swiper class="swiper" indicator-dots indicator-active-color="#ff5777" autoplay circular interval="2000">
+	<block wx:for="{{bannerList}}" wx:key="index">
+		<swiper-item class="swiper-item">
+			<image src="{{item}}" mode="widthFix" class="swiper-item-image"></image>
+		</swiper-item>
+	</block>
+</swiper>

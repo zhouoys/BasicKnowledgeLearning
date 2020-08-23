@@ -1,0 +1,17 @@
+/* pages/profile/childCompon/z-list-view/z-list-view.wxss */
+.list-info{
+  padding: 0rpx 20rpx;
+  font-size: 32rpx;
+}
+.list-info .info-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:10rpx 0rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.list-info .info-item-image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}

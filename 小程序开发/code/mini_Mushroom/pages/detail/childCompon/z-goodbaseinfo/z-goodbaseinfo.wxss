@@ -1,0 +1,56 @@
+/* pages/detail/childCompon/z-goodbaseinfo/z-goodbaseinfo.wxss */
+.base-info{
+  padding:20rpx 15rpx;
+}
+.base-title{
+  font-size: 36rpx;
+  text-align: justify;
+}
+.base-price{
+  margin-bottom: 10rpx;
+}
+.new-price {
+  color:#ff5777;
+  font-size: 36rpx;
+  padding-right: 20rpx;
+}
+.old-price{
+  font-size: 32rpx;
+  text-decoration: line-through;
+  padding-right: 20rpx;
+}
+.discount{
+  display: inline-block;
+  font-size: 36rpx;
+  color:#fff;
+  background-color: #ff5777;
+  padding:5rpx 20rpx;
+  border-radius:35%;
+}
+.base-sell{
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+  border-bottom: 3rpx solid #fef2f2;
+}
+.base-sell-item{
+  display: inline-block;
+  vertical-align:middle;
+}
+
+.base-service{
+ display: flex;
+ font-size: 28rpx;
+ justify-content: space-between;
+ padding:30rpx 0rpx;
+ border-bottom: 3rpx solid #fef2f2;
+}
+.service-item .icon{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  vertical-align:middle;
+}
+.service-item .name{
+  vertical-align:middle;
+}

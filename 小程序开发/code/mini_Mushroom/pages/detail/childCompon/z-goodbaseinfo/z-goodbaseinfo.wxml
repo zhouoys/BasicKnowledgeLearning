@@ -1,0 +1,27 @@
+<!--pages/detail/childCompon/z-goodbaseinfo/z-goodbaseinfo.wxml-->
+<view class="base-info">
+
+	<view class="base-title">{{goodBaseInfo.title}}</view>
+
+	<view class="base-price">
+		<text class="new-price">{{goodBaseInfo.newPrice}}</text>
+		<text class="old-price">{{goodBaseInfo.oldPrice}}</text>
+		<text class="discount">{{goodBaseInfo.discount}}</text>
+	</view>
+
+	<view class="base-sell">
+		<block wx:for="{{goodBaseInfo.columns}}" wx:key="index">
+			<text class="base-sell-item">{{item}}</text>
+		</block>
+	</view>
+
+	<view class="base-service">
+		<block wx:for="{{goodBaseInfo.services}}" wx:key="index">
+			<view wx:if="{{index !== 0}}" class="service-item">
+				<image class='icon' src="{{item.icon}}" mode="widthFix"></image>
+				<text class='name'>{{item.name}}</text>
+			</view>
+		</block>
+	</view>
+
+</view>
